@@ -14,6 +14,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
     CRViewController *rootVC = [[CRViewController alloc] init];
     CRBaseNavigationViewController *baseNaviVC = [[CRBaseNavigationViewController alloc] initWithRootViewController:rootVC];
     

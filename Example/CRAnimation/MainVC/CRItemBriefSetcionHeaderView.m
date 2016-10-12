@@ -10,26 +10,31 @@
 
 @implementation CRItemBriefSetcionHeaderView
 
-- (instancetype)init
-{
-    self = [super init];
-    
-    if (self) {
-        
-    }
-    
-    return self;
-}
-
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     
     if (self) {
-        
+        [self createUI];
     }
     
     return self;
+}
+
+- (void)createUI
+{
+    _titleLabel = [[UILabel alloc] init];
+    _titleLabel.textColor = [UIColor whiteColor];
+    _titleLabel.font = [UIFont systemFontOfSize:16];
+    [self addSubview:_titleLabel];
+}
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+    [_titleLabel sizeToFit];
+    [_titleLabel BearSetRelativeLayoutWithDirection:kDIR_LEFT destinationView:nil parentRelation:YES distance:15 center:YES];
 }
 
 @end

@@ -39,6 +39,8 @@ static NSString *__kCRDemoCombination   = @"组合动效";
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
     self.navigationController.navigationBarHidden = YES;
 }
 
@@ -69,7 +71,7 @@ static NSString *__kCRDemoCombination   = @"组合动效";
         demoInfoModel.demoName      = @"Gif demo";
         demoInfoModel.demoSummary   = @"Gif demo";
         demoInfoModel.demoVCName    = @"GifDemoVC";
-//        demoInfoModel.demoGifName   = @"CardFlipGif.gif";
+        demoInfoModel.demoGifName   = @"CardFlipGif.gif";
         [self addDemoModel:demoInfoModel withGroupName:__kCRDemoStorage];
     }
     
@@ -79,7 +81,7 @@ static NSString *__kCRDemoCombination   = @"组合动效";
         demoInfoModel.demoSummary   = @"LYGif demo";
         demoInfoModel.demoVCName    = @"CRYFGifDemoViewController";
         demoInfoModel.demoGifName   = @"CardFlipGif.gif";
-        [self addDemoModel:demoInfoModel withGroupName:__kCRDemoStorage];
+//        [self addDemoModel:demoInfoModel withGroupName:__kCRDemoStorage];
     }
     
 
@@ -125,9 +127,11 @@ static NSString *__kCRDemoCombination   = @"组合动效";
 
 - (void)createUI
 {
+    self.view.backgroundColor = color_Master;
+    
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     
-    _mainCollectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, HEIGHT) collectionViewLayout:layout];
+    _mainCollectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, STATUS_HEIGHT, WIDTH, HEIGHT - STATUS_HEIGHT) collectionViewLayout:layout];
     _mainCollectionView.backgroundColor = color_Master;
     _mainCollectionView.delegate = self;
     _mainCollectionView.dataSource = self;
@@ -163,7 +167,6 @@ static NSString *__kCRDemoCombination   = @"组合动效";
     return cell;
 }
 
-// 和UITableView类似，UICollectionView也可设置段头段尾
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
 {
     
@@ -174,24 +177,18 @@ static NSString *__kCRDemoCombination   = @"组合动效";
         {
             headerView = [[CRItemBriefSetcionHeaderView alloc] init];
         }
-        headerView.backgroundColor = [UIColor grayColor];
+        headerView.titleLabel.text = _dataArrayTitle[indexPath.section];
         
         return headerView;
     }
     else if([kind isEqualToString:UICollectionElementKindSectionFooter])
     {
-//        UICollectionReusableView *footerView = [_collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:footerId forIndexPath:indexPath];
-//        if(footerView == nil)
-//        {
-//            footerView = [[UICollectionReusableView alloc] init];
-//        }
-//        footerView.backgroundColor = [UIColor lightGrayColor];
-//        
-//        return footerView;
+        nil;
     }
     
     return nil;
 }
+
 
 #pragma mark - collectionView delegate
 
@@ -205,7 +202,13 @@ static NSString *__kCRDemoCombination   = @"组合动效";
     }
 }
 
+
 #pragma mark - UICollectionViewDelegateFlowLayout
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section
+{
+    return (CGSize){WIDTH, 40};
+}
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -230,27 +233,6 @@ static NSString *__kCRDemoCombination   = @"组合动效";
     return 10.f;
 }
 
-
-#pragma mark - tableView delegate
-
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-{
-    return 30;
-}
-
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-{
-    UIView *titleView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, 30)];
-    
-    UILabel *titleLable = [[UILabel alloc] init];
-    titleLable.text = _dataArrayTitle[section];
-    titleLable.font = [UIFont systemFontOfSize:14];
-    [titleLable sizeToFit];
-    [titleView addSubview:titleLable];
-    [titleLable BearSetRelativeLayoutWithDirection:kDIR_LEFT destinationView:nil parentRelation:YES distance:15 center:YES];
-    
-    return titleView;
-}
 
 - (void)didReceiveMemoryWarning
 {

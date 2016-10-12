@@ -10,4 +10,6 @@
 
 @interface CRItemBriefSetcionHeaderView : UICollectionReusableView
 
+@property (strong, nonatomic) UILabel   *titleLabel;
+
 @end
