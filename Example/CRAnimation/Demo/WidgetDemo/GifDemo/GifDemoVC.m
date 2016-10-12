@@ -18,15 +18,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     
     [self createUI];
+    
+    self.backBtnColor = [UIColor blackColor];
     [self addTopBar];
 }
 
 - (void)createUI
 {
-    NSString *path = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"CardFlipGif.gif"];
+    NSString *path = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"GifPlay.gif"];
     FLAnimatedImage *image = [FLAnimatedImage animatedImageWithGIFData:[NSData dataWithContentsOfFile:path]];
 //    FLAnimatedImage *image = [FLAnimatedImage animatedImageWithGIFData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"https://upload.wikimedia.org/wikipedia/commons/2/2c/Rotating_earth_%28large%29.gif"]]];
     FLAnimatedImageView *imageView = [[FLAnimatedImageView alloc] init];
@@ -39,15 +40,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

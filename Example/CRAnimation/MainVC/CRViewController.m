@@ -53,7 +53,7 @@ static NSString *__kCRDemoCombination   = @"组合动效";
         demoInfoModel.demoName      = @"CRCardAnimationView";
         demoInfoModel.demoSummary   = @"卡片切换动效";
         demoInfoModel.demoVCName    = @"CRCardAnimationViewDemoVC";
-        demoInfoModel.demoGifName   = @"CardFlipGif.gif";
+        demoInfoModel.demoGifName   = @"CRCardAnimationViewDemoVC.gif";
         [self addDemoModel:demoInfoModel withGroupName:__kCRDemoStorage];
     }
     
@@ -62,16 +62,16 @@ static NSString *__kCRDemoCombination   = @"组合动效";
         demoInfoModel.demoName      = @"CRImageGradientView";
         demoInfoModel.demoSummary   = @"ImageView过渡切换动效";
         demoInfoModel.demoVCName    = @"CRImageGradientDemoVC";
-        demoInfoModel.demoGifName   = @"CardFlipGif.gif";
+        demoInfoModel.demoGifName   = @"CRImageGradientDemoVC.gif";
         [self addDemoModel:demoInfoModel withGroupName:__kCRDemoStorage];
     }
     
     if (1) {
         CRDemoInfoModel *demoInfoModel = [CRDemoInfoModel new];
         demoInfoModel.demoName      = @"Gif demo";
-        demoInfoModel.demoSummary   = @"Gif demo";
+        demoInfoModel.demoSummary   = @"Gif播放控件";
         demoInfoModel.demoVCName    = @"GifDemoVC";
-        demoInfoModel.demoGifName   = @"CardFlipGif.gif";
+        demoInfoModel.demoGifName   = @"GifPlay.gif";
         [self addDemoModel:demoInfoModel withGroupName:__kCRDemoStorage];
     }
     
@@ -80,7 +80,7 @@ static NSString *__kCRDemoCombination   = @"组合动效";
         demoInfoModel.demoName      = @"LYGif demo";
         demoInfoModel.demoSummary   = @"LYGif demo";
         demoInfoModel.demoVCName    = @"CRYFGifDemoViewController";
-        demoInfoModel.demoGifName   = @"CardFlipGif.gif";
+        demoInfoModel.demoGifName   = @"GifPlay.gif";
 //        [self addDemoModel:demoInfoModel withGroupName:__kCRDemoStorage];
     }
     
@@ -92,7 +92,7 @@ static NSString *__kCRDemoCombination   = @"组合动效";
         demoInfoModel.demoName      = @"音乐切换动效";
         demoInfoModel.demoSummary   = @"CRCardAnimationView和CRImageGradientView的组合动效";
         demoInfoModel.demoVCName    = @"CRMusicCardDemoVC";
-        demoInfoModel.demoGifName   = @"CardFlipGif.gif";
+        demoInfoModel.demoGifName   = @"CRMusicCardDemoVC.gif";
         [self addDemoModel:demoInfoModel withGroupName:__kCRDemoCombination];
     }
 }

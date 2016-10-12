@@ -10,6 +10,8 @@
 
 @interface CRBaseViewController : UIViewController
 
+@property (strong, nonatomic) UIColor     *backBtnColor;
+
 - (void)createUI;
 
 - (void)addTopBar;

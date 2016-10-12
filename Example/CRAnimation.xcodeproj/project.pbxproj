@@ -17,12 +17,15 @@
 		092003451DAAA20B008266B8 /* CRImageGradientDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0920033F1DAAA20B008266B8 /* CRImageGradientDemoVC.m */; };
 		092003481DAC70EB008266B8 /* CRCardAnimationViewDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 092003471DAC70EB008266B8 /* CRCardAnimationViewDemoVC.m */; };
 		0920034C1DAD4422008266B8 /* GifDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0920034B1DAD4422008266B8 /* GifDemoVC.m */; };
-		0920034E1DAD45F7008266B8 /* CardFlipGif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0920034D1DAD45F7008266B8 /* CardFlipGif.gif */; };
 		092003511DAD478A008266B8 /* CRYFGifDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 092003501DAD478A008266B8 /* CRYFGifDemoViewController.m */; };
 		092003551DADC3AA008266B8 /* CRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 092003541DADC3AA008266B8 /* CRViewController.m */; };
 		092003581DADC3F2008266B8 /* CRItemBriefCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 092003571DADC3F2008266B8 /* CRItemBriefCollectionViewCell.m */; };
 		0920035D1DADC74F008266B8 /* CRDefines.m in Sources */ = {isa = PBXBuildFile; fileRef = 0920035C1DADC74F008266B8 /* CRDefines.m */; };
 		092003631DADCE2A008266B8 /* CRItemBriefSetcionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 092003621DADCE2A008266B8 /* CRItemBriefSetcionHeaderView.m */; };
+		092003651DAE82F7008266B8 /* CRCardAnimationViewDemoVC.gif in Resources */ = {isa = PBXBuildFile; fileRef = 092003641DAE82F7008266B8 /* CRCardAnimationViewDemoVC.gif */; };
+		092003671DAE83A4008266B8 /* CRImageGradientDemoVC.gif in Resources */ = {isa = PBXBuildFile; fileRef = 092003661DAE83A4008266B8 /* CRImageGradientDemoVC.gif */; };
+		092003691DAE8457008266B8 /* GifPlay.gif in Resources */ = {isa = PBXBuildFile; fileRef = 092003681DAE8457008266B8 /* GifPlay.gif */; };
+		0920036B1DAE8517008266B8 /* CRMusicCardDemoVC.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0920036A1DAE8517008266B8 /* CRMusicCardDemoVC.gif */; };
 		0993B46D1DA9C6790012F962 /* CRBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0993B46C1DA9C6790012F962 /* CRBaseViewController.m */; };
 		366BCD0EA1948D6414619360 /* Pods_CRAnimation_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02449F62305352FC64D71D38 /* Pods_CRAnimation_Tests.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -74,7 +77,6 @@
 		092003471DAC70EB008266B8 /* CRCardAnimationViewDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRCardAnimationViewDemoVC.m; sourceTree = "<group>"; };
 		0920034A1DAD4422008266B8 /* GifDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GifDemoVC.h; sourceTree = "<group>"; };
 		0920034B1DAD4422008266B8 /* GifDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GifDemoVC.m; sourceTree = "<group>"; };
-		0920034D1DAD45F7008266B8 /* CardFlipGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = CardFlipGif.gif; sourceTree = "<group>"; };
 		0920034F1DAD478A008266B8 /* CRYFGifDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRYFGifDemoViewController.h; sourceTree = "<group>"; };
 		092003501DAD478A008266B8 /* CRYFGifDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRYFGifDemoViewController.m; sourceTree = "<group>"; };
 		092003531DADC3AA008266B8 /* CRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRViewController.h; sourceTree = "<group>"; };
@@ -85,6 +87,10 @@
 		0920035C1DADC74F008266B8 /* CRDefines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRDefines.m; sourceTree = "<group>"; };
 		092003611DADCE2A008266B8 /* CRItemBriefSetcionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRItemBriefSetcionHeaderView.h; sourceTree = "<group>"; };
 		092003621DADCE2A008266B8 /* CRItemBriefSetcionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRItemBriefSetcionHeaderView.m; sourceTree = "<group>"; };
+		092003641DAE82F7008266B8 /* CRCardAnimationViewDemoVC.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = CRCardAnimationViewDemoVC.gif; sourceTree = "<group>"; };
+		092003661DAE83A4008266B8 /* CRImageGradientDemoVC.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = CRImageGradientDemoVC.gif; sourceTree = "<group>"; };
+		092003681DAE8457008266B8 /* GifPlay.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = GifPlay.gif; sourceTree = "<group>"; };
+		0920036A1DAE8517008266B8 /* CRMusicCardDemoVC.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = CRMusicCardDemoVC.gif; sourceTree = "<group>"; };
 		0993B46B1DA9C6790012F962 /* CRBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRBaseViewController.h; sourceTree = "<group>"; };
 		0993B46C1DA9C6790012F962 /* CRBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRBaseViewController.m; sourceTree = "<group>"; };
 		0EE5779AF28D42163CC3E896 /* Pods-CRAnimation_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CRAnimation_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-CRAnimation_Example/Pods-CRAnimation_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -169,6 +175,7 @@
 		092003301DAAA20B008266B8 /* CRMusicCardDemo */ = {
 			isa = PBXGroup;
 			children = (
+				0920036A1DAE8517008266B8 /* CRMusicCardDemoVC.gif */,
 				092003371DAAA20B008266B8 /* CRMusicCardDemoVC.h */,
 				092003381DAAA20B008266B8 /* CRMusicCardDemoVC.m */,
 				092003311DAAA20B008266B8 /* CRBottomPageView.h */,
@@ -196,6 +203,7 @@
 		0920033C1DAAA20B008266B8 /* CRCardAnimationViewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				092003641DAE82F7008266B8 /* CRCardAnimationViewDemoVC.gif */,
 				092003461DAC70EB008266B8 /* CRCardAnimationViewDemoVC.h */,
 				092003471DAC70EB008266B8 /* CRCardAnimationViewDemoVC.m */,
 			);
@@ -205,6 +213,7 @@
 		0920033D1DAAA20B008266B8 /* CRImageGradientViewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				092003661DAE83A4008266B8 /* CRImageGradientDemoVC.gif */,
 				0920033E1DAAA20B008266B8 /* CRImageGradientDemoVC.h */,
 				0920033F1DAAA20B008266B8 /* CRImageGradientDemoVC.m */,
 			);
@@ -214,11 +223,11 @@
 		092003491DAD440B008266B8 /* GifDemo */ = {
 			isa = PBXGroup;
 			children = (
+				092003681DAE8457008266B8 /* GifPlay.gif */,
 				0920034A1DAD4422008266B8 /* GifDemoVC.h */,
 				0920034B1DAD4422008266B8 /* GifDemoVC.m */,
 				0920034F1DAD478A008266B8 /* CRYFGifDemoViewController.h */,
 				092003501DAD478A008266B8 /* CRYFGifDemoViewController.m */,
-				0920034D1DAD45F7008266B8 /* CardFlipGif.gif */,
 			);
 			path = GifDemo;
 			sourceTree = "<group>";
@@ -439,9 +448,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
+				092003671DAE83A4008266B8 /* CRImageGradientDemoVC.gif in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
-				0920034E1DAD45F7008266B8 /* CardFlipGif.gif in Resources */,
+				092003691DAE8457008266B8 /* GifPlay.gif in Resources */,
+				092003651DAE82F7008266B8 /* CRCardAnimationViewDemoVC.gif in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
+				0920036B1DAE8517008266B8 /* CRMusicCardDemoVC.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,7 +13,6 @@
 {
     UIButton    *_backBtn;
     UIView      *_topBarView;
-    UIColor     *_backBtnColor;
 }
 
 @end
