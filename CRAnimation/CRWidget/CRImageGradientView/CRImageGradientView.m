@@ -35,6 +35,7 @@
         _imageViewsMaxNum = 5;
         
         _interimImageBgView = [[UIView alloc] initWithFrame:self.bounds];
+        _interimImageBgView.clipsToBounds = YES;
         [self addSubview:_interimImageBgView];
     }
     
