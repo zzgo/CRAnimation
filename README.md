@@ -24,6 +24,6 @@ CRAnimation为开源项目，CRAnimation Pod仓库中整理了各种封装号的
 
 有意向者，可与管理员取得联系。
 
-QQ:648070256@qq.com
+QQ:648070256熊熊
 
 ![CR.gif](READMEResource/8D42D2A9AD90B4B6E6012F783064545F.gif)
