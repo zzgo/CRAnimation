@@ -19,8 +19,12 @@ static NSString *__kCRDemoCombination   = @"组合动效";
 
 @interface CRViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
-@property (strong, nonatomic) NSMutableArray  *dataArrayTitle;
-@property (strong, nonatomic) NSMutableArray  *dataArrayDemoModel;
+@property (strong, nonatomic) NSMutableArray    *dataArrayTitle;
+@property (strong, nonatomic) NSMutableArray    *dataArrayDemoModel;
+
+@property (strong, nonatomic) NSArray           *storageDemoInfoModelNameArray;
+@property (strong, nonatomic) NSArray           *combinationDemoInfoModelNameArray;
+
 
 @property (strong, nonatomic) UICollectionView  *mainCollectionView;
 
@@ -46,66 +50,34 @@ static NSString *__kCRDemoCombination   = @"组合动效";
 
 - (void)dataReady
 {
-    //  动效仓库
+    _dataArrayTitle = [[NSMutableArray alloc] initWithArray:@[
+                                                              __kCRDemoStorage,
+                                                              __kCRDemoCombination,
+                                                              ]];
     
-    if (1) {
-        CRDemoInfoModel *demoInfoModel = [CRDemoInfoModel new];
-        demoInfoModel.demoName      = @"CRCardAnimationView";
-        demoInfoModel.demoSummary   = @"卡片切换动效";
-        demoInfoModel.demoVCName    = @"CRCardAnimationViewDemoVC";
-        demoInfoModel.demoGifName   = @"CRCardAnimationViewDemoVC.gif";
-        [self addDemoModel:demoInfoModel withGroupName:__kCRDemoStorage];
-    }
+    _storageDemoInfoModelNameArray = @[
+                                       @"CRCardAnimationViewDemoInfoModel",
+                                       @"CRImageGradientDemoInfoModel",
+                                       @"GifDemoInfoModel"
+                                       ];
     
-    if (1) {
-        CRDemoInfoModel *demoInfoModel = [CRDemoInfoModel new];
-        demoInfoModel.demoName      = @"CRImageGradientView";
-        demoInfoModel.demoSummary   = @"ImageView过渡切换动效";
-        demoInfoModel.demoVCName    = @"CRImageGradientDemoVC";
-        demoInfoModel.demoGifName   = @"CRImageGradientDemoVC.gif";
-        [self addDemoModel:demoInfoModel withGroupName:__kCRDemoStorage];
-    }
+    _combinationDemoInfoModelNameArray = @[
+                                           @"CRMusicCardDemoInfoModel"
+                                        ];
     
-    if (1) {
-        CRDemoInfoModel *demoInfoModel = [CRDemoInfoModel new];
-        demoInfoModel.demoName      = @"Gif demo";
-        demoInfoModel.demoSummary   = @"Gif播放控件";
-        demoInfoModel.demoVCName    = @"GifDemoVC";
-        demoInfoModel.demoGifName   = @"GifPlay.gif";
-        [self addDemoModel:demoInfoModel withGroupName:__kCRDemoStorage];
-    }
-    
-    if (1) {
-        CRDemoInfoModel *demoInfoModel = [CRDemoInfoModel new];
-        demoInfoModel.demoName      = @"LYGif demo";
-        demoInfoModel.demoSummary   = @"LYGif demo";
-        demoInfoModel.demoVCName    = @"CRYFGifDemoViewController";
-        demoInfoModel.demoGifName   = @"GifPlay.gif";
-//        [self addDemoModel:demoInfoModel withGroupName:__kCRDemoStorage];
-    }
-    
+    [self dealDemoNameArray:_storageDemoInfoModelNameArray withGroupName:__kCRDemoStorage];
+    [self dealDemoNameArray:_combinationDemoInfoModelNameArray withGroupName:__kCRDemoCombination];
+}
 
-    //  组合动效
-    
-    if (1) {
-        CRDemoInfoModel *demoInfoModel = [CRDemoInfoModel new];
-        demoInfoModel.demoName      = @"音乐切换动效";
-        demoInfoModel.demoSummary   = @"CRCardAnimationView和CRImageGradientView的组合动效";
-        demoInfoModel.demoVCName    = @"CRMusicCardDemoVC";
-        demoInfoModel.demoGifName   = @"CRMusicCardDemoVC.gif";
-        [self addDemoModel:demoInfoModel withGroupName:__kCRDemoCombination];
+- (void)dealDemoNameArray:(NSArray *)demoNameArray withGroupName:(NSString *)groupName
+{
+    for (NSString *demoName in demoNameArray) {
+        [self addDemoInfoModelName:demoName withGroupName:groupName];
     }
 }
 
-- (void)addDemoModel:(CRDemoInfoModel *)infoModel withGroupName:(NSString *)groupName
+- (void)addDemoInfoModelName:(NSString *)demoInfoModelName withGroupName:(NSString *)groupName
 {
-    if (!_dataArrayTitle) {
-        _dataArrayTitle = [[NSMutableArray alloc] initWithArray:@[
-                                                                  __kCRDemoStorage,
-                                                                  __kCRDemoCombination,
-                                                                  ]];
-    }
-    
     if (!_dataArrayDemoModel) {
         _dataArrayDemoModel = [[NSMutableArray alloc] init];
         
@@ -115,13 +87,17 @@ static NSString *__kCRDemoCombination   = @"组合动效";
         }
     }
     
-    __weak typeof(self) weakSelf = self;
-    if (infoModel) {
-        //  添加新的Demo数据模型
-        NSInteger index = [weakSelf.dataArrayTitle indexOfObject:groupName];
-        NSMutableArray *subMutableArray = weakSelf.dataArrayDemoModel[index];
-        [subMutableArray addObject:infoModel];
-        _dataArrayDemoModel[index] = subMutableArray;
+    if ([demoInfoModelName length] > 0) {
+        
+        CRDemoInfoModel *infoModel = [[NSClassFromString(demoInfoModelName) alloc] init];
+        if (infoModel) {
+            
+            //  添加新的Demo数据模型
+            NSInteger index = [self.dataArrayTitle indexOfObject:groupName];
+            NSMutableArray *subMutableArray = self.dataArrayDemoModel[index];
+            [subMutableArray addObject:infoModel];
+            _dataArrayDemoModel[index] = subMutableArray;
+        }
     }
 }
 
