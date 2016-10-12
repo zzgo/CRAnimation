@@ -31,6 +31,7 @@
 		092003791DAE8E80008266B8 /* GifDemoInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 092003781DAE8E80008266B8 /* GifDemoInfoModel.m */; };
 		0920037C1DAE8EA0008266B8 /* CRMusicCardDemoInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0920037B1DAE8EA0008266B8 /* CRMusicCardDemoInfoModel.m */; };
 		0993B46D1DA9C6790012F962 /* CRBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0993B46C1DA9C6790012F962 /* CRBaseViewController.m */; };
+		09D937D61DAEAC69007694BA /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 09D937D51DAEAC69007694BA /* README.md */; };
 		366BCD0EA1948D6414619360 /* Pods_CRAnimation_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02449F62305352FC64D71D38 /* Pods_CRAnimation_Tests.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
@@ -104,7 +105,7 @@
 		0920037B1DAE8EA0008266B8 /* CRMusicCardDemoInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRMusicCardDemoInfoModel.m; sourceTree = "<group>"; };
 		0993B46B1DA9C6790012F962 /* CRBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRBaseViewController.h; sourceTree = "<group>"; };
 		0993B46C1DA9C6790012F962 /* CRBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRBaseViewController.m; sourceTree = "<group>"; };
-		09D937D41DAEAA2D007694BA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		09D937D51DAEAC69007694BA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 		0EE5779AF28D42163CC3E896 /* Pods-CRAnimation_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CRAnimation_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-CRAnimation_Example/Pods-CRAnimation_Example.release.xcconfig"; sourceTree = "<group>"; };
 		1C7FE269E5E0C0765014CB0A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		59F56DF0F33F6C42324864D8 /* Pods_CRAnimation_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CRAnimation_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -334,7 +335,7 @@
 				6003F596195388D20070C39A /* InfoPlist.strings */,
 				6003F599195388D20070C39A /* main.m */,
 				6003F59B195388D20070C39A /* CRAnimation-Prefix.pch */,
-				09D937D41DAEAA2D007694BA /* README.md */,
+				09D937D51DAEAC69007694BA /* README.md */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -591,6 +592,7 @@
 				0920032D1DAAA1A6008266B8 /* CRDemoInfoModel.m in Sources */,
 				092003421DAAA20B008266B8 /* CRCardViewFront.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				09D937D61DAEAC69007694BA /* README.md in Sources */,
 				092003151DAA9B63008266B8 /* CRBaseNavigationViewController.m in Sources */,
 				092003791DAE8E80008266B8 /* GifDemoInfoModel.m in Sources */,
 				092003761DAE8E57008266B8 /* CRCardAnimationViewDemoInfoModel.m in Sources */,
