@@ -28,6 +28,8 @@
 
 - (void)createUI
 {
+    self.view.backgroundColor = color_Master;
+    
     _cardAnimationView = [[CRCardAnimationView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, HEIGHT)];
     _cardAnimationView.delegate = self;
     _cardAnimationView.backgroundColor = [UIColor clearColor];
@@ -50,9 +52,10 @@
     CRCardViewCell *cardView = (CRCardViewCell *)[cardAnimationView dequeueReusableCardViewCellWithIdentifier:cardViewID_Str];
     if (!cardView) {
         cardView = [[CRCardViewCell alloc] initWithFrame:CGRectMake(0, 0, cardView_width, cardView_height) reuseIdentifier:cardViewID_Str];
+        cardView.layer.cornerRadius = 7.0f;
     }
     
-    cardView.backgroundColor = [UIColor orangeColor];
+    cardView.backgroundColor = UIColorFromHEX(0xC9162C);
     
     return cardView;
 }

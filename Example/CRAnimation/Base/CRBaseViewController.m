@@ -13,6 +13,7 @@
 {
     UIButton    *_backBtn;
     UIView      *_topBarView;
+    UIColor     *_backBtnColor;
 }
 
 @end
@@ -22,12 +23,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = color_Master;
+    _backBtnColor = [UIColor whiteColor];
 }
 
 - (void)createUI
 {
         
+}
+
+- (void)setBackBtnColor:(UIColor *)backBtnColor
+{
+    _backBtnColor = backBtnColor;
+    
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(7, (44-69/3.0)/2.0, 48/3.0, 69/3.0)];
+    [imageView setImage:[[UIImage imageNamed:@"share_iconShare"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
+    imageView.tintColor = [UIColor whiteColor];
 }
 
 - (void)addTopBar
@@ -38,8 +49,12 @@
     }
     
     if (!_backBtn) {
-        _backBtn = [[UIButton alloc] init];
-        [_backBtn setImage:[UIImage imageNamed:@"back_icon"] forState:UIControlStateNormal];
+        
+        UIImage *backImage = [[UIImage imageNamed:@"back_icon"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+        
+        _backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_backBtn setImage:backImage forState:UIControlStateNormal];
+        [_backBtn setTintColor:_backBtnColor];
         [_backBtn sizeToFit];
         [_backBtn addTarget:self action:@selector(popSelf) forControlEvents:UIControlEventTouchUpInside];
         [_topBarView addSubview:_backBtn];
