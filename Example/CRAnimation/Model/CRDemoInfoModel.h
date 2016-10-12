@@ -24,6 +24,18 @@ typedef enum {
 //  demoVC名称（用于push到指定名称的VC）
 @property (strong, nonatomic) NSString      *demoVCName;
 
+//  作者
+@property (strong, nonatomic) NSString      *author;
+
+//  作者邮箱
+@property (strong, nonatomic) NSString      *authorMail;
+
+//  UI设计师
+@property (strong, nonatomic) NSString      *UIDesigner;
+
+//  UI设计师邮箱
+@property (strong, nonatomic) NSString      *UIDesignerMail;
+
 //  demoGif名称
 //  Ex:demoGifName = @"GifPlay.gif"
 @property (strong, nonatomic) NSString      *demoGifName;

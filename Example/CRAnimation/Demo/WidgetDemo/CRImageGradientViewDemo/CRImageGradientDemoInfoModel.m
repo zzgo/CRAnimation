@@ -14,6 +14,11 @@
 {
     self.demoName       = @"CRImageGradientView";
     self.demoSummary    = @"ImageView过渡切换动效";
+    self.author         = @"Bear";
+    self.authorMail     = @"648070256@qq.com";
+    self.UIDesigner     = @"";
+    
+    self.UIDesignerMail = @"";
     self.demoVCName     = @"CRImageGradientDemoVC";
     self.demoGifName    = @"CRImageGradientDemoVC.gif";
     self.demoType       = kCRDemoTypeStorage;
