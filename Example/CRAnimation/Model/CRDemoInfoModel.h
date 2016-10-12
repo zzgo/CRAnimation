@@ -8,11 +8,36 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum {
+    kCRDemoTypeStorage,       //  动效仓库
+    kCRDemoTypeCombination,   //  组合动效
+} CRDemoType;
+
 @interface CRDemoInfoModel : NSObject
 
-@property (strong, nonatomic) NSString  *demoName;
-@property (strong, nonatomic) NSString  *demoSummary;
-@property (strong, nonatomic) NSString  *demoVCName;
-@property (strong, nonatomic) NSString  *demoGifName;
+//  动效名称
+@property (strong, nonatomic) NSString      *demoName;
+
+//  动效简介
+@property (strong, nonatomic) NSString      *demoSummary;
+
+//  demoVC名称（用于push到指定名称的VC）
+@property (strong, nonatomic) NSString      *demoVCName;
+
+//  demoGif名称
+//  Ex:demoGifName = @"GifPlay.gif"
+@property (strong, nonatomic) NSString      *demoGifName;
+
+//  动效类型
+//  kCRDemoTypeStorage:         动效仓库
+//  kCRDemoTypeCombination:     组合动效
+@property (assign, nonatomic) CRDemoType    demoType;
+
+//  ID编号
+//  S0001:动效仓库
+//  C0001:组合动效
+@property (strong, nonatomic) NSString      *CRID;
+
+- (void)fillDemoInfo;
 
 @end

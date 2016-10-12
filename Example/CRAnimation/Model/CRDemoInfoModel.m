@@ -15,11 +15,20 @@
     self = [super init];
     
     if (self) {
-        _demoName = @"";
-        _demoSummary = @"";
+        [self fillDemoInfo];
     }
     
     return self;
+}
+
+- (void)fillDemoInfo
+{
+    self.demoName       = @"";
+    self.demoSummary    = @"";
+    self.demoVCName     = @"";
+    self.demoGifName    = @"";
+    self.demoType       = kCRDemoTypeStorage;
+    self.CRID           = @"S0001";
 }
 
 @end
