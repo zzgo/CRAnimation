@@ -63,7 +63,7 @@ static NSString *__kCRDemoCombination   = @"组合动效";
     
     _combinationDemoInfoModelNameArray = @[
                                            @"CRMusicCardDemoInfoModel"
-                                        ];
+                                           ];
     
     [self dealDemoNameArray:_storageDemoInfoModelNameArray withGroupName:__kCRDemoStorage];
     [self dealDemoNameArray:_combinationDemoInfoModelNameArray withGroupName:__kCRDemoCombination];

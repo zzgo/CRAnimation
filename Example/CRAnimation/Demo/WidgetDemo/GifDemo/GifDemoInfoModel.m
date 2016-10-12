@@ -17,6 +17,7 @@
     self.demoVCName     = @"GifDemoVC";
     self.demoGifName    = @"GifPlay.gif";
     self.demoType       = kCRDemoTypeStorage;
+    self.CRID           = @"S0003";
 }
 
 @end

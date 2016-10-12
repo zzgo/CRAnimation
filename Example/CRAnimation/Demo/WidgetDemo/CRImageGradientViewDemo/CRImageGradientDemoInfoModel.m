@@ -17,6 +17,7 @@
     self.demoVCName     = @"CRImageGradientDemoVC";
     self.demoGifName    = @"CRImageGradientDemoVC.gif";
     self.demoType       = kCRDemoTypeStorage;
+    self.CRID           = @"S0002";
 }
 
 @end

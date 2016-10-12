@@ -17,6 +17,7 @@
     self.demoVCName     = @"CRMusicCardDemoVC";
     self.demoGifName    = @"CRMusicCardDemoVC.gif";
     self.demoType       = kCRDemoTypeStorage;
+    self.CRID           = @"C0001";
 }
 
 @end
