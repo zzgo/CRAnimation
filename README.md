@@ -8,7 +8,7 @@ gitHub:<https://github.com/BearRan/CRAnimation>
 
 ### 简介：
 
-CRAnimation为开源项目，CRAnimation Pod仓库中整理了各种封装号的动效代码，并且在App中可以直接体验Demo，并且能够直接交互。找到适合自己需要的Demo后，再去查看源代码。减少不必要的时间去下载，运行demo。
+CRAnimation为开源项目，CRAnimation Pod仓库中整理了各种封装好的动效代码，并且在App中可以直接体验Demo，并且能够直接交互。找到适合自己需要的Demo后，再去查看源代码。减少不必要的时间去下载，运行demo。
 
 将动效做成Demo后，再进行封装，提供接口，这样能够方便开发者在最短的时间内集成自己需要的动效。
 
