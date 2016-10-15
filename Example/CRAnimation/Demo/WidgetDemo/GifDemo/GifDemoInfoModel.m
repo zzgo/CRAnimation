@@ -14,6 +14,7 @@
 {
     self.demoName       = @"Gif demo";
     self.demoSummary    = @"Gif播放控件";
+    self.codeLanguage   = kCRLanguageTypeObjectiveC;
     self.author         = @"Bear";
     self.authorMail     = @"648070256@qq.com";
     self.UIDesigner     = @"";

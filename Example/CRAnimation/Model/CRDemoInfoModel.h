@@ -13,6 +13,11 @@ typedef enum {
     kCRDemoTypeCombination,   //  组合动效
 } CRDemoType;
 
+typedef enum {
+    kCRLanguageTypeObjectiveC,  //  Objective-C
+    kCRLanguageTypeSwift,       //  Swift
+} CRLanguage;
+
 @interface CRDemoInfoModel : NSObject
 
 //  动效名称
@@ -20,6 +25,10 @@ typedef enum {
 
 //  动效简介
 @property (strong, nonatomic) NSString      *demoSummary;
+
+//  语言
+//  OC/Swift
+@property (assign, nonatomic) CRLanguage    codeLanguage;
 
 //  demoVC名称（用于push到指定名称的VC）
 @property (strong, nonatomic) NSString      *demoVCName;

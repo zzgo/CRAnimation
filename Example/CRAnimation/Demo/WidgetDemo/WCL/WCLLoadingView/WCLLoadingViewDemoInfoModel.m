@@ -28,6 +28,7 @@
 {
     self.demoName       = @"WCLLoadingView";
     self.demoSummary    = @"Slack 的 Loading 动画";
+    self.codeLanguage   = kCRLanguageTypeSwift;
     self.author         = @"WCL";
     self.authorMail     = @"wangchonhlei93@icloud.com";
     self.UIDesigner     = @"";

@@ -25,6 +25,7 @@
 {
     self.demoName       = @"";
     self.demoSummary    = @"";
+    self.codeLanguage   = kCRLanguageTypeSwift;
     self.demoVCName     = @"";
     self.demoGifName    = @"";
     self.demoType       = kCRDemoTypeStorage;
