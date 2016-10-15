@@ -35,6 +35,9 @@ class WCLLoadingViewDemoVC: CRBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        loadingView.startAnimation()
+        view.backgroundColor = UIColor.init(rgba: "#F6F4F2")
+        addTopBar()
     }
 
     override func didReceiveMemoryWarning() {
@@ -61,5 +64,4 @@ class WCLLoadingViewDemoVC: CRBaseViewController {
     @IBAction func durationSliderValueChange(_ sender: UISlider) {
         loadingView.duration = Double(sender.value)
     }
-
 }

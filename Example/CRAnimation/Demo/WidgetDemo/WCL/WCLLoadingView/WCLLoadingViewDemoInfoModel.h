@@ -24,6 +24,7 @@
 //
 
 #import "CRDemoInfoModel.h"
+#import "CRAnimation_Example-swift.h"
 
 @interface WCLLoadingViewDemoInfoModel : CRDemoInfoModel
 

@@ -33,7 +33,8 @@
     self.UIDesigner     = @"";
     
     self.UIDesignerMail = @"";
-    self.demoVCName     = @"WCLLoadingViewDemoVC";
+    // 去CRAnimation_Example-swift.h这个头文件里面去看你对于的swift的类名，例如我的就是_TtC19CRAnimation_Example14WCLLoadingView
+    self.demoVCName     = @"_TtC19CRAnimation_Example20WCLLoadingViewDemoVC";
     self.demoGifName    = @"WCLLoadingView.gif";
     self.demoType       = kCRDemoTypeStorage;
     self.CRID           = @"S0002";

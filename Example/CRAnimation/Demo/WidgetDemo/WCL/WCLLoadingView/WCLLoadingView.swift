@@ -228,9 +228,6 @@ class WCLLoadingView: UIView, CAAnimationDelegate {
             }
             let lineLayer = lines[i]
             lineLayer.add(lineAnimationTwo, forKey: "lineAnimationTwo")
-            DispatchQueue.main.async {
-                print("hahha")
-            }
         }
         
         //三角形两边的比例
@@ -288,6 +285,7 @@ class WCLLoadingView: UIView, CAAnimationDelegate {
     }
     
     private func config() {
+        layoutIfNeeded()
         lineLength = max(frame.width, frame.height)
         lineWidth  = lineLength/6.0
         margin     = lineLength/4.5 + lineWidth/2
