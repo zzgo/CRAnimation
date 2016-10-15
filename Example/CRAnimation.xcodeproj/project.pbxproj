@@ -31,7 +31,6 @@
 		092003791DAE8E80008266B8 /* GifDemoInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 092003781DAE8E80008266B8 /* GifDemoInfoModel.m */; };
 		0920037C1DAE8EA0008266B8 /* CRMusicCardDemoInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0920037B1DAE8EA0008266B8 /* CRMusicCardDemoInfoModel.m */; };
 		0993B46D1DA9C6790012F962 /* CRBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0993B46C1DA9C6790012F962 /* CRBaseViewController.m */; };
-		09D937D61DAEAC69007694BA /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 09D937D51DAEAC69007694BA /* README.md */; };
 		366BCD0EA1948D6414619360 /* Pods_CRAnimation_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02449F62305352FC64D71D38 /* Pods_CRAnimation_Tests.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
@@ -50,7 +49,6 @@
 		973FBA281DB246F4003A2C7E /* WCLLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973FBA261DB246F4003A2C7E /* WCLLoadingView.swift */; };
 		973FBA2F1DB24944003A2C7E /* WCLLoadingViewDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973FBA2D1DB24944003A2C7E /* WCLLoadingViewDemoVC.swift */; };
 		973FBA301DB24944003A2C7E /* WCLLoadingViewDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 973FBA2E1DB24944003A2C7E /* WCLLoadingViewDemoVC.xib */; };
-		973FBA321DB249A0003A2C7E /* CRAnimation-Bridging-Header.h in Sources */ = {isa = PBXBuildFile; fileRef = 973FBA311DB249A0003A2C7E /* CRAnimation-Bridging-Header.h */; };
 		973FBA351DB24C41003A2C7E /* WCLLoadingViewDemoInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 973FBA341DB24C41003A2C7E /* WCLLoadingViewDemoInfoModel.m */; };
 		BCFA28746AFD50F5E1BE2C1A /* Pods_CRAnimation_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59F56DF0F33F6C42324864D8 /* Pods_CRAnimation_Example.framework */; };
 /* End PBXBuildFile section */
@@ -642,11 +640,9 @@
 				0920035D1DADC74F008266B8 /* CRDefines.m in Sources */,
 				092003441DAAA20B008266B8 /* CRMyCardView.m in Sources */,
 				0920032D1DAAA1A6008266B8 /* CRDemoInfoModel.m in Sources */,
-				973FBA321DB249A0003A2C7E /* CRAnimation-Bridging-Header.h in Sources */,
 				092003421DAAA20B008266B8 /* CRCardViewFront.m in Sources */,
 				973FBA351DB24C41003A2C7E /* WCLLoadingViewDemoInfoModel.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
-				09D937D61DAEAC69007694BA /* README.md in Sources */,
 				092003151DAA9B63008266B8 /* CRBaseNavigationViewController.m in Sources */,
 				092003791DAE8E80008266B8 /* GifDemoInfoModel.m in Sources */,
 				973FBA281DB246F4003A2C7E /* WCLLoadingView.swift in Sources */,
