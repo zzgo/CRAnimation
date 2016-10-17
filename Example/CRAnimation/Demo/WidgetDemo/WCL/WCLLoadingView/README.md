@@ -27,6 +27,32 @@ WCLLoadingView.init(fram: CGRect.zero, colors: colorArr)
 var duration:Double    = 2
 //动画的间隔时间，循环动画的间隔时间
 var interval:Double    = 1
+//动画的状态
+private(set) var status:AnimationStatus = .normal
+enum AnimationStatus {
+    //普通状态
+    case normal
+    //动画中
+    case animating
+    //暂停
+    case pause
+}
+
+//MARK: Public Methods
+/**
+开始动画
+*/
+func startAnimation()
+    
+/**
+暂停动画
+*/
+func pauseAnimation()}
+    
+/**
+继续动画
+*/
+func resumeAnimation()
 ```
 
 
