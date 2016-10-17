@@ -28,20 +28,20 @@ import UIKit
 
 class WCLLoadingView: UIView, CAAnimationDelegate {
     
-    //线的宽度
-    var lineWidth:CGFloat = 0
-    //线的长度
-    var lineLength:CGFloat = 0
-    //边距
-    var margin:CGFloat = 0
     //动画时间
-    var duration:Double = 2
+    var duration:Double    = 2
     //动画的间隔时间
-    var interval:Double = 1
+    var interval:Double    = 1
     //四条线的颜色
-    var colors:[UIColor] = [UIColor.init(rgba: "#9DD4E9") , UIColor.init(rgba: "#F5BD58"),  UIColor.init(rgba: "#FF317E") , UIColor.init(rgba: "#6FC9B5")]
+    private(set) var colors:[UIColor] = [UIColor.init(rgba: "#9DD4E9") , UIColor.init(rgba: "#F5BD58"),  UIColor.init(rgba: "#FF317E") , UIColor.init(rgba: "#6FC9B5")]
     //动画的状态
     private(set) var status:AnimationStatus = .normal
+    //线的宽度
+    private(set) var lineWidth:CGFloat  = 0
+    //线的长度
+    private(set) var lineLength:CGFloat = 0
+    //边距
+    private(set) var margin:CGFloat     = 0
     //四条线
     private var lines:[CAShapeLayer] = []
     

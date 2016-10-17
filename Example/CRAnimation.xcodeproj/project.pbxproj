@@ -50,6 +50,7 @@
 		973FBA2F1DB24944003A2C7E /* WCLLoadingViewDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973FBA2D1DB24944003A2C7E /* WCLLoadingViewDemoVC.swift */; };
 		973FBA301DB24944003A2C7E /* WCLLoadingViewDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 973FBA2E1DB24944003A2C7E /* WCLLoadingViewDemoVC.xib */; };
 		973FBA351DB24C41003A2C7E /* WCLLoadingViewDemoInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 973FBA341DB24C41003A2C7E /* WCLLoadingViewDemoInfoModel.m */; };
+		979B08F61DB49C6F00712D8E /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 979B08F51DB49C6F00712D8E /* README.md */; };
 		BCFA28746AFD50F5E1BE2C1A /* Pods_CRAnimation_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59F56DF0F33F6C42324864D8 /* Pods_CRAnimation_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -140,6 +141,7 @@
 		973FBA331DB24C41003A2C7E /* WCLLoadingViewDemoInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCLLoadingViewDemoInfoModel.h; sourceTree = "<group>"; };
 		973FBA341DB24C41003A2C7E /* WCLLoadingViewDemoInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCLLoadingViewDemoInfoModel.m; sourceTree = "<group>"; };
 		976F95561DB25275000776A6 /* CRAnimation-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CRAnimation-Bridging-Header.h"; sourceTree = "<group>"; };
+		979B08F51DB49C6F00712D8E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CD775529C0010A6B82D84DCC /* Pods-CRAnimation_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CRAnimation_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CRAnimation_Tests/Pods-CRAnimation_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		E7C662237C9E60F0C433AB69 /* Pods-CRAnimation_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CRAnimation_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CRAnimation_Tests/Pods-CRAnimation_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		F220D5C14A899040CB268169 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -404,6 +406,7 @@
 		973FBA241DB246F4003A2C7E /* WCLLoadingView */ = {
 			isa = PBXGroup;
 			children = (
+				979B08F51DB49C6F00712D8E /* README.md */,
 				973FBA251DB246F4003A2C7E /* WCLLoadingView.gif */,
 				973FBA261DB246F4003A2C7E /* WCLLoadingView.swift */,
 				973FBA2D1DB24944003A2C7E /* WCLLoadingViewDemoVC.swift */,
@@ -648,6 +651,7 @@
 				973FBA281DB246F4003A2C7E /* WCLLoadingView.swift in Sources */,
 				973FBA1D1DB244B4003A2C7E /* UIColorExtension.swift in Sources */,
 				092003761DAE8E57008266B8 /* CRCardAnimationViewDemoInfoModel.m in Sources */,
+				979B08F61DB49C6F00712D8E /* README.md in Sources */,
 				092003731DAE8E2A008266B8 /* CRImageGradientDemoInfoModel.m in Sources */,
 				0993B46D1DA9C6790012F962 /* CRBaseViewController.m in Sources */,
 				092003481DAC70EB008266B8 /* CRCardAnimationViewDemoVC.m in Sources */,
