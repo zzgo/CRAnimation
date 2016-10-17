@@ -20,6 +20,7 @@
 //
 
 #import "WCLLoadingViewDemoInfoModel.h"
+#import "CRAnimation_Example-swift.h"
 
 @implementation WCLLoadingViewDemoInfoModel
 
