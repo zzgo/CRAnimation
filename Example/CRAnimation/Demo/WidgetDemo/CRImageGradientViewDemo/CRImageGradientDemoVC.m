@@ -116,7 +116,17 @@
 
 - (void)stop
 {
+    dispatch_suspend(_timer);
+}
+
+- (void)finishTimer
+{
     dispatch_source_cancel(_timer);
+}
+
+- (void)dealloc
+{
+    [self finishTimer];
 }
 
 - (void)didReceiveMemoryWarning {
