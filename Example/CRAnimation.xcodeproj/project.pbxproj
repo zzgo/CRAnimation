@@ -802,8 +802,8 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.crossStreet.forDevelopment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "5e9bbe3d-49b2-4e92-a35c-a5a01f123110";
-				PROVISIONING_PROFILE_SPECIFIER = CorssStreet_dev_03;
+				PROVISIONING_PROFILE = "469a68e7-2aa4-420d-aa90-f2726a23598e";
+				PROVISIONING_PROFILE_SPECIFIER = crossStreet_dev_05;
 				SWIFT_OBJC_BRIDGING_HEADER = "CRAnimation/CRAnimation-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				WRAPPER_EXTENSION = app;

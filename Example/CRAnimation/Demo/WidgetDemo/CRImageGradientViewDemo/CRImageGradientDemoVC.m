@@ -7,7 +7,7 @@
 //
 
 #import "CRImageGradientDemoVC.h"
-#import "CRImageGradientView.h"
+#import <CRAnimation/CRImageGradientView.h>
 
 @interface CRImageGradientDemoVC ()
 {
