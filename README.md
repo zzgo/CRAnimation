@@ -20,7 +20,44 @@ CRAnimation为开源项目，CRAnimation Pod仓库中整理了各种封装好的
 
 即使是很简单的Demo，通过我们的CRCoder和CRUED改变后，可以变得更有情调，更吸引其他开发者、产品经理、设计师的眼球，并且提升交互体验，方便开发者找到适合的Demo并进行集成。
 
-### 招纳：
+---
+##控件动效
+
+>S0001
+CRCardAnimationView
+卡片切换动效
+
+![CRCardAnimationViewDemoVC.gif](Example/CRAnimation/Demo/WidgetDemo/S0001_CRCardAnimationViewDemo/CRCardAnimationViewDemoVC.gif)
+
+>S0002
+CRImageGradientView
+ImageView过渡切换动效
+
+![CRImageGradientDemoVC.gif](Example/CRAnimation/Demo/WidgetDemo/S0002_CRImageGradientViewDemo/CRImageGradientDemoVC.gif)
+
+>S0003
+Gif demo
+Gif播放控件
+
+![GifPlay.gif](Example/CRAnimation/Demo/WidgetDemo/S0003_GifDemo/GifPlay.gif)
+
+>S0004
+WCLLoadingView
+Slack 的 Loading 动画
+
+![WCLLoadingView.gif](Example/CRAnimation/Demo/WidgetDemo/S0004_WCLLoadingView/WCLLoadingView.gif)
+
+---
+##组合动效
+
+>C0001
+音乐切换动效
+CRCardAnimationView和CRImageGradientView的组合动效
+
+![CRMusicCardDemoVC.gif](Example/CRAnimation/Demo/MixDemo/C0001_CRMusicCardDemo/CRMusicCardDemoVC.gif)
+
+---
+### Find
 
 目前，我们急需UI设计师，产品经理，iOS动效工程师。
 
@@ -29,3 +66,4 @@ CRAnimation为开源项目，CRAnimation Pod仓库中整理了各种封装好的
 QQ:648070256熊熊
 
 ![CR.gif](READMEResource/CRPerformance.gif)
+
