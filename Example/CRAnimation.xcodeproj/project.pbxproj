@@ -245,12 +245,12 @@
 		092A2D111DBCA51C00650DE1 /* S0002_CRImageGradientViewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				092A2D171DBCA51C00650DE1 /* README.md */,
 				092A2D141DBCA51C00650DE1 /* CRImageGradientDemoVC.gif */,
 				092A2D121DBCA51C00650DE1 /* CRImageGradientDemoInfoModel.h */,
 				092A2D131DBCA51C00650DE1 /* CRImageGradientDemoInfoModel.m */,
 				092A2D151DBCA51C00650DE1 /* CRImageGradientDemoVC.h */,
 				092A2D161DBCA51C00650DE1 /* CRImageGradientDemoVC.m */,
-				092A2D171DBCA51C00650DE1 /* README.md */,
 			);
 			path = S0002_CRImageGradientViewDemo;
 			sourceTree = "<group>";
