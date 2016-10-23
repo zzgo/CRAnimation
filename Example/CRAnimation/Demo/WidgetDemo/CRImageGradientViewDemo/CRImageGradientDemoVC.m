@@ -37,13 +37,6 @@
     [self start];
 }
 
-- (void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
-    
-    [self stop];
-}
-
 - (void)createUI
 {
     _indexNow = -1;
