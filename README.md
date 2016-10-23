@@ -32,7 +32,7 @@ CRAnimation为开源项目，CRAnimation Pod仓库中整理了各种封装好的
 <img src="Example/CRAnimation/Demo/WidgetDemo/S0001_CRCardAnimationViewDemo/CRCardAnimationViewDemoVC.gif" width=156 />
 
 - S0002
-- [CRCardAnimationView](https://github.com/BearRan/CRAnimation/tree/master/Example/CRAnimation/Demo/WidgetDemo/S0002_CRImageGradientViewDemo)
+- [CRImageGradientView](https://github.com/BearRan/CRAnimation/tree/master/Example/CRAnimation/Demo/WidgetDemo/S0002_CRImageGradientViewDemo)
 - ImageView过渡切换动效
 
 <img src="Example/CRAnimation/Demo/WidgetDemo/S0002_CRImageGradientViewDemo/CRImageGradientDemoVC.gif" width=156 />
