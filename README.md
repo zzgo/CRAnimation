@@ -30,17 +30,15 @@ CRAnimation
 ##控件动效
 
 >S0001
-CRCardAnimationView
-卡片切换动效
+>CRCardAnimationView
+>卡片切换动效
 
 <center>
 <img src="Example/CRAnimation/Demo/WidgetDemo/S0001_CRCardAnimationViewDemo/CRCardAnimationViewDemoVC.gif" width=156 />
 CRCardAnimationView
 </center>
 
->S0002
-CRImageGradientView
-ImageView过渡切换动效
+>S0002\nCRImageGradientView\nImageView过渡切换动效
 
 <center>
 <img src="Example/CRAnimation/Demo/WidgetDemo/S0002_CRImageGradientViewDemo/CRImageGradientDemoVC.gif" width=156 />
