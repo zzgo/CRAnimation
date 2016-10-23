@@ -42,4 +42,4 @@ imageGradientView.animationDuration_EX = 1.0f;
 ---
 ## 演示效果：
 
-![CRImageGradientDemoVC.gif](Example/CRAnimation/Demo/WidgetDemo/CRImageGradientViewDemo/CRImageGradientDemoVC.gif)
+![CRImageGradientDemoVC.gif](CRImageGradientDemoVC.gif)
