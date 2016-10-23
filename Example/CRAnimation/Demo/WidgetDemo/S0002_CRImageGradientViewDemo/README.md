@@ -13,6 +13,8 @@
 
 ---
 ##使用：
+
+###Pod
 >pod ‘CRAnimation/Widget/CRImageGradientView’
 
 ```
