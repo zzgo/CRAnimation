@@ -1,4 +1,4 @@
-# CRMusicCardDemo
+# C0001_CRMusicCardDemo
 <img src="CRMusicCardDemoVC.gif" width=200 />
 
 ##简介：
@@ -8,7 +8,7 @@
 |:-----------:|:---------------------:|
 | DemoName    | CRMusicCardDemo       |
 | CRID        | C0001                 |
-| author      | Bear                  |
+| author      | [Bear](https://github.com/BearRan) |
 | authorMail  | 648070256@qq.com      |
 | 源gitHub    | 无                    |
 | 其他说明    | 无                    |

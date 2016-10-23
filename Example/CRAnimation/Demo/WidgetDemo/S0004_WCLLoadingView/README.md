@@ -8,7 +8,7 @@ WCLLoadingView，用CAAnimation写的loading动画，供大家学习交流使用
 |:-----------:|:--------------------------|
 | DemoName    | WCLLoadingView            |
 | CRID        | S0004                     |
-| author      | WCL                       |
+| author      | [WCL](https://github.com/631106979) |
 | authorMail  | wangchonhlei93@icloud.com |
 | 源gitHub    | https://github.com/631106979/WCLLoadingView |
 | 其他说明    | http://blog.csdn.net/wang631106979/article/details/52473985 |

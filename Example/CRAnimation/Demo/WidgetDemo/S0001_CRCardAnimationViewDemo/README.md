@@ -1,5 +1,6 @@
 # S0001_CRCardAnimationViewDemo
 <img src="CRCardAnimationViewDemoVC.gif" width=200 />
+
 ##简介：
 卡片切换动效
 
@@ -7,7 +8,7 @@
 |:-----------:|:---------------------:|
 | DemoName    | CRCardAnimationView   |
 | CRID        | S0001                 |
-| author      | Bear                  |
+| author      | [Bear](https://github.com/BearRan) |
 | authorMail  | 648070256@qq.com      |
 | 源gitHub    | 无                    |
 | 其他说明    | 无                    |
