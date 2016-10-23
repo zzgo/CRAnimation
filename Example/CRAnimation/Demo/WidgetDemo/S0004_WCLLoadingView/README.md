@@ -1,16 +1,18 @@
 # WCLLoadingView
 
-gitHub:<https://github.com/631106979/WCLLoadingView>
-
-动画详细解析：<http://blog.csdn.net/wang631106979/article/details/52473985>
-
-![](https://camo.githubusercontent.com/a6eec93a26efa4b006ccddafcc132871e6a8a514/687474703a2f2f696d672e626c6f672e6373646e2e6e65742f3230313630393038313632333236353330)
-
-### 简介：
-
+##简介：
 WCLLoadingView，用CAAnimation写的loading动画，供大家学习交流使用，已封装好也可以用到项目里面当loading动画
 
-### 使用：
+| demo信息    | 详情                      |
+|:-----------:|:--------------------------|
+| DemoName    | WCLLoadingView            |
+| CRID        | S0004                     |
+| author      | WCL                       |
+| authorMail  | wangchonhlei93@icloud.com |
+| 源gitHub    | https://github.com/631106979/WCLLoadingView |
+| 其他说明    | http://blog.csdn.net/wang631106979/article/details/52473985 |
+
+## 使用：
 
 ```swift
 //使用默认颜色
@@ -30,12 +32,12 @@ var interval:Double    = 1
 //动画的状态
 private(set) var status:AnimationStatus = .normal
 enum AnimationStatus {
-    //普通状态
-    case normal
-    //动画中
-    case animating
-    //暂停
-    case pause
+//普通状态
+case normal
+//动画中
+case animating
+//暂停
+case pause
 }
 
 //MARK: Public Methods
@@ -43,18 +45,20 @@ enum AnimationStatus {
 开始动画
 */
 func startAnimation()
-    
+
 /**
 暂停动画
 */
 func pauseAnimation()}
-    
+
 /**
 继续动画
 */
 func resumeAnimation()
 ```
 
+
+![](https://camo.githubusercontent.com/a6eec93a26efa4b006ccddafcc132871e6a8a514/687474703a2f2f696d672e626c6f672e6373646e2e6e65742f3230313630393038313632333236353330)
 
 
 
