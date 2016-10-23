@@ -46,8 +46,10 @@ CRImageGradientView
 </center>
 
 >S0003
-Gif demo
-Gif播放控件
+
+>Gif demo
+
+>Gif播放控件
 
 <center>
 <img src="Example/CRAnimation/Demo/WidgetDemo/S0003_GifDemo/GifPlay.gif" width=156 />
