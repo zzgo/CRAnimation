@@ -2,9 +2,6 @@
 
 [![Join the chat at https://gitter.im/CRAnimation/Lobby](https://badges.gitter.im/CRAnimation/Lobby.svg)](https://gitter.im/CRAnimation/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-CRAnimation
-Couldn’t Resist Animation，做有情调的Demo～
-
 <left>
 <img src="READMEResource/TitleImage.png">
 </left>
@@ -21,7 +18,7 @@ CRAnimation为开源项目，CRAnimation Pod仓库中整理了各种封装好的
 
 <center>
 <img src="READMEResource/CRPerformance.gif" width=156 />
-$
+
 CRAnimation
 </center>
 
