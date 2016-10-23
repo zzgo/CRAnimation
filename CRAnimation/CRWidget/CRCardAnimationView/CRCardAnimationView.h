@@ -19,7 +19,9 @@ typedef enum {
 @protocol CardAnimationViewDelegate <NSObject>
 
 @required
+//  和tableView中的cellForRow同理
 - (CRCardViewCell *)cardViewInCardAnimationView:(CRCardAnimationView *)cardAnimationView Index:(int)index;
+//  显示的card数量，和tableView中的numberOfRows同理
 - (NSInteger)numberOfCardsInCardAnimationView:(CRCardAnimationView *)cardAnimationView;
 
 @optional
@@ -40,10 +42,9 @@ typedef enum {
 @property (assign, nonatomic) CGFloat   cardAlphaGapValue;          //相邻卡片alpha差值
 @property (assign, nonatomic) CGPoint   cardOffSetPoint;            //相邻卡片偏移位置设定
 @property (assign, nonatomic) CGFloat   cardScaleRatio;             //相邻卡片缩放比例
+    
 @property (assign, nonatomic) BOOL      cardCycleShow;              //卡片显示完毕后循环显示
 @property (assign, nonatomic) BOOL      cardPanEnable;              //卡片是否允许拖动
-
-
 @property (assign, nonatomic) BOOL      cardRotateWhenPan;          //卡片拖动时是否可旋转
 @property (assign, nonatomic) CGFloat   cardRotateMaxAngle;         //卡片可旋转时:卡片可旋转的最大角度(角度制，如，90，180)
 @property (assign, nonatomic) CGFloat   cardFlyMaxDistance;         //卡片不可旋转时:卡片移动超过某一值时就飞走的阈值
