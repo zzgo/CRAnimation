@@ -33,54 +33,39 @@ CRAnimation
 - CRCardAnimationView
 - 卡片切换动效
 
-<center>
 <img src="Example/CRAnimation/Demo/WidgetDemo/S0001_CRCardAnimationViewDemo/CRCardAnimationViewDemoVC.gif" width=156 />
-CRCardAnimationView
-</center>
 
 - S0002
 - CRImageGradientView
 - ImageView过渡切换动效
 
-<center>
 <img src="Example/CRAnimation/Demo/WidgetDemo/S0002_CRImageGradientViewDemo/CRImageGradientDemoVC.gif" width=156 />
-CRImageGradientView
-</center>
 
-> S0003
-> Gif demo
-> Gif播放控件
+- S0003
+- Gif demo
+- Gif播放控件
 
-<center>
 <img src="Example/CRAnimation/Demo/WidgetDemo/S0003_GifDemo/GifPlay.gif" width=156 />
-Gif demo
-</center>
 
->S0004
-WCLLoadingView
-Slack 的 Loading 动画
+- S0004
+- WCLLoadingView
+- Slack 的 Loading 动画
 
-<center>
 <img src="Example/CRAnimation/Demo/WidgetDemo/S0004_WCLLoadingView/WCLLoadingView.gif" width=156 />
-WCLLoadingView
-</center>
 
 ---
 ##组合动效
 
->C0001
-音乐切换动效
-CRCardAnimationView和CRImageGradientView的组合动效
+- C0001
+- 音乐切换动效
+- CRCardAnimationView和CRImageGradientView的组合动效
 
-<center>
 <img src="Example/CRAnimation/Demo/MixDemo/C0001_CRMusicCardDemo/CRMusicCardDemoVC.gif" width=156 />
-音乐切换动效
-</center>
 
 ---
 ### Find
 
-目前，我们急需UI设计师，产品经理，iOS动效工程师。
+目前，我们在寻找合适的UI设计师，产品经理，iOS动效工程师。
 
 有意向者，可与管理员取得联系。
 
