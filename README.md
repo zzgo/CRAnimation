@@ -3,8 +3,8 @@
 [![Join the chat at https://gitter.im/CRAnimation/Lobby](https://badges.gitter.im/CRAnimation/Lobby.svg)](https://gitter.im/CRAnimation/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 CRAnimation
-
 Couldn’t Resist Animation，做有情调的Demo～
+
 <left>
 <img src="READMEResource/TitleImage.png">
 </left>
