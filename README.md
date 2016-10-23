@@ -7,7 +7,9 @@
 </left>
 
 gitHub:<https://github.com/BearRan/CRAnimation>
+<br>
 QQ群：iOS动效特攻队->547897182
+<br>
 加群时请说明加群原因。否则一律拒绝。
 ### 简介：
 
