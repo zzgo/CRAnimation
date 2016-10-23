@@ -1,4 +1,4 @@
-# CRImageGradientView
+# S0002_CRImageGradientViewDemo
 <img src="CRImageGradientDemoVC.gif" width=200 />
 
 ##简介：

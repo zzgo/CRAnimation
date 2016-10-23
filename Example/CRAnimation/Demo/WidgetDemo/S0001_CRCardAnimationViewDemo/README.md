@@ -1,4 +1,4 @@
-# CRCardAnimationView
+# S0001_CRCardAnimationViewDemo
 <img src="CRCardAnimationViewDemoVC.gif" width=200 />
 ##简介：
 卡片切换动效

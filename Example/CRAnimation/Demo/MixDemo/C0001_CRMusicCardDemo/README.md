@@ -1,6 +1,4 @@
 # C0001_CRMusicCardDemo
-
-# CRMusicCardDemo
 <img src="CRMusicCardDemoVC.gif" width=200 />
 
 ##简介：
