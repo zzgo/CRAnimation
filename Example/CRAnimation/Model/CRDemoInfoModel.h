@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CRStaffInfoModel.h"
 
 typedef enum {
     kCRDemoTypeStorage,       //  动效仓库
@@ -20,44 +21,56 @@ typedef enum {
 
 @interface CRDemoInfoModel : NSObject
 
-//  动效名称
-@property (strong, nonatomic) NSString      *demoName;
-
-//  动效简介
-@property (strong, nonatomic) NSString      *demoSummary;
-
-//  语言
-//  OC/Swift
-@property (assign, nonatomic) CRLanguage    codeLanguage;
-
+//  Require
 //  demoVC名称（用于push到指定名称的VC）
 @property (strong, nonatomic) NSString      *demoVCName;
 
-//  作者
-@property (strong, nonatomic) NSString      *author;
-
-//  作者邮箱
-@property (strong, nonatomic) NSString      *authorMail;
-
-//  UI设计师
-@property (strong, nonatomic) NSString      *UIDesigner;
-
-//  UI设计师邮箱
-@property (strong, nonatomic) NSString      *UIDesignerMail;
-
+//  Require
 //  demoGif名称
 //  Ex:demoGifName = @"GifPlay.gif"
 @property (strong, nonatomic) NSString      *demoGifName;
 
+//  Require
 //  动效类型
 //  kCRDemoTypeStorage:         动效仓库
 //  kCRDemoTypeCombination:     组合动效
 @property (assign, nonatomic) CRDemoType    demoType;
 
+//  Require
 //  ID编号
 //  S0001:动效仓库
 //  C0001:组合动效
 @property (strong, nonatomic) NSString      *CRID;
+
+//  Require
+//  动效名称
+@property (strong, nonatomic) NSString      *demoName;
+
+//  Require
+//  动效简介
+@property (strong, nonatomic) NSString      *demoSummary;
+
+//  Require
+//  语言
+//  OC/Swift
+@property (assign, nonatomic) CRLanguage    codeLanguage;
+
+//  Optional
+//  作者源gitHub地址
+@property (strong, nonatomic) NSString      *originGitHubAddress;
+
+//  Optional
+//  主页／该demo其他相关介绍文章地址，如csdn，简书，blog地址
+@property (strong, nonatomic) NSString      *homePage;
+
+//  Require
+//  作者信息
+@property (strong, nonatomic) CRStaffInfoModel      *authorInfo;
+
+//  Optional
+//  UI设计师信息
+@property (strong, nonatomic) CRStaffInfoModel      *UIDesignerInfo;
+
 
 - (void)fillDemoInfo;
 

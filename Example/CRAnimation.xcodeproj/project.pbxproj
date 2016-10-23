@@ -31,6 +31,7 @@
 		092003791DAE8E80008266B8 /* GifDemoInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 092003781DAE8E80008266B8 /* GifDemoInfoModel.m */; };
 		0920037C1DAE8EA0008266B8 /* CRMusicCardDemoInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0920037B1DAE8EA0008266B8 /* CRMusicCardDemoInfoModel.m */; };
 		092A2D071DBC947700650DE1 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 092A2D061DBC947700650DE1 /* README.md */; };
+		092A2D0A1DBC9A5C00650DE1 /* CRStaffInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 092A2D091DBC9A5C00650DE1 /* CRStaffInfoModel.m */; };
 		0993B46D1DA9C6790012F962 /* CRBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0993B46C1DA9C6790012F962 /* CRBaseViewController.m */; };
 		366BCD0EA1948D6414619360 /* Pods_CRAnimation_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02449F62305352FC64D71D38 /* Pods_CRAnimation_Tests.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -111,6 +112,8 @@
 		0920037A1DAE8EA0008266B8 /* CRMusicCardDemoInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRMusicCardDemoInfoModel.h; sourceTree = "<group>"; };
 		0920037B1DAE8EA0008266B8 /* CRMusicCardDemoInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRMusicCardDemoInfoModel.m; sourceTree = "<group>"; };
 		092A2D061DBC947700650DE1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		092A2D081DBC9A5C00650DE1 /* CRStaffInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRStaffInfoModel.h; sourceTree = "<group>"; };
+		092A2D091DBC9A5C00650DE1 /* CRStaffInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRStaffInfoModel.m; sourceTree = "<group>"; };
 		0993B46B1DA9C6790012F962 /* CRBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRBaseViewController.h; sourceTree = "<group>"; };
 		0993B46C1DA9C6790012F962 /* CRBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRBaseViewController.m; sourceTree = "<group>"; };
 		09D937D51DAEAC69007694BA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
@@ -180,6 +183,8 @@
 			children = (
 				0920032B1DAAA1A6008266B8 /* CRDemoInfoModel.h */,
 				0920032C1DAAA1A6008266B8 /* CRDemoInfoModel.m */,
+				092A2D081DBC9A5C00650DE1 /* CRStaffInfoModel.h */,
+				092A2D091DBC9A5C00650DE1 /* CRStaffInfoModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -644,6 +649,7 @@
 				973FBA2F1DB24944003A2C7E /* WCLLoadingViewDemoVC.swift in Sources */,
 				0920034C1DAD4422008266B8 /* GifDemoVC.m in Sources */,
 				0920035D1DADC74F008266B8 /* CRDefines.m in Sources */,
+				092A2D0A1DBC9A5C00650DE1 /* CRStaffInfoModel.m in Sources */,
 				092003441DAAA20B008266B8 /* CRMyCardView.m in Sources */,
 				0920032D1DAAA1A6008266B8 /* CRDemoInfoModel.m in Sources */,
 				092003421DAAA20B008266B8 /* CRCardViewFront.m in Sources */,
