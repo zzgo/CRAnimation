@@ -18,6 +18,7 @@ CRAnimation为开源项目，CRAnimation Pod仓库中整理了各种封装好的
 
 <center>
 <img src="READMEResource/CRPerformance.gif" width=156 />
+$
 CRAnimation
 </center>
 
