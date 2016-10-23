@@ -30,6 +30,7 @@
 		092003761DAE8E57008266B8 /* CRCardAnimationViewDemoInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 092003751DAE8E57008266B8 /* CRCardAnimationViewDemoInfoModel.m */; };
 		092003791DAE8E80008266B8 /* GifDemoInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 092003781DAE8E80008266B8 /* GifDemoInfoModel.m */; };
 		0920037C1DAE8EA0008266B8 /* CRMusicCardDemoInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0920037B1DAE8EA0008266B8 /* CRMusicCardDemoInfoModel.m */; };
+		092A2D071DBC947700650DE1 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 092A2D061DBC947700650DE1 /* README.md */; };
 		0993B46D1DA9C6790012F962 /* CRBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0993B46C1DA9C6790012F962 /* CRBaseViewController.m */; };
 		366BCD0EA1948D6414619360 /* Pods_CRAnimation_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02449F62305352FC64D71D38 /* Pods_CRAnimation_Tests.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -109,6 +110,7 @@
 		092003781DAE8E80008266B8 /* GifDemoInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GifDemoInfoModel.m; sourceTree = "<group>"; };
 		0920037A1DAE8EA0008266B8 /* CRMusicCardDemoInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRMusicCardDemoInfoModel.h; sourceTree = "<group>"; };
 		0920037B1DAE8EA0008266B8 /* CRMusicCardDemoInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRMusicCardDemoInfoModel.m; sourceTree = "<group>"; };
+		092A2D061DBC947700650DE1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0993B46B1DA9C6790012F962 /* CRBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRBaseViewController.h; sourceTree = "<group>"; };
 		0993B46C1DA9C6790012F962 /* CRBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRBaseViewController.m; sourceTree = "<group>"; };
 		09D937D51DAEAC69007694BA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 		0920033D1DAAA20B008266B8 /* CRImageGradientViewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				092A2D061DBC947700650DE1 /* README.md */,
 				092003661DAE83A4008266B8 /* CRImageGradientDemoVC.gif */,
 				092003711DAE8E2A008266B8 /* CRImageGradientDemoInfoModel.h */,
 				092003721DAE8E2A008266B8 /* CRImageGradientDemoInfoModel.m */,
@@ -646,6 +649,7 @@
 				092003421DAAA20B008266B8 /* CRCardViewFront.m in Sources */,
 				973FBA351DB24C41003A2C7E /* WCLLoadingViewDemoInfoModel.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				092A2D071DBC947700650DE1 /* README.md in Sources */,
 				092003151DAA9B63008266B8 /* CRBaseNavigationViewController.m in Sources */,
 				092003791DAE8E80008266B8 /* GifDemoInfoModel.m in Sources */,
 				973FBA281DB246F4003A2C7E /* WCLLoadingView.swift in Sources */,
