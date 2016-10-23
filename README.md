@@ -8,6 +8,7 @@ Couldn’t Resist Animation，做有情调的Demo～
 <left>
 <img src="READMEResource/TitleImage.png">
 </left>
+
 gitHub:<https://github.com/BearRan/CRAnimation>
 
 ### 简介：
