@@ -1,3 +1,6 @@
+# CRImageGradientView
+<img src="CRImageGradientDemoVC.gif" width=200 />
+
 ##简介：
 图片渐变切换效果
 
@@ -10,8 +13,6 @@
 | 源gitHub    | 无                    |
 | 其他说明    | 无                    |
 
-
----
 ##使用：
 
 ###Pod
@@ -31,6 +32,3 @@ CRImageGradientView *imageGradientView = [[CRImageGradientView alloc] initWithFr
 // animationDuration_EX：图片切换间隔时间，默认0.3s
 imageGradientView.animationDuration_EX = 1.0f;
 ```
----
-## 演示效果：
-![CRImageGradientDemoVC.gif](CRImageGradientDemoVC.gif)

@@ -16,7 +16,7 @@ CRAnimation为开源项目，CRAnimation Pod仓库中整理了各种封装好的
 
 如果开发者对源码感兴趣，也可以研究源码，给作者提建议，提升代码质量，完善代码接口和功能。
 
-<img src="READMEResource/CRPerformance.gif" width=156 />
+<img src="READMEResource/CRPerformance.gif" width=150 />
 
 ### 特色：
 
@@ -26,28 +26,28 @@ CRAnimation为开源项目，CRAnimation Pod仓库中整理了各种封装好的
 ##控件动效
 
 - S0001
-- [CRCardAnimationView](https://github.com/BearRan/CRAnimation/tree/master/Example/CRAnimation/Demo/WidgetDemo/S0001_CRCardAnimationViewDemo)
+- [CRCardAnimationView](https://github.com/BearRan/CRAnimation/tree/master/Example/CRAnimation/Demo/WidgetDemo/S0002_CRImageGradientViewDemo)
 - 卡片切换动效
 
-<img src="Example/CRAnimation/Demo/WidgetDemo/S0001_CRCardAnimationViewDemo/CRCardAnimationViewDemoVC.gif" width=156 />
+<img src="Example/CRAnimation/Demo/WidgetDemo/S0001_CRCardAnimationViewDemo/CRCardAnimationViewDemoVC.gif" width=150 />
 
 - S0002
 - [CRImageGradientView](https://github.com/BearRan/CRAnimation/tree/master/Example/CRAnimation/Demo/WidgetDemo/S0002_CRImageGradientViewDemo)
 - ImageView过渡切换动效
 
-<img src="Example/CRAnimation/Demo/WidgetDemo/S0002_CRImageGradientViewDemo/CRImageGradientDemoVC.gif" width=156 />
+<img src="Example/CRAnimation/Demo/WidgetDemo/S0002_CRImageGradientViewDemo/CRImageGradientDemoVC.gif" width=150 />
 
 - S0003
 - Gif demo
 - Gif播放控件
 
-<img src="Example/CRAnimation/Demo/WidgetDemo/S0003_GifDemo/GifPlay.gif" width=156 />
+<img src="Example/CRAnimation/Demo/WidgetDemo/S0003_GifDemo/GifPlay.gif" width=150 />
 
 - S0004
 - [WCLLoadingView](https://github.com/BearRan/CRAnimation/tree/master/Example/CRAnimation/Demo/WidgetDemo/S0004_WCLLoadingView)
 - Slack 的 Loading 动画
 
-<img src="Example/CRAnimation/Demo/WidgetDemo/S0004_WCLLoadingView/WCLLoadingView.gif" width=156 />
+<img src="Example/CRAnimation/Demo/WidgetDemo/S0004_WCLLoadingView/WCLLoadingView.gif" width=150 />
 
 ---
 ##组合动效
@@ -56,7 +56,7 @@ CRAnimation为开源项目，CRAnimation Pod仓库中整理了各种封装好的
 - 音乐切换动效
 - CRCardAnimationView和CRImageGradientView的组合动效
 
-<img src="Example/CRAnimation/Demo/MixDemo/C0001_CRMusicCardDemo/CRMusicCardDemoVC.gif" width=156 />
+<img src="Example/CRAnimation/Demo/MixDemo/C0001_CRMusicCardDemo/CRMusicCardDemoVC.gif" width=150 />
 
 ---
 ### Find

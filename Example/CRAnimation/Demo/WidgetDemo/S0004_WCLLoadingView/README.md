@@ -1,4 +1,5 @@
 # WCLLoadingView
+<img src="https://camo.githubusercontent.com/a6eec93a26efa4b006ccddafcc132871e6a8a514/687474703a2f2f696d672e626c6f672e6373646e2e6e65742f3230313630393038313632333236353330" width=200 />
 
 ##简介：
 WCLLoadingView，用CAAnimation写的loading动画，供大家学习交流使用，已封装好也可以用到项目里面当loading动画
@@ -56,11 +57,3 @@ func pauseAnimation()}
 */
 func resumeAnimation()
 ```
-
-
-![](https://camo.githubusercontent.com/a6eec93a26efa4b006ccddafcc132871e6a8a514/687474703a2f2f696d672e626c6f672e6373646e2e6e65742f3230313630393038313632333236353330)
-
-
-
-
-
