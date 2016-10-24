@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'CRAnimation'
-    s.version          = '0.1.0'
+    s.version          = '0.1.1'
     s.summary          = 'Some incredible animation effects in iOS.'
     s.description      = <<-DESC
         CRAniamtion full name is Couldn't Refuse Aniamtion.
