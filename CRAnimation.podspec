@@ -22,16 +22,16 @@ Pod::Spec.new do |s|
     s.ios.deployment_target = '7.0'
     s.frameworks = 'UIKit'
     s.dependency 'BearSkill'
-    s.prefix_header_file = 'CRAnimation/CRPCH/CRPrefixHeader.pch'
+    s.prefix_header_file = 'Pod/CRPCH/CRPrefixHeader.pch'
 
     s.subspec 'Widget' do |widget|
 
         widget.subspec 'CRImageGradientView' do |imageGradientView|
-            imageGradientView.source_files = 'CRAnimation/CRWidget/CRImageGradientView/*'
+            imageGradientView.source_files = 'Pod/CRWidget/CRImageGradientView/*'
         end
 
         widget.subspec 'CRCardAnimationView' do |cardAnimationView|
-            cardAnimationView.source_files = 'CRAnimation/CRWidget/CRCardAnimationView/*'
+            cardAnimationView.source_files = 'Pod/CRWidget/CRCardAnimationView/*'
         end
 
     end
