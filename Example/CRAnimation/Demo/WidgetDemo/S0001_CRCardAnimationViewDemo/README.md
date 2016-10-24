@@ -10,7 +10,7 @@
 | CRID        | S0001                 |
 | author      | [Bear](https://github.com/BearRan) |
 | authorMail  | 648070256@qq.com      |
-| 源gitHub    | 无                    |
+| 源gitHub     | 无                    |
 | 其他说明     | 无                    |
 
 ##使用：
