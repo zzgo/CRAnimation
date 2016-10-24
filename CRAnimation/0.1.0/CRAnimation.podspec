@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'CRAnimation'
-    s.version          = '0.1.1'
+    s.version          = '0.1.0'
     s.summary          = 'Some incredible animation effects in iOS.'
     s.description      = <<-DESC
         CRAniamtion full name is Couldn't Refuse Aniamtion.
@@ -22,16 +22,16 @@ Pod::Spec.new do |s|
     s.ios.deployment_target = '7.0'
     s.frameworks = 'UIKit'
     s.dependency 'BearSkill'
-    s.prefix_header_file = 'Pod/CRPCH/CRPrefixHeader.pch'
+    s.prefix_header_file = 'CRAnimation/CRPCH/CRPrefixHeader.pch'
 
     s.subspec 'Widget' do |widget|
 
         widget.subspec 'CRImageGradientView' do |imageGradientView|
-            imageGradientView.source_files = 'Pod/CRWidget/CRImageGradientView/*'
+            imageGradientView.source_files = 'CRAnimation/CRWidget/CRImageGradientView/*'
         end
 
         widget.subspec 'CRCardAnimationView' do |cardAnimationView|
-            cardAnimationView.source_files = 'Pod/CRWidget/CRCardAnimationView/*'
+            cardAnimationView.source_files = 'CRAnimation/CRWidget/CRCardAnimationView/*'
         end
 
     end
