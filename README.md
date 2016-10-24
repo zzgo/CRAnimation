@@ -11,7 +11,7 @@ gitHub:<https://github.com/BearRan/CRAnimation>
 QQ群：iOS动效特攻队->547897182
 <br>
 加群时请说明加群原因。否则一律拒绝。
-### 简介：
+### 简介
 
 CRAnimation为开源项目，CRAnimation Pod仓库中整理了各种封装好的动效代码，并且在App中可以直接体验Demo，并且能够直接交互。找到适合自己需要的Demo后，再去查看源代码。减少不必要的时间去下载，运行demo。
 
