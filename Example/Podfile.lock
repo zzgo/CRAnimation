@@ -1,0 +1,41 @@
+PODS:
+  - BearSkill (0.2.0)
+  - CRAnimation (0.1.1):
+    - BearSkill
+    - CRAnimation/Widget (= 0.1.1)
+  - CRAnimation/Widget (0.1.1):
+    - BearSkill
+    - CRAnimation/Widget/CRCardAnimationView (= 0.1.1)
+    - CRAnimation/Widget/CRImageGradientView (= 0.1.1)
+  - CRAnimation/Widget/CRCardAnimationView (0.1.1):
+    - BearSkill
+  - CRAnimation/Widget/CRImageGradientView (0.1.1):
+    - BearSkill
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - FLAnimatedImage (1.0.12)
+  - YLGIFImage (0.11)
+
+DEPENDENCIES:
+  - CRAnimation (from `../`)
+  - FBSnapshotTestCase
+  - FLAnimatedImage (~> 1.0)
+  - YLGIFImage
+
+EXTERNAL SOURCES:
+  CRAnimation:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  BearSkill: 180b4d49cfae7466f65402eabcdb8d5a28665314
+  CRAnimation: b73870d799c7f526c3a194e163e50a87f6f58d40
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
+  YLGIFImage: c0ae132fe80e5282b2762a97d14e23ba71a748ae
+
+PODFILE CHECKSUM: 7e503d935803ad0247bc57082a826a2bf742b066
+
+COCOAPODS: 1.1.0.beta.2
