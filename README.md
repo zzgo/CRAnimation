@@ -3,7 +3,7 @@
 [![Join the chat at https://gitter.im/CRAnimation/Lobby](https://badges.gitter.im/CRAnimation/Lobby.svg)](https://gitter.im/CRAnimation/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 <left>
-<img src="READMEResource/TitleImage.png">
+<img src="http://oftcdgt2m.bkt.clouddn.com/Base/TitleImage.png">
 </left>
 
 gitHub:<https://github.com/BearRan/CRAnimation>
@@ -11,7 +11,7 @@ gitHub:<https://github.com/BearRan/CRAnimation>
 QQ群：iOS动效特攻队->547897182
 <br>
 加群时请说明加群原因。否则一律拒绝。
-### 简介
+### 简介：
 
 CRAnimation为开源项目，CRAnimation Pod仓库中整理了各种封装好的动效代码，并且在App中可以直接体验Demo，并且能够直接交互。找到适合自己需要的Demo后，再去查看源代码。减少不必要的时间去下载，运行demo。
 
@@ -19,7 +19,7 @@ CRAnimation为开源项目，CRAnimation Pod仓库中整理了各种封装好的
 
 如果开发者对源码感兴趣，也可以研究源码，给作者提建议，提升代码质量，完善代码接口和功能。
 
-<img src="READMEResource/CRPerformance.gif" width=150 />
+<img src="http://oftcdgt2m.bkt.clouddn.com/Base/CRPerformance.gif" width=150 />
 
 ### 特色：
 
@@ -32,25 +32,25 @@ CRAnimation为开源项目，CRAnimation Pod仓库中整理了各种封装好的
 - [CRCardAnimationView](https://github.com/BearRan/CRAnimation/tree/master/Example/CRAnimation/Demo/WidgetDemo/S0001_CRCardAnimationViewDemo)
 - 卡片切换动效
 
-<img src="Example/CRAnimation/Demo/WidgetDemo/S0001_CRCardAnimationViewDemo/CRCardAnimationViewDemoVC.gif" width=150 />
+<img src="http://oftcdgt2m.bkt.clouddn.com/S0001/CRCardAnimationViewDemoVC.gif" width=150 />
 
 - S0002
 - [CRImageGradientView](https://github.com/BearRan/CRAnimation/tree/master/Example/CRAnimation/Demo/WidgetDemo/S0002_CRImageGradientViewDemo)
 - ImageView过渡切换动效
 
-<img src="Example/CRAnimation/Demo/WidgetDemo/S0002_CRImageGradientViewDemo/CRImageGradientDemoVC.gif" width=150 />
+<img src="http://oftcdgt2m.bkt.clouddn.com/S0002/CRImageGradientDemoVC.gif" width=150 />
 
 - S0003
 - Gif demo
 - Gif播放控件
 
-<img src="Example/CRAnimation/Demo/WidgetDemo/S0003_GifDemo/GifPlay.gif" width=150 />
+<img src="http://oftcdgt2m.bkt.clouddn.com/S0003/GifPlay.gif" width=150 />
 
 - S0004
 - [WCLLoadingView](https://github.com/BearRan/CRAnimation/tree/master/Example/CRAnimation/Demo/WidgetDemo/S0004_WCLLoadingView)
 - Slack 的 Loading 动画
 
-<img src="Example/CRAnimation/Demo/WidgetDemo/S0004_WCLLoadingView/WCLLoadingView.gif" width=150 />
+<img src="http://oftcdgt2m.bkt.clouddn.com/S0004/WCLLoadingView.gif" width=150 />
 
 ---
 ##组合动效
@@ -59,7 +59,7 @@ CRAnimation为开源项目，CRAnimation Pod仓库中整理了各种封装好的
 - [音乐切换动效](https://github.com/BearRan/CRAnimation/tree/master/Example/CRAnimation/Demo/MixDemo/C0001_CRMusicCardDemo)
 - CRCardAnimationView和CRImageGradientView的组合动效
 
-<img src="Example/CRAnimation/Demo/MixDemo/C0001_CRMusicCardDemo/CRMusicCardDemoVC.gif" width=150 />
+<img src="http://oftcdgt2m.bkt.clouddn.com/C0001/CRMusicCardDemoVC.gif" width=150 />
 
 ---
 ### Find
