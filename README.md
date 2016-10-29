@@ -32,6 +32,7 @@ CRAnimation为开源项目，CRAnimation Pod仓库中整理了各种封装好的
 - [CRCardAnimationView](https://github.com/BearRan/CRAnimation/tree/master/Example/CRAnimation/Demo/WidgetDemo/S0001_CRCardAnimationViewDemo)
 - 卡片切换动效
 
+<img src="http://img.hb.aicdn.com/69261ba15765259a1942c23ac11d229fc6e619a2915ea-euO6Aa_fw658" width=150 />
 <img src="http://oftcdgt2m.bkt.clouddn.com/S0001/CRCardAnimationViewDemoVC.gif" width=150 />
 
 - S0002
