@@ -65,7 +65,7 @@ CRAnimation为开源项目，CRAnimation Pod仓库中整理了各种封装好的
 - [音乐切换动效](https://github.com/BearRan/CRAnimation/tree/master/Example/CRAnimation/Demo/MixDemo/C0001_CRMusicCardDemo)
 - CRCardAnimationView和CRImageGradientView的组合动效
 
-<img src="http://oftcdgt2m.bkt.clouddn.com/C0001/CRMusicCardDemoVC1.gif" width=150 />
+<img src="http://oftcdgt2m.bkt.clouddn.com/C0001/CRMusicCardDemoVC2.gif" width=150 />
 
 ---
 ### Find
