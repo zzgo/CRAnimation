@@ -34,5 +34,9 @@ Pod::Spec.new do |s|
             cardAnimationView.source_files = 'Pod/CRWidget/CRCardAnimationView/*'
         end
 
+        widget.subspec 'HZLaunchView' do |hzLaunchView|
+            hzLaunchView.source_files = 'Pod/CRWidget/HZLaunchView/*'
+        end
+
     end
 end

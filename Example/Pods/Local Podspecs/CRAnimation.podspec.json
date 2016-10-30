@@ -36,6 +36,10 @@
         {
           "name": "CRCardAnimationView",
           "source_files": "Pod/CRWidget/CRCardAnimationView/*"
+        },
+        {
+          "name": "HZLaunchView",
+          "source_files": "Pod/CRWidget/HZLaunchView/*"
         }
       ]
     }

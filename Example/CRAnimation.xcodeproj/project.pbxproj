@@ -44,7 +44,6 @@
 		257751521DC25A790019D38B /* HZLaunchViewDemoInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2577514F1DC25A790019D38B /* HZLaunchViewDemoInfoModel.m */; };
 		257751531DC25A790019D38B /* HZLaunchViewDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 257751511DC25A790019D38B /* HZLaunchViewDemoVC.m */; };
 		257751551DC25B070019D38B /* HZLaunchView.gif in Resources */ = {isa = PBXBuildFile; fileRef = 257751541DC25B070019D38B /* HZLaunchView.gif */; };
-		257751591DC25D1D0019D38B /* HZLaunchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 257751581DC25D1D0019D38B /* HZLaunchView.m */; };
 		366BCD0EA1948D6414619360 /* Pods_CRAnimation_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02449F62305352FC64D71D38 /* Pods_CRAnimation_Tests.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
@@ -139,8 +138,6 @@
 		257751501DC25A790019D38B /* HZLaunchViewDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZLaunchViewDemoVC.h; sourceTree = "<group>"; };
 		257751511DC25A790019D38B /* HZLaunchViewDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZLaunchViewDemoVC.m; sourceTree = "<group>"; };
 		257751541DC25B070019D38B /* HZLaunchView.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = HZLaunchView.gif; sourceTree = "<group>"; };
-		257751571DC25D1D0019D38B /* HZLaunchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZLaunchView.h; sourceTree = "<group>"; };
-		257751581DC25D1D0019D38B /* HZLaunchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZLaunchView.m; sourceTree = "<group>"; };
 		59F56DF0F33F6C42324864D8 /* Pods_CRAnimation_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CRAnimation_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58A195388D20070C39A /* CRAnimation_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CRAnimation_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -335,7 +332,6 @@
 		2577514D1DC25A790019D38B /* S0005_HZLaunchView */ = {
 			isa = PBXGroup;
 			children = (
-				257751561DC25D1D0019D38B /* HZLaunchVIew */,
 				257751541DC25B070019D38B /* HZLaunchView.gif */,
 				2577514E1DC25A790019D38B /* HZLaunchViewDemoInfoModel.h */,
 				2577514F1DC25A790019D38B /* HZLaunchViewDemoInfoModel.m */,
@@ -343,15 +339,6 @@
 				257751511DC25A790019D38B /* HZLaunchViewDemoVC.m */,
 			);
 			path = S0005_HZLaunchView;
-			sourceTree = "<group>";
-		};
-		257751561DC25D1D0019D38B /* HZLaunchVIew */ = {
-			isa = PBXGroup;
-			children = (
-				257751571DC25D1D0019D38B /* HZLaunchView.h */,
-				257751581DC25D1D0019D38B /* HZLaunchView.m */,
-			);
-			path = HZLaunchVIew;
 			sourceTree = "<group>";
 		};
 		6003F581195388D10070C39A = {
@@ -702,7 +689,6 @@
 				092A2D4A1DBCA54C00650DE1 /* CRCardViewFront.m in Sources */,
 				092A2D291DBCA51C00650DE1 /* CRCardAnimationViewDemoInfoModel.m in Sources */,
 				973FBA1D1DB244B4003A2C7E /* UIColorExtension.swift in Sources */,
-				257751591DC25D1D0019D38B /* HZLaunchView.m in Sources */,
 				0993B46D1DA9C6790012F962 /* CRBaseViewController.m in Sources */,
 				092003581DADC3F2008266B8 /* CRItemBriefCollectionViewCell.m in Sources */,
 				092A2D4E1DBCA54C00650DE1 /* CRMyCardView.m in Sources */,

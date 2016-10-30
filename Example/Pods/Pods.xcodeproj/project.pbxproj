@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		035EC5ED21F61A34BC73FFE05EDF91F8 /* CRCardViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4DF6DCF9EA676503F8363A1635A7387 /* CRCardViewCell.m */; };
 		0480D92A71691FDC1862455DAC3A230F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E72335447D810316457585D5639CCDF7 /* Foundation.framework */; };
 		0C1C0A2F2162BEFCB9DE7EAA247AEEB3 /* UIView+BearSet.m in Sources */ = {isa = PBXBuildFile; fileRef = B0AD27FE66EBDB217D02D340143CCE00 /* UIView+BearSet.m */; };
 		10CBF0552CA426F6F6F5718B3EDB0E61 /* YLGIFImage-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C17F20767E984680D00E9A3FCE728BC5 /* YLGIFImage-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -17,51 +18,50 @@
 		1A36A658D9FF8E174A1C754B6F9FABDE /* Pods-CRAnimation_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0226493A6444E90FE261CB6937CDD204 /* Pods-CRAnimation_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1ADB3F37875AB16867840A076F6098A9 /* BearAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 66C8320897A4B2AB631F619DA32A948F /* BearAlertView.m */; };
 		1B6DBB7D4EDF238AA2D89608A3F51C03 /* FLAnimatedImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 38F775970F02E0815642E10C226F26D8 /* FLAnimatedImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1E5F6C4BA563752D6A0E3E532668A896 /* CRCardViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 1507EB838BD6075CF1E31ECFC7EF3795 /* CRCardViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1FFC450914FE357E8F9C28F2518ADCC4 /* Pods-CRAnimation_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3AF5B12FD98BDCCAEBA28325A51BA0 /* Pods-CRAnimation_Example-dummy.m */; };
+		25489E481D4A29E169386B593AD619BA /* CRAnimation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BD81223B12A02B01D4AA0B217620C429 /* CRAnimation-dummy.m */; };
 		26D307F6EDA56EC635D57E84D2D93314 /* UILabel+BearSet.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF760FDF6F4BE3676CB89B1EBD88CB1 /* UILabel+BearSet.m */; };
 		27A33CE096496EBEE885A85D05CEC807 /* Pods-CRAnimation_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D4089CF5B7DC5FCE8B053A63904EC4B4 /* Pods-CRAnimation_Tests-dummy.m */; };
 		2949051D4FFB24CCBC27FFFA1832FABD /* YLImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 971715D50EC0E7E3448717C65788A29D /* YLImageView.m */; };
 		2BFB1107663D9368A55305254D76FCEF /* BearCutOutView.h in Headers */ = {isa = PBXBuildFile; fileRef = 81A65CADD1D3701EC2015E58608DBD93 /* BearCutOutView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2C87E1788C8FA06AE3481A2226E3AF2D /* UIApplication+StrictKeyWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = D3938CD321C3BED1240C0F647CE15566 /* UIApplication+StrictKeyWindow.m */; };
-		30A989A3AD611FB7EEE41C265020CAFA /* CRAnimation-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F44884E13CDB4E16EB1CEA793D352F3 /* CRAnimation-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		339CBD2CED13C05550DBF9C643D0C532 /* CRImageGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3820B8A0013F9F7B28081CC4CA0E0DD1 /* CRImageGradientView.m */; };
 		34A1C7E576C58A9D3F3101448308BF3E /* UIImage+Snapshot.h in Headers */ = {isa = PBXBuildFile; fileRef = 4116B7BF7D945657E9B1DA401D330565 /* UIImage+Snapshot.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		34F03C06652B46C48A256E392BE3C966 /* CRCardViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 500236C024F52AC30E736F7FB6C29213 /* CRCardViewCell.m */; };
 		35F3391E9CE9AD770ADBE6A038053564 /* YLGIFImage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F8E7BAF284171CF436B56A95272FCB32 /* YLGIFImage-dummy.m */; };
 		36783620A39572F6AE3D6FFCC1B0356A /* YLGIFImage.m in Sources */ = {isa = PBXBuildFile; fileRef = F19B1F8300F51A33CD771E6DD6B1345B /* YLGIFImage.m */; };
-		3BCE3DE6890F7135A6B7DCB88074DE4A /* CRImageGradientView.h in Headers */ = {isa = PBXBuildFile; fileRef = D4E164934C471E7059B8FA107DEBE341 /* CRImageGradientView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3C93AD8EA184BED942200E35308C7394 /* UILabel+BearSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B432648232DA991B776F6D045FA986D /* UILabel+BearSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D70E93C22D0BEBD863D0B65D225A11E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 747A2A35F86A21DFA550AA54DF87CD27 /* UIKit.framework */; };
+		3ECE3E8548852AEF65140695115480D9 /* HZLaunchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90504B35A945EDF8EB898EB917847F7F /* HZLaunchView.m */; };
 		403F851E744BA3CAB34337C780310F88 /* BearAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 380CF90A2D4ABFC541049D0192E04E98 /* BearAlertView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		42A4998FC7E9C1B0AE0C8D6C9335E911 /* BearConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = A912AA1C30CAABF4D35D917DBD6B95B3 /* BearConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		42E2C9AF7E7618CE9796BE4BA47204C8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 747A2A35F86A21DFA550AA54DF87CD27 /* UIKit.framework */; };
-		435EA36035FD6601CC7914C77A65BA2D /* CRInterimImageCellView.h in Headers */ = {isa = PBXBuildFile; fileRef = E311D3CB108F0A123DE20270D94B3DED /* CRInterimImageCellView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		497AA8816FC08215EF4C2431E1986992 /* FBSnapshotTestCase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F72CC6FC992CD7B2A2B8E03AC925ED91 /* FBSnapshotTestCase-dummy.m */; };
-		5DA7EDC0C17483E3D68302FD0E718A2F /* CRCardAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1C807968EFBCB0B6DB04C7D5A6DB4B /* CRCardAnimationView.m */; };
 		60359F909559C6F45412A0AA45C09B75 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6792C8C4E4EE52962A0C32A14E3F9F80 /* MobileCoreServices.framework */; };
 		61EBC5CF0D5E065C88028B49C6B8D3B3 /* UIImage+Diff.h in Headers */ = {isa = PBXBuildFile; fileRef = 52C27EF5C36944A6C3BBC08FB5952B5A /* UIImage+Diff.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		68B245DB47CA60F8F9ADCA1E8CCDC324 /* UIApplication+StrictKeyWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 17E4C4F29DBE7A22FCBAC525A725AA19 /* UIApplication+StrictKeyWindow.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		6914EE43A9B8B8D30220B3B6B0D57523 /* FBSnapshotTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E7DE8E7EA66838A6804F4E123D76824 /* FBSnapshotTestCase.m */; };
 		6E4A16BF4D27C48BB1FE1E1CF5E8B90E /* FBSnapshotTestCasePlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = C73D1468056824F7AD53AD99BBD1FBFC /* FBSnapshotTestCasePlatform.m */; };
 		6F76BF30C2F56243214DF5257725551C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E72335447D810316457585D5639CCDF7 /* Foundation.framework */; };
+		6FEB01F30A4E3E63F9DE37DD83ECA715 /* CRAnimation-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A5B709B0D2556786D7C5AA9C6B857CB /* CRAnimation-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		731AC681E5318761711E3D5A38482802 /* ApplicationOpenURLManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C5B07EF3F188C1F1A3238C9FEF4CEF51 /* ApplicationOpenURLManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		73B96724E9D2B03677BA3C2D24601D64 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8CFADE545EC16FEFE8A72DE74B87D88 /* XCTest.framework */; };
 		77D80D582EFA9B4B303B25DBA731B6C4 /* YLGIFImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 73A03D26DA09CE954800092246E3D529 /* YLGIFImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7865D57FECB6D263221B941D7091D868 /* ApplicationOpenURLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C07F4C2F4D196B7CC9911A9109DCD0 /* ApplicationOpenURLManager.m */; };
 		793B3BC18A6BD80D99ACFBE8917F9F89 /* FLAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAB754B43B0F2CC6936417B0CB40C78 /* FLAnimatedImageView.m */; };
+		7AE71CD505F43D5D0B63508937383B98 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E72335447D810316457585D5639CCDF7 /* Foundation.framework */; };
+		7C1C31527303B66D65E554E1116B5329 /* CRCardAnimationView.h in Headers */ = {isa = PBXBuildFile; fileRef = FFDECD33ECD9DF21D753FC3F64DE4059 /* CRCardAnimationView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		81C2F5F5E198091BA26B167C14637951 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5794F1D61ACA4A76B8D93CD15C1CA95E /* CoreGraphics.framework */; };
 		85D178DFCA1BC67BBFB1188E34EC5B19 /* SwiftSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006C1D4D89D5FD6BB0C7D86B2BA8D7E9 /* SwiftSupport.swift */; };
-		88895ED48237ED79998E6210025708F7 /* CRCardAnimationView.h in Headers */ = {isa = PBXBuildFile; fileRef = 22F73F99953C3B1E5A7D254CFB076A03 /* CRCardAnimationView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8A3FA90CDA5B1F821740ABB065431916 /* BearAlertBtnsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 733D12F5A7ACDC8DFA9F925B8BF012E1 /* BearAlertBtnsView.m */; };
 		8AA9541169EFB247C2D8443006945E42 /* FLAnimatedImage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AEB44E75C5B3278A997E0AC561F8F01 /* FLAnimatedImage-dummy.m */; };
 		8ACF6A5515A175054E22414BF740EF14 /* FBSnapshotTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = BB00760FCB2AAA063325F5D53952A009 /* FBSnapshotTestCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8D706FEE32EFB67B11C36F6014A6F842 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B75D1F78C44061E07C12F2CA974B32AC /* ImageIO.framework */; };
+		8DDDE1D87E8E62C27CDFCD24B0BF6F56 /* CRImageGradientView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A1BF7E40CC7C4751612456179D92B65 /* CRImageGradientView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		91AB1E452384911F482E05AA21B8117D /* UITextField+BearLimitLength.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FB6CEF4419210CD394C187077EE519 /* UITextField+BearLimitLength.m */; };
 		94142ED32A3194A3CAA63B33E4385E77 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6792C8C4E4EE52962A0C32A14E3F9F80 /* MobileCoreServices.framework */; };
-		9CEAB046483FB3564DEFDD91DB2AA4E7 /* CRAnimation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5EC1D0CB820F897259490D5A3CA5CE /* CRAnimation-dummy.m */; };
+		96B1B5B6EE02C040E6CA5CFB8FCD7602 /* CRCardViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 83DCC0F5B5B96E1A3A5623135122D837 /* CRCardViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		998BC1D7D846CFBB87696CC22FF956C3 /* BearSkill.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ABD6918B4ACD5F32B483F86E533D16F /* BearSkill.framework */; };
 		9FA3B93CE0ECAC3CDC30890659AACF82 /* FBSnapshotTestCasePlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = A342AFDFD631252BC47087AE938574DF /* FBSnapshotTestCasePlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A1E800D08B027E215AACE0888088A991 /* BearAlertContentView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CD93CA76D35D80F2841789542CD235A /* BearAlertContentView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A236A5E3E0B421E6866518B8DEEB88C7 /* CRInterimImageCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4360422B35530DABDCC0EEC536633443 /* CRInterimImageCellView.m */; };
 		A50C2FCF58768205DC28ACBBFDD0142A /* Pods-CRAnimation_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D83629B9BA055520F9DBA21C1B79267 /* Pods-CRAnimation_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A932B89F114B02D24B5FBF362FD0B9F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E72335447D810316457585D5639CCDF7 /* Foundation.framework */; };
 		ABCF37B585DA0F401BD51F67BD7863DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E72335447D810316457585D5639CCDF7 /* Foundation.framework */; };
@@ -69,7 +69,6 @@
 		B3AC3B2A758C9054AA1D03D9060C5AEF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 479D41CAF573DD48732B13BA8F3EE520 /* QuartzCore.framework */; };
 		B6065D2B4F0B2E661D3E68D8E4276FA4 /* YLImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DF066483509CA05F397BC21645E6B58 /* YLImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B6A67A3B998747E4290BF6010EC33806 /* FBSnapshotTestCase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EDFFB2BF4A5D49B1436A209A22ECEE6D /* FBSnapshotTestCase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B7E08737365EB473C75D2D2C0340CE76 /* CRImageGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF3FD522F4075F7D016D849FA5C2F22 /* CRImageGradientView.m */; };
 		B9238977DCF3ED4109DFCACD471AF8F9 /* FLAnimatedImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 50EA81B3064D10700AFC968AB582067E /* FLAnimatedImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BCF5D9D9B92F15A45328E1AF992AE7ED /* UITextField+BearLimitLength.h in Headers */ = {isa = PBXBuildFile; fileRef = 376AC0BAEAEAE67288A4C3E494E47D4A /* UITextField+BearLimitLength.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD7AE7B859D42AE9E02DDFA47D823784 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E72335447D810316457585D5639CCDF7 /* Foundation.framework */; };
@@ -77,6 +76,7 @@
 		C3C7FDA15B1CEC77BA5477E7625B7BA0 /* NSMutableAttributedString+BearSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5C7AEA2FD5049E1852ADEAC3EA7A13 /* NSMutableAttributedString+BearSet.m */; };
 		C5B9CA1D7F1517B31E4C6970C8EC3DCF /* FLAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B50EEFE63372307716F7488412D735E /* FLAnimatedImage.m */; };
 		C8494F6417048F5E4471D654004023CE /* UITableView+BearStoreCellHeight.h in Headers */ = {isa = PBXBuildFile; fileRef = D26EDDABD63DC8BCEBEE0EF1BE1959F4 /* UITableView+BearStoreCellHeight.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C8E0BFC7F9D6C2F24273ECBE6D971942 /* CRCardAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B35D0077C99BDBF04E5DCD3A764B6D /* CRCardAnimationView.m */; };
 		CB1EF0C4E1E952287BDE6B3E1D6132B8 /* BearCutOutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 898D236BC47456D258891D431A0BB33E /* BearCutOutView.m */; };
 		D0619A074F66A09344B80688CD0EDB1C /* BearSkill-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 03CC9F0AC6A0F02C8864034D38CF866B /* BearSkill-dummy.m */; };
 		D0B3B87AC8422EE080B8E9F3E2BCBC2A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E72335447D810316457585D5639CCDF7 /* Foundation.framework */; };
@@ -86,14 +86,16 @@
 		DC9D6BF4F46899829F02742E778E8D1A /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B75D1F78C44061E07C12F2CA974B32AC /* ImageIO.framework */; };
 		DF12AE18342068980E0C1F879D02AF8A /* BearConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2DDED46E5EFE252F66EAA0FEF155D6 /* BearConstants.m */; };
 		E60A84FBA6EE828AD05190C97E1F1B00 /* BearAlertBtnsView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F5A99FFAA7925AF654250E816E813B7 /* BearAlertBtnsView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E75ED064DE0FA4DB7878E82C7CE8F90C /* HZLaunchView.h in Headers */ = {isa = PBXBuildFile; fileRef = EEE29E040F7CA17F4A1D4327697777CD /* HZLaunchView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EAA652557B70F493923A3447B5D64E0D /* UIImage+Compare.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F6CFECE9084AA5D56043F3D06AF6A4A /* UIImage+Compare.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		F01C71FCBE8D6F9A6595E0B2DEBD983E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 747A2A35F86A21DFA550AA54DF87CD27 /* UIKit.framework */; };
 		F0B3BC4CE7B1074981F32DDD032E9539 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 747A2A35F86A21DFA550AA54DF87CD27 /* UIKit.framework */; };
 		F366B775C22BBE1DBAC7BDB7DE8F0A26 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 479D41CAF573DD48732B13BA8F3EE520 /* QuartzCore.framework */; };
 		F47158C234C50FFB069A1EF8AB26D9F1 /* FBSnapshotTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 100793F7D37788971FDAA7939F521689 /* FBSnapshotTestController.m */; };
 		F52FB24290491A7995198C3BB8A1C0FD /* BearAlertContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 956FFCA0F89F9D661F7CD7506E821AB1 /* BearAlertContentView.m */; };
-		F5ADA618B4749ED385A55FA09EAA029B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E72335447D810316457585D5639CCDF7 /* Foundation.framework */; };
 		FC0B5867C1CAD26C40A12CC2D1552978 /* UIView+BearSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 1461D95CB8EEB37F7E0C50D738EF5E87 /* UIView+BearSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FCDFF290B95DFAABBB8EAD9C19F6B6DF /* BearSkill.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ABD6918B4ACD5F32B483F86E533D16F /* BearSkill.framework */; };
+		FCFFB0AD67DC3354EF9CAA7AFDE831BF /* CRInterimImageCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F9CB9F2FEC7FC5F707B4842B047FFD /* CRInterimImageCellView.m */; };
+		FE43009973BAD993B3B16F4CD82468F4 /* CRInterimImageCellView.h in Headers */ = {isa = PBXBuildFile; fileRef = 18CFA387552182655B4B96CF40634F76 /* CRInterimImageCellView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +113,13 @@
 			remoteGlobalIDString = 94A0B9827A8D09964FCEA49BE6A2265A;
 			remoteInfo = YLGIFImage;
 		};
+		6C383350E416D12637EAC0FE21E0B706 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C87B41C54D1B542E2DED06AF9808F251;
+			remoteInfo = BearSkill;
+		};
 		9EFC46CC295A6E0003CF2CB170F7BF4A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
@@ -125,18 +134,11 @@
 			remoteGlobalIDString = C87B41C54D1B542E2DED06AF9808F251;
 			remoteInfo = BearSkill;
 		};
-		D38CE8E64FDD8E339F2DE982D81487DC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C87B41C54D1B542E2DED06AF9808F251;
-			remoteInfo = BearSkill;
-		};
 		D66A031B826DC19B360E169F02788859 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0214E4DA2F95E5199DE9B66560683FCC;
+			remoteGlobalIDString = E7D237DDFFCF75F73AA2D2846F63EED3;
 			remoteInfo = CRAnimation;
 		};
 /* End PBXContainerItemProxy section */
@@ -150,38 +152,36 @@
 		0C9576B62F75157F9B09483F16EC81DD /* BearSkill.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BearSkill.xcconfig; sourceTree = "<group>"; };
 		100793F7D37788971FDAA7939F521689 /* FBSnapshotTestController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestController.m; path = FBSnapshotTestCase/FBSnapshotTestController.m; sourceTree = "<group>"; };
 		1461D95CB8EEB37F7E0C50D738EF5E87 /* UIView+BearSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+BearSet.h"; path = "Pod/Classes/Layout/UIView+BearSet.h"; sourceTree = "<group>"; };
-		1507EB838BD6075CF1E31ECFC7EF3795 /* CRCardViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CRCardViewCell.h; sourceTree = "<group>"; };
+		148AE577136F2F65A8909848A25AFEC2 /* CRAnimation-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CRAnimation-prefix.pch"; sourceTree = "<group>"; };
 		17E4C4F29DBE7A22FCBAC525A725AA19 /* UIApplication+StrictKeyWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication+StrictKeyWindow.h"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.h"; sourceTree = "<group>"; };
+		18CFA387552182655B4B96CF40634F76 /* CRInterimImageCellView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CRInterimImageCellView.h; sourceTree = "<group>"; };
 		1AAB754B43B0F2CC6936417B0CB40C78 /* FLAnimatedImageView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLAnimatedImageView.m; path = FLAnimatedImage/FLAnimatedImageView.m; sourceTree = "<group>"; };
 		1AEB44E75C5B3278A997E0AC561F8F01 /* FLAnimatedImage-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FLAnimatedImage-dummy.m"; sourceTree = "<group>"; };
-		22F73F99953C3B1E5A7D254CFB076A03 /* CRCardAnimationView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CRCardAnimationView.h; sourceTree = "<group>"; };
+		27B35D0077C99BDBF04E5DCD3A764B6D /* CRCardAnimationView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CRCardAnimationView.m; sourceTree = "<group>"; };
 		2ABD6918B4ACD5F32B483F86E533D16F /* BearSkill.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BearSkill.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B432648232DA991B776F6D045FA986D /* UILabel+BearSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UILabel+BearSet.h"; path = "Pod/Classes/UI&Extend/UILabel+BearSet.h"; sourceTree = "<group>"; };
 		2C025E93C367BEADFDDE488AA193B3F0 /* Pods-CRAnimation_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CRAnimation_Example.modulemap"; sourceTree = "<group>"; };
-		31F59495BFC3D9EE2B082197EECFCE9A /* CRAnimation-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CRAnimation-prefix.pch"; sourceTree = "<group>"; };
 		35651ACB85BB62C806203666845E6C9B /* Pods-CRAnimation_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CRAnimation_Example-frameworks.sh"; sourceTree = "<group>"; };
 		376AC0BAEAEAE67288A4C3E494E47D4A /* UITextField+BearLimitLength.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITextField+BearLimitLength.h"; path = "Pod/Classes/UI&Extend/UITextField+BearLimitLength.h"; sourceTree = "<group>"; };
 		380CF90A2D4ABFC541049D0192E04E98 /* BearAlertView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BearAlertView.h; path = "Pod/Classes/UI&Extend/BearAlertView/BearAlertView.h"; sourceTree = "<group>"; };
+		3820B8A0013F9F7B28081CC4CA0E0DD1 /* CRImageGradientView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CRImageGradientView.m; sourceTree = "<group>"; };
 		38F775970F02E0815642E10C226F26D8 /* FLAnimatedImageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLAnimatedImageView.h; path = FLAnimatedImage/FLAnimatedImageView.h; sourceTree = "<group>"; };
 		3D3AF5B12FD98BDCCAEBA28325A51BA0 /* Pods-CRAnimation_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CRAnimation_Example-dummy.m"; sourceTree = "<group>"; };
 		4116B7BF7D945657E9B1DA401D330565 /* UIImage+Snapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Snapshot.h"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.h"; sourceTree = "<group>"; };
 		42C5CCA4476FD30AE75ED1D6431451CE /* FLAnimatedImage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FLAnimatedImage.xcconfig; sourceTree = "<group>"; };
-		4360422B35530DABDCC0EEC536633443 /* CRInterimImageCellView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CRInterimImageCellView.m; sourceTree = "<group>"; };
 		4414BD9EDC0417EFF09F099B7B0A60BC /* FLAnimatedImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FLAnimatedImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		459623228465A4D4F79BAC9581F37D81 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		479D41CAF573DD48732B13BA8F3EE520 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		4A5B709B0D2556786D7C5AA9C6B857CB /* CRAnimation-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CRAnimation-umbrella.h"; sourceTree = "<group>"; };
 		4B5C7AEA2FD5049E1852ADEAC3EA7A13 /* NSMutableAttributedString+BearSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableAttributedString+BearSet.m"; path = "Pod/Classes/AttributeString/NSMutableAttributedString+BearSet.m"; sourceTree = "<group>"; };
 		4B9903130968559B970BD24268CB6E86 /* Pods-CRAnimation_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CRAnimation_Tests-resources.sh"; sourceTree = "<group>"; };
-		4BF3FD522F4075F7D016D849FA5C2F22 /* CRImageGradientView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CRImageGradientView.m; sourceTree = "<group>"; };
 		4CD93CA76D35D80F2841789542CD235A /* BearAlertContentView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BearAlertContentView.h; path = "Pod/Classes/UI&Extend/BearAlertView/BearAlertContentView.h"; sourceTree = "<group>"; };
-		500236C024F52AC30E736F7FB6C29213 /* CRCardViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CRCardViewCell.m; sourceTree = "<group>"; };
 		50A837E84FD1C1936A02DFA458A5F104 /* FLAnimatedImage.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = FLAnimatedImage.modulemap; sourceTree = "<group>"; };
 		50EA81B3064D10700AFC968AB582067E /* FLAnimatedImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FLAnimatedImage.h; path = FLAnimatedImage/FLAnimatedImage.h; sourceTree = "<group>"; };
 		52C27EF5C36944A6C3BBC08FB5952B5A /* UIImage+Diff.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Diff.h"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.h"; sourceTree = "<group>"; };
 		55CD27ED6BB5ED6F5D47218A52144146 /* Pods-CRAnimation_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CRAnimation_Example.release.xcconfig"; sourceTree = "<group>"; };
 		5794F1D61ACA4A76B8D93CD15C1CA95E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		5B50EEFE63372307716F7488412D735E /* FLAnimatedImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FLAnimatedImage.m; path = FLAnimatedImage/FLAnimatedImage.m; sourceTree = "<group>"; };
-		5E1C807968EFBCB0B6DB04C7D5A6DB4B /* CRCardAnimationView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CRCardAnimationView.m; sourceTree = "<group>"; };
 		5F6CFECE9084AA5D56043F3D06AF6A4A /* UIImage+Compare.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Compare.h"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.h"; sourceTree = "<group>"; };
 		63C07F4C2F4D196B7CC9911A9109DCD0 /* ApplicationOpenURLManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ApplicationOpenURLManager.m; path = Pod/Classes/Constants/ApplicationOpenURLManager.m; sourceTree = "<group>"; };
 		6407745F487D4AEEE904E5B6A2D8C108 /* FBSnapshotTestCase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-prefix.pch"; sourceTree = "<group>"; };
@@ -189,22 +189,25 @@
 		66C8320897A4B2AB631F619DA32A948F /* BearAlertView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BearAlertView.m; path = "Pod/Classes/UI&Extend/BearAlertView/BearAlertView.m"; sourceTree = "<group>"; };
 		6792C8C4E4EE52962A0C32A14E3F9F80 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
 		6D83629B9BA055520F9DBA21C1B79267 /* Pods-CRAnimation_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CRAnimation_Tests-umbrella.h"; sourceTree = "<group>"; };
-		710FF77886825870A15705A23F7ECDC5 /* CRAnimation.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = CRAnimation.modulemap; sourceTree = "<group>"; };
 		724E2B5C6BD7158DB207F03FDEF0CB56 /* Pods-CRAnimation_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CRAnimation_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		733D12F5A7ACDC8DFA9F925B8BF012E1 /* BearAlertBtnsView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BearAlertBtnsView.m; path = "Pod/Classes/UI&Extend/BearAlertView/BearAlertBtnsView.m"; sourceTree = "<group>"; };
 		73A03D26DA09CE954800092246E3D529 /* YLGIFImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YLGIFImage.h; path = YLGIFImage/YLGIFImage.h; sourceTree = "<group>"; };
 		73C130D9B40B685F82873E2B7D90FE93 /* Pods-CRAnimation_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CRAnimation_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		747A2A35F86A21DFA550AA54DF87CD27 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		7A528CC844AFE1D8653F24B1B84D61B0 /* CRAnimation.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CRAnimation.xcconfig; sourceTree = "<group>"; };
 		7C687EEB496A434F4933534C70409C7F /* FBSnapshotTestCase.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSnapshotTestCase.xcconfig; sourceTree = "<group>"; };
 		7D009DA5E96DF6F1272707825D5B6610 /* YLGIFImage.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = YLGIFImage.modulemap; sourceTree = "<group>"; };
 		81A65CADD1D3701EC2015E58608DBD93 /* BearCutOutView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BearCutOutView.h; path = "Pod/Classes/UI&Extend/BearCutOutView.h"; sourceTree = "<group>"; };
+		83DCC0F5B5B96E1A3A5623135122D837 /* CRCardViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CRCardViewCell.h; sourceTree = "<group>"; };
 		898D236BC47456D258891D431A0BB33E /* BearCutOutView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BearCutOutView.m; path = "Pod/Classes/UI&Extend/BearCutOutView.m"; sourceTree = "<group>"; };
 		89F3CF1BDD96708CEFF5D3FDEFDFDB6E /* BearSkill.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BearSkill.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A1BF7E40CC7C4751612456179D92B65 /* CRImageGradientView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CRImageGradientView.h; sourceTree = "<group>"; };
 		8A32F70B98F7DCC0F5B0D3A2C0E07B11 /* Pods-CRAnimation_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CRAnimation_Example-resources.sh"; sourceTree = "<group>"; };
 		8BED81DAC4569BB3A9130169F20056EB /* FBSnapshotTestCase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = FBSnapshotTestCase.modulemap; sourceTree = "<group>"; };
 		8F5A99FFAA7925AF654250E816E813B7 /* BearAlertBtnsView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BearAlertBtnsView.h; path = "Pod/Classes/UI&Extend/BearAlertView/BearAlertBtnsView.h"; sourceTree = "<group>"; };
 		8F7DDA0C848CD5ABBACDCD06F7A86CA0 /* Pods-CRAnimation_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CRAnimation_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		8FC1B03D8E94A078A1EA49845AE84009 /* Pods_CRAnimation_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CRAnimation_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		90504B35A945EDF8EB898EB917847F7F /* HZLaunchView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HZLaunchView.m; sourceTree = "<group>"; };
 		934B41D7D6F085959F59EB47D1D8BC74 /* UIImage+Snapshot.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Snapshot.m"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.m"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		955835640F68200B5340335A75122CFA /* UIImage+Compare.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Compare.m"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.m"; sourceTree = "<group>"; };
@@ -216,17 +219,16 @@
 		9DF066483509CA05F397BC21645E6B58 /* YLImageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YLImageView.h; path = YLGIFImage/YLImageView.h; sourceTree = "<group>"; };
 		9E7DE8E7EA66838A6804F4E123D76824 /* FBSnapshotTestCase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCase.m; path = FBSnapshotTestCase/FBSnapshotTestCase.m; sourceTree = "<group>"; };
 		9EEE5B487A730049D50CAC3995E3F67B /* UIImage+Diff.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Diff.m"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.m"; sourceTree = "<group>"; };
-		9F44884E13CDB4E16EB1CEA793D352F3 /* CRAnimation-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CRAnimation-umbrella.h"; sourceTree = "<group>"; };
 		9FA98844F9EB46FA80CB3F6E0ACBA6D9 /* FLAnimatedImage-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FLAnimatedImage-umbrella.h"; sourceTree = "<group>"; };
 		A0CC60EC687223326A6B04A7CEBDA8BF /* Pods-CRAnimation_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CRAnimation_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		A342AFDFD631252BC47087AE938574DF /* FBSnapshotTestCasePlatform.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCasePlatform.h; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.h; sourceTree = "<group>"; };
+		A4DF6DCF9EA676503F8363A1635A7387 /* CRCardViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CRCardViewCell.m; sourceTree = "<group>"; };
 		A66671ED184370988A3803B402634C81 /* Pods-CRAnimation_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CRAnimation_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		A6D6C9F9C24BB0D2D7B461549835A520 /* UITableView+BearStoreCellHeight.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITableView+BearStoreCellHeight.m"; path = "Pod/Classes/Layout/UITableView+BearStoreCellHeight.m"; sourceTree = "<group>"; };
 		A8CFADE545EC16FEFE8A72DE74B87D88 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		A912AA1C30CAABF4D35D917DBD6B95B3 /* BearConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BearConstants.h; path = Pod/Classes/Constants/BearConstants.h; sourceTree = "<group>"; };
 		AADF29557DDC6A3797396119A13FFF9C /* BearSkill-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BearSkill-umbrella.h"; sourceTree = "<group>"; };
 		ABBBACDB562541175704A0CA09A1F94F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AC5EC1D0CB820F897259490D5A3CA5CE /* CRAnimation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CRAnimation-dummy.m"; sourceTree = "<group>"; };
 		AF0EFE14E82FDFDFAC53C0A54A3F0A07 /* BearSkill-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BearSkill-prefix.pch"; sourceTree = "<group>"; };
 		AFF06114D3C24DA90D3B63EB004BAE4C /* Pods-CRAnimation_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CRAnimation_Tests.modulemap"; sourceTree = "<group>"; };
 		B0AD27FE66EBDB217D02D340143CCE00 /* UIView+BearSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+BearSet.m"; path = "Pod/Classes/Layout/UIView+BearSet.m"; sourceTree = "<group>"; };
@@ -234,10 +236,10 @@
 		B75D1F78C44061E07C12F2CA974B32AC /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
 		B96670526817D7E763CE985F6523E348 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB00760FCB2AAA063325F5D53952A009 /* FBSnapshotTestCase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCase.h; path = FBSnapshotTestCase/FBSnapshotTestCase.h; sourceTree = "<group>"; };
+		BD81223B12A02B01D4AA0B217620C429 /* CRAnimation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CRAnimation-dummy.m"; sourceTree = "<group>"; };
 		BF0E30A4A95D768EE94334A7233E3106 /* FBSnapshotTestController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestController.h; path = FBSnapshotTestCase/FBSnapshotTestController.h; sourceTree = "<group>"; };
 		C17F20767E984680D00E9A3FCE728BC5 /* YLGIFImage-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YLGIFImage-umbrella.h"; sourceTree = "<group>"; };
 		C4561276D690F2E75BAD82746EE2F7BC /* Pods_CRAnimation_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CRAnimation_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C4BEB1E9FDECB55358509B37498799BF /* CRAnimation.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CRAnimation.xcconfig; sourceTree = "<group>"; };
 		C5B07EF3F188C1F1A3238C9FEF4CEF51 /* ApplicationOpenURLManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ApplicationOpenURLManager.h; path = Pod/Classes/Constants/ApplicationOpenURLManager.h; sourceTree = "<group>"; };
 		C73D1468056824F7AD53AD99BBD1FBFC /* FBSnapshotTestCasePlatform.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCasePlatform.m; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.m; sourceTree = "<group>"; };
 		CB2DDED46E5EFE252F66EAA0FEF155D6 /* BearConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BearConstants.m; path = Pod/Classes/Constants/BearConstants.m; sourceTree = "<group>"; };
@@ -245,22 +247,24 @@
 		D26EDDABD63DC8BCEBEE0EF1BE1959F4 /* UITableView+BearStoreCellHeight.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITableView+BearStoreCellHeight.h"; path = "Pod/Classes/Layout/UITableView+BearStoreCellHeight.h"; sourceTree = "<group>"; };
 		D3938CD321C3BED1240C0F647CE15566 /* UIApplication+StrictKeyWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+StrictKeyWindow.m"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.m"; sourceTree = "<group>"; };
 		D4089CF5B7DC5FCE8B053A63904EC4B4 /* Pods-CRAnimation_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CRAnimation_Tests-dummy.m"; sourceTree = "<group>"; };
-		D4E164934C471E7059B8FA107DEBE341 /* CRImageGradientView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CRImageGradientView.h; sourceTree = "<group>"; };
+		DD83B7FEEA32B06D26D0D567F9CE7564 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0EE1CCC5E8DB162C86571333131725F /* YLGIFImage-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YLGIFImage-prefix.pch"; sourceTree = "<group>"; };
-		E311D3CB108F0A123DE20270D94B3DED /* CRInterimImageCellView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CRInterimImageCellView.h; sourceTree = "<group>"; };
 		E3D162D0AB86403E915AF740037FF9E2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E5154B6585A0DC2C647642224DBF6485 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5D8F6E7A9D3AFC6B7D3D677EEC2BB06 /* Pods-CRAnimation_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CRAnimation_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		E72335447D810316457585D5639CCDF7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		E7BEAD4969E9FB760290379994A84065 /* CRAnimation.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = CRAnimation.modulemap; sourceTree = "<group>"; };
 		EBF760FDF6F4BE3676CB89B1EBD88CB1 /* UILabel+BearSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UILabel+BearSet.m"; path = "Pod/Classes/UI&Extend/UILabel+BearSet.m"; sourceTree = "<group>"; };
 		EDFFB2BF4A5D49B1436A209A22ECEE6D /* FBSnapshotTestCase-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-umbrella.h"; sourceTree = "<group>"; };
 		EE2BC9BE38AF0FAD85B8D0972B2F2689 /* FLAnimatedImage-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FLAnimatedImage-prefix.pch"; sourceTree = "<group>"; };
+		EEE29E040F7CA17F4A1D4327697777CD /* HZLaunchView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HZLaunchView.h; sourceTree = "<group>"; };
+		F0F9CB9F2FEC7FC5F707B4842B047FFD /* CRInterimImageCellView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CRInterimImageCellView.m; sourceTree = "<group>"; };
 		F19B1F8300F51A33CD771E6DD6B1345B /* YLGIFImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YLGIFImage.m; path = YLGIFImage/YLGIFImage.m; sourceTree = "<group>"; };
 		F72CC6FC992CD7B2A2B8E03AC925ED91 /* FBSnapshotTestCase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FBSnapshotTestCase-dummy.m"; sourceTree = "<group>"; };
 		F7ABA18C194AB1F42BACF1F38AFD00EE /* NSMutableAttributedString+BearSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMutableAttributedString+BearSet.h"; path = "Pod/Classes/AttributeString/NSMutableAttributedString+BearSet.h"; sourceTree = "<group>"; };
 		F8E7BAF284171CF436B56A95272FCB32 /* YLGIFImage-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YLGIFImage-dummy.m"; sourceTree = "<group>"; };
 		FA1F34B0531DBDF20B226017A3C5C434 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD2064BB5F0F4CAE69B7B3A7B94CD222 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFDECD33ECD9DF21D753FC3F64DE4059 /* CRCardAnimationView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CRCardAnimationView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -280,13 +284,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9ABE57376B43BF2FA7639055624BF3EF /* Frameworks */ = {
+		7E5E203C15AD95216919165D9C947359 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCDFF290B95DFAABBB8EAD9C19F6B6DF /* BearSkill.framework in Frameworks */,
-				F5ADA618B4749ED385A55FA09EAA029B /* Foundation.framework in Frameworks */,
-				42E2C9AF7E7618CE9796BE4BA47204C8 /* UIKit.framework in Frameworks */,
+				998BC1D7D846CFBB87696CC22FF956C3 /* BearSkill.framework in Frameworks */,
+				7AE71CD505F43D5D0B63508937383B98 /* Foundation.framework in Frameworks */,
+				F01C71FCBE8D6F9A6595E0B2DEBD983E /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,15 +351,38 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		1409A4B495299FFEE1E5C8F9649CE7C6 /* CRCardAnimationView */ = {
+		1807AC670AE89234731C658B35DBB6DC /* HZLaunchView */ = {
 			isa = PBXGroup;
 			children = (
-				22F73F99953C3B1E5A7D254CFB076A03 /* CRCardAnimationView.h */,
-				5E1C807968EFBCB0B6DB04C7D5A6DB4B /* CRCardAnimationView.m */,
-				1507EB838BD6075CF1E31ECFC7EF3795 /* CRCardViewCell.h */,
-				500236C024F52AC30E736F7FB6C29213 /* CRCardViewCell.m */,
+				FD935CA7BDBE4BD156EA5C09E3F6AC4C /* Pod */,
 			);
-			path = CRCardAnimationView;
+			name = HZLaunchView;
+			sourceTree = "<group>";
+		};
+		1AA2A3918B9E79CEC931F9747EAF6644 /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				248145C7BF31593BDE43960AE0817C8F /* CRCardAnimationView */,
+				ECB564719EBECB4A563DBD44FBCE83FC /* CRImageGradientView */,
+				1807AC670AE89234731C658B35DBB6DC /* HZLaunchView */,
+			);
+			name = Widget;
+			sourceTree = "<group>";
+		};
+		244B09656DB9A41ACA6F2DBC1E6F7CBA /* CRWidget */ = {
+			isa = PBXGroup;
+			children = (
+				5EBFDF73965CA0D4274363B2C88C1D3B /* HZLaunchView */,
+			);
+			path = CRWidget;
+			sourceTree = "<group>";
+		};
+		248145C7BF31593BDE43960AE0817C8F /* CRCardAnimationView */ = {
+			isa = PBXGroup;
+			children = (
+				DF3795967AF8783FBC5711606001DF74 /* Pod */,
+			);
+			name = CRCardAnimationView;
 			sourceTree = "<group>";
 		};
 		279810ADF56FF4813016660861B51893 /* Pods-CRAnimation_Example */ = {
@@ -374,6 +401,17 @@
 			);
 			name = "Pods-CRAnimation_Example";
 			path = "Target Support Files/Pods-CRAnimation_Example";
+			sourceTree = "<group>";
+		};
+		2A48434405569CD78D366AB3BEB4C3CB /* CRImageGradientView */ = {
+			isa = PBXGroup;
+			children = (
+				8A1BF7E40CC7C4751612456179D92B65 /* CRImageGradientView.h */,
+				3820B8A0013F9F7B28081CC4CA0E0DD1 /* CRImageGradientView.m */,
+				18CFA387552182655B4B96CF40634F76 /* CRInterimImageCellView.h */,
+				F0F9CB9F2FEC7FC5F707B4842B047FFD /* CRInterimImageCellView.m */,
+			);
+			path = CRImageGradientView;
 			sourceTree = "<group>";
 		};
 		2CDFE4B4A0B7C09E5BDD297CC78B2823 /* BearSkill */ = {
@@ -406,27 +444,25 @@
 			path = BearSkill;
 			sourceTree = "<group>";
 		};
-		4342BE63904F1EB38D9580CF6790EF95 /* Widget */ = {
+		49E3A55C3EED88A5FACA56C651DBD001 /* CRAnimation */ = {
 			isa = PBXGroup;
 			children = (
-				E72A46EE88E907E73C4D1330EA834FEB /* CRCardAnimationView */,
-				BC4FC098B191DEBE7B081CF691E2905D /* CRImageGradientView */,
+				C7F6094D95216137E79DCCD6D337C184 /* Support Files */,
+				1AA2A3918B9E79CEC931F9747EAF6644 /* Widget */,
 			);
-			name = Widget;
+			name = CRAnimation;
+			path = ../..;
 			sourceTree = "<group>";
 		};
-		52AE40F1395549146A9DE8206D6316D0 /* Support Files */ = {
+		4DAEEEC660CFC5750D27F657B43CDA2D /* CRCardAnimationView */ = {
 			isa = PBXGroup;
 			children = (
-				710FF77886825870A15705A23F7ECDC5 /* CRAnimation.modulemap */,
-				C4BEB1E9FDECB55358509B37498799BF /* CRAnimation.xcconfig */,
-				AC5EC1D0CB820F897259490D5A3CA5CE /* CRAnimation-dummy.m */,
-				31F59495BFC3D9EE2B082197EECFCE9A /* CRAnimation-prefix.pch */,
-				9F44884E13CDB4E16EB1CEA793D352F3 /* CRAnimation-umbrella.h */,
-				E5154B6585A0DC2C647642224DBF6485 /* Info.plist */,
+				FFDECD33ECD9DF21D753FC3F64DE4059 /* CRCardAnimationView.h */,
+				27B35D0077C99BDBF04E5DCD3A764B6D /* CRCardAnimationView.m */,
+				83DCC0F5B5B96E1A3A5623135122D837 /* CRCardViewCell.h */,
+				A4DF6DCF9EA676503F8363A1635A7387 /* CRCardViewCell.m */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/CRAnimation";
+			path = CRCardAnimationView;
 			sourceTree = "<group>";
 		};
 		575FB88E193607F437F134BF1BD6EB1F /* Targets Support Files */ = {
@@ -464,6 +500,23 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/FBSnapshotTestCase";
+			sourceTree = "<group>";
+		};
+		5EBFDF73965CA0D4274363B2C88C1D3B /* HZLaunchView */ = {
+			isa = PBXGroup;
+			children = (
+				EEE29E040F7CA17F4A1D4327697777CD /* HZLaunchView.h */,
+				90504B35A945EDF8EB898EB917847F7F /* HZLaunchView.m */,
+			);
+			path = HZLaunchView;
+			sourceTree = "<group>";
+		};
+		6789D9E25CA298304E38DC20883810C7 /* CRWidget */ = {
+			isa = PBXGroup;
+			children = (
+				2A48434405569CD78D366AB3BEB4C3CB /* CRImageGradientView */,
+			);
+			path = CRWidget;
 			sourceTree = "<group>";
 		};
 		6D19A35368AE869B85EE7D0B0DF9B40B /* Core */ = {
@@ -581,14 +634,6 @@
 			path = "../Target Support Files/YLGIFImage";
 			sourceTree = "<group>";
 		};
-		8E94F42758AA5BFF1200B2E795FC4051 /* CRWidget */ = {
-			isa = PBXGroup;
-			children = (
-				1409A4B495299FFEE1E5C8F9649CE7C6 /* CRCardAnimationView */,
-			);
-			path = CRWidget;
-			sourceTree = "<group>";
-		};
 		8F972008F2F2E7A266452002F2A0B518 /* YLGIFImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -604,44 +649,25 @@
 		9CD92979552219668592211BFBBADFF2 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C79318C50FEE52927323E73106E3FC70 /* CRAnimation */,
+				49E3A55C3EED88A5FACA56C651DBD001 /* CRAnimation */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		9FE8E0C658E30901EBA5A8992C832E9C /* Pod */ = {
+		A520AEC60E87E548FD24B2C9F8374B90 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				FB68850F93397F1B92EF317CB00F4AEA /* CRWidget */,
+				6789D9E25CA298304E38DC20883810C7 /* CRWidget */,
 			);
 			path = Pod;
 			sourceTree = "<group>";
 		};
-		B663D412317012F9399830680B243E5F /* CRImageGradientView */ = {
+		A8D36D922D6811EC9D4F7F0C56C8FEF5 /* CRWidget */ = {
 			isa = PBXGroup;
 			children = (
-				D4E164934C471E7059B8FA107DEBE341 /* CRImageGradientView.h */,
-				4BF3FD522F4075F7D016D849FA5C2F22 /* CRImageGradientView.m */,
-				E311D3CB108F0A123DE20270D94B3DED /* CRInterimImageCellView.h */,
-				4360422B35530DABDCC0EEC536633443 /* CRInterimImageCellView.m */,
+				4DAEEEC660CFC5750D27F657B43CDA2D /* CRCardAnimationView */,
 			);
-			path = CRImageGradientView;
-			sourceTree = "<group>";
-		};
-		BC4FC098B191DEBE7B081CF691E2905D /* CRImageGradientView */ = {
-			isa = PBXGroup;
-			children = (
-				9FE8E0C658E30901EBA5A8992C832E9C /* Pod */,
-			);
-			name = CRImageGradientView;
-			sourceTree = "<group>";
-		};
-		BEE8E478724722607D0F4A5AF6B8C65F /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				8E94F42758AA5BFF1200B2E795FC4051 /* CRWidget */,
-			);
-			path = Pod;
+			path = CRWidget;
 			sourceTree = "<group>";
 		};
 		C30864E9FE2F37B66E205FDF97573AE4 /* SwiftSupport */ = {
@@ -666,14 +692,18 @@
 			path = "../Target Support Files/FLAnimatedImage";
 			sourceTree = "<group>";
 		};
-		C79318C50FEE52927323E73106E3FC70 /* CRAnimation */ = {
+		C7F6094D95216137E79DCCD6D337C184 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				52AE40F1395549146A9DE8206D6316D0 /* Support Files */,
-				4342BE63904F1EB38D9580CF6790EF95 /* Widget */,
+				E7BEAD4969E9FB760290379994A84065 /* CRAnimation.modulemap */,
+				7A528CC844AFE1D8653F24B1B84D61B0 /* CRAnimation.xcconfig */,
+				BD81223B12A02B01D4AA0B217620C429 /* CRAnimation-dummy.m */,
+				148AE577136F2F65A8909848A25AFEC2 /* CRAnimation-prefix.pch */,
+				4A5B709B0D2556786D7C5AA9C6B857CB /* CRAnimation-umbrella.h */,
+				DD83B7FEEA32B06D26D0D567F9CE7564 /* Info.plist */,
 			);
-			name = CRAnimation;
-			path = ../..;
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/CRAnimation";
 			sourceTree = "<group>";
 		};
 		D1D2C2096E1FB3232129CA50EA7610A6 /* Frameworks */ = {
@@ -685,20 +715,28 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E72A46EE88E907E73C4D1330EA834FEB /* CRCardAnimationView */ = {
+		DF3795967AF8783FBC5711606001DF74 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				BEE8E478724722607D0F4A5AF6B8C65F /* Pod */,
+				A8D36D922D6811EC9D4F7F0C56C8FEF5 /* CRWidget */,
 			);
-			name = CRCardAnimationView;
+			path = Pod;
 			sourceTree = "<group>";
 		};
-		FB68850F93397F1B92EF317CB00F4AEA /* CRWidget */ = {
+		ECB564719EBECB4A563DBD44FBCE83FC /* CRImageGradientView */ = {
 			isa = PBXGroup;
 			children = (
-				B663D412317012F9399830680B243E5F /* CRImageGradientView */,
+				A520AEC60E87E548FD24B2C9F8374B90 /* Pod */,
 			);
-			path = CRWidget;
+			name = CRImageGradientView;
+			sourceTree = "<group>";
+		};
+		FD935CA7BDBE4BD156EA5C09E3F6AC4C /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				244B09656DB9A41ACA6F2DBC1E6F7CBA /* CRWidget */,
+			);
+			path = Pod;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -734,6 +772,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A36A658D9FF8E174A1C754B6F9FABDE /* Pods-CRAnimation_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5902FD1B61B15C7082425535A26FF008 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FEB01F30A4E3E63F9DE37DD83ECA715 /* CRAnimation-umbrella.h in Headers */,
+				7C1C31527303B66D65E554E1116B5329 /* CRCardAnimationView.h in Headers */,
+				96B1B5B6EE02C040E6CA5CFB8FCD7602 /* CRCardViewCell.h in Headers */,
+				8DDDE1D87E8E62C27CDFCD24B0BF6F56 /* CRImageGradientView.h in Headers */,
+				FE43009973BAD993B3B16F4CD82468F4 /* CRInterimImageCellView.h in Headers */,
+				E75ED064DE0FA4DB7878E82C7CE8F90C /* HZLaunchView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -774,39 +825,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BB57B568A0AEB3EDFE0DB58FE6E398F5 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				30A989A3AD611FB7EEE41C265020CAFA /* CRAnimation-umbrella.h in Headers */,
-				88895ED48237ED79998E6210025708F7 /* CRCardAnimationView.h in Headers */,
-				1E5F6C4BA563752D6A0E3E532668A896 /* CRCardViewCell.h in Headers */,
-				3BCE3DE6890F7135A6B7DCB88074DE4A /* CRImageGradientView.h in Headers */,
-				435EA36035FD6601CC7914C77A65BA2D /* CRInterimImageCellView.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0214E4DA2F95E5199DE9B66560683FCC /* CRAnimation */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 57FA246AEBC96F1EB6E947D19A64624A /* Build configuration list for PBXNativeTarget "CRAnimation" */;
-			buildPhases = (
-				25AD163E0E49E5B185DE04D65EFBAD3A /* Sources */,
-				9ABE57376B43BF2FA7639055624BF3EF /* Frameworks */,
-				BB57B568A0AEB3EDFE0DB58FE6E398F5 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A523C211FF7F26EC04331EA34CF9A9A6 /* PBXTargetDependency */,
-			);
-			name = CRAnimation;
-			productName = CRAnimation;
-			productReference = 9B12728872DE8A74C1049E0A33AFE37A /* CRAnimation.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		3D40BFA54F395A8592B54E1949639585 /* Pods-CRAnimation_Tests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8B148CD7702D1D30835B2642379F76A9 /* Build configuration list for PBXNativeTarget "Pods-CRAnimation_Tests" */;
@@ -897,6 +918,24 @@
 			productReference = 89F3CF1BDD96708CEFF5D3FDEFDFDB6E /* BearSkill.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		E7D237DDFFCF75F73AA2D2846F63EED3 /* CRAnimation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C4407E03AFAA5D3240F261A08BA7695 /* Build configuration list for PBXNativeTarget "CRAnimation" */;
+			buildPhases = (
+				C23948708E1E482C04076D0509399153 /* Sources */,
+				7E5E203C15AD95216919165D9C947359 /* Frameworks */,
+				5902FD1B61B15C7082425535A26FF008 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				28DEC12C08CC0F98F9771FFD3A11E39C /* PBXTargetDependency */,
+			);
+			name = CRAnimation;
+			productName = CRAnimation;
+			productReference = 9B12728872DE8A74C1049E0A33AFE37A /* CRAnimation.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		FE113CEF81C16AA59EC049ACE130BCB2 /* FLAnimatedImage */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3E4AFDEDCC47C4415CB9B5B395C41321 /* Build configuration list for PBXNativeTarget "FLAnimatedImage" */;
@@ -936,7 +975,7 @@
 			projectRoot = "";
 			targets = (
 				C87B41C54D1B542E2DED06AF9808F251 /* BearSkill */,
-				0214E4DA2F95E5199DE9B66560683FCC /* CRAnimation */,
+				E7D237DDFFCF75F73AA2D2846F63EED3 /* CRAnimation */,
 				5DB46EA499F9A5E22765121102FCC34B /* FBSnapshotTestCase */,
 				FE113CEF81C16AA59EC049ACE130BCB2 /* FLAnimatedImage */,
 				BB34AB653E18B2BB0B98AB5E1EEB5D9E /* Pods-CRAnimation_Example */,
@@ -952,18 +991,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				27A33CE096496EBEE885A85D05CEC807 /* Pods-CRAnimation_Tests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		25AD163E0E49E5B185DE04D65EFBAD3A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9CEAB046483FB3564DEFDD91DB2AA4E7 /* CRAnimation-dummy.m in Sources */,
-				5DA7EDC0C17483E3D68302FD0E718A2F /* CRCardAnimationView.m in Sources */,
-				34F03C06652B46C48A256E392BE3C966 /* CRCardViewCell.m in Sources */,
-				B7E08737365EB473C75D2D2C0340CE76 /* CRImageGradientView.m in Sources */,
-				A236A5E3E0B421E6866518B8DEEB88C7 /* CRInterimImageCellView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1010,6 +1037,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C23948708E1E482C04076D0509399153 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25489E481D4A29E169386B593AD619BA /* CRAnimation-dummy.m in Sources */,
+				C8E0BFC7F9D6C2F24273ECBE6D971942 /* CRCardAnimationView.m in Sources */,
+				035EC5ED21F61A34BC73FFE05EDF91F8 /* CRCardViewCell.m in Sources */,
+				339CBD2CED13C05550DBF9C643D0C532 /* CRImageGradientView.m in Sources */,
+				FCFFB0AD67DC3354EF9CAA7AFDE831BF /* CRInterimImageCellView.m in Sources */,
+				3ECE3E8548852AEF65140695115480D9 /* HZLaunchView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E698BFE933E7AED7D7933A1EE2BAAC8C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1039,6 +1079,12 @@
 			target = 94A0B9827A8D09964FCEA49BE6A2265A /* YLGIFImage */;
 			targetProxy = 670E694FD8DFE50A8D03C6F629DB41E7 /* PBXContainerItemProxy */;
 		};
+		28DEC12C08CC0F98F9771FFD3A11E39C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BearSkill;
+			target = C87B41C54D1B542E2DED06AF9808F251 /* BearSkill */;
+			targetProxy = 6C383350E416D12637EAC0FE21E0B706 /* PBXContainerItemProxy */;
+		};
 		2D49CD78A38BC54081075F2F3F488D0F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = BearSkill;
@@ -1057,16 +1103,10 @@
 			target = 5DB46EA499F9A5E22765121102FCC34B /* FBSnapshotTestCase */;
 			targetProxy = 9EFC46CC295A6E0003CF2CB170F7BF4A /* PBXContainerItemProxy */;
 		};
-		A523C211FF7F26EC04331EA34CF9A9A6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = BearSkill;
-			target = C87B41C54D1B542E2DED06AF9808F251 /* BearSkill */;
-			targetProxy = D38CE8E64FDD8E339F2DE982D81487DC /* PBXContainerItemProxy */;
-		};
 		E4BB2E9BF863D08890CA6D1619131570 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CRAnimation;
-			target = 0214E4DA2F95E5199DE9B66560683FCC /* CRAnimation */;
+			target = E7D237DDFFCF75F73AA2D2846F63EED3 /* CRAnimation */;
 			targetProxy = D66A031B826DC19B360E169F02788859 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1148,38 +1188,6 @@
 			};
 			name = Debug;
 		};
-		2CFAB1FB2DED60420E65E558797224F0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C4BEB1E9FDECB55358509B37498799BF /* CRAnimation.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/CRAnimation/CRAnimation-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CRAnimation/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/CRAnimation/CRAnimation.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = CRAnimation;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		2EF42BB57A19C2D134F073008F2A04D6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0C9576B62F75157F9B09483F16EC81DD /* BearSkill.xcconfig */;
@@ -1211,6 +1219,38 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		2F886BCC5181DAA3A93533E89B112559 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A528CC844AFE1D8653F24B1B84D61B0 /* CRAnimation.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/CRAnimation/CRAnimation-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CRAnimation/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CRAnimation/CRAnimation.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = CRAnimation;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		44CDBB6D11DE06DB64D6268622BDC47E /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1287,6 +1327,38 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		90ADE98677C2B4F46F50A7CA2A33EF60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A528CC844AFE1D8653F24B1B84D61B0 /* CRAnimation.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/CRAnimation/CRAnimation-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CRAnimation/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CRAnimation/CRAnimation.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = CRAnimation;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		9B896600DB6F1D801FDFE48ECECC1F76 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1487,38 +1559,6 @@
 			};
 			name = Debug;
 		};
-		E2179160B5C52E636C3158A52A50EDED /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C4BEB1E9FDECB55358509B37498799BF /* CRAnimation.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/CRAnimation/CRAnimation-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CRAnimation/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/CRAnimation/CRAnimation.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = CRAnimation;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		E6B9AAB48FE03613917D4FD5E647B579 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0C9576B62F75157F9B09483F16EC81DD /* BearSkill.xcconfig */;
@@ -1621,6 +1661,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2C4407E03AFAA5D3240F261A08BA7695 /* Build configuration list for PBXNativeTarget "CRAnimation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F886BCC5181DAA3A93533E89B112559 /* Debug */,
+				90ADE98677C2B4F46F50A7CA2A33EF60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1644,15 +1693,6 @@
 			buildConfigurations = (
 				AB60E5A4B080AFB649E549E1B24192FA /* Debug */,
 				F6E0EC23DEABC3B86B431F2B7DD1CEDE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		57FA246AEBC96F1EB6E947D19A64624A /* Build configuration list for PBXNativeTarget "CRAnimation" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2CFAB1FB2DED60420E65E558797224F0 /* Debug */,
-				E2179160B5C52E636C3158A52A50EDED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
