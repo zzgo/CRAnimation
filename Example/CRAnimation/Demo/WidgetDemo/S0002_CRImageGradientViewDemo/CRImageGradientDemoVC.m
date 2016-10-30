@@ -79,7 +79,7 @@
 - (void)createTimer
 {
     __weak typeof(self) weakSelf = self;
-    CGFloat duration = 2.0f;   //间隔时间
+    CGFloat duration = 1.3f;   //间隔时间
     
     if (!_queue) {
         _queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);

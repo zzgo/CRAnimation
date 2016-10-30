@@ -39,6 +39,7 @@
 		092A2D691DBCA8DA00650DE1 /* WCLLoadingViewDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092A2D631DBCA8DA00650DE1 /* WCLLoadingViewDemoVC.swift */; };
 		092A2D6A1DBCA8DA00650DE1 /* WCLLoadingViewDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 092A2D641DBCA8DA00650DE1 /* WCLLoadingViewDemoVC.xib */; };
 		0993B46D1DA9C6790012F962 /* CRBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0993B46C1DA9C6790012F962 /* CRBaseViewController.m */; };
+		09D168D81DC620210082C35E /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 09D168D61DC620210082C35E /* README.md */; };
 		09EE9BA01DBCE2E400BD81A2 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 09EE9B9F1DBCE2E400BD81A2 /* README.md */; };
 		09EE9BA21DBCEA5A00BD81A2 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 09EE9BA11DBCEA5A00BD81A2 /* README.md */; };
 		257751521DC25A790019D38B /* HZLaunchViewDemoInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2577514F1DC25A790019D38B /* HZLaunchViewDemoInfoModel.m */; };
@@ -128,6 +129,7 @@
 		092A2D641DBCA8DA00650DE1 /* WCLLoadingViewDemoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WCLLoadingViewDemoVC.xib; sourceTree = "<group>"; };
 		0993B46B1DA9C6790012F962 /* CRBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRBaseViewController.h; sourceTree = "<group>"; };
 		0993B46C1DA9C6790012F962 /* CRBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRBaseViewController.m; sourceTree = "<group>"; };
+		09D168D61DC620210082C35E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		09D937D51DAEAC69007694BA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 		09EE9B9F1DBCE2E400BD81A2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		09EE9BA11DBCEA5A00BD81A2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 		0920033B1DAAA20B008266B8 /* WidgetDemo */ = {
 			isa = PBXGroup;
 			children = (
+				09D168D51DC61FFB0082C35E /* S0000_SampleDemo */,
 				092A2D0B1DBCA51C00650DE1 /* S0001_CRCardAnimationViewDemo */,
 				092A2D111DBCA51C00650DE1 /* S0002_CRImageGradientViewDemo */,
 				092A2D181DBCA51C00650DE1 /* S0003_GifDemo */,
@@ -327,6 +330,14 @@
 				092003141DAA9B63008266B8 /* CRBaseNavigationViewController.m */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		09D168D51DC61FFB0082C35E /* S0000_SampleDemo */ = {
+			isa = PBXGroup;
+			children = (
+				09D168D61DC620210082C35E /* README.md */,
+			);
+			path = S0000_SampleDemo;
 			sourceTree = "<group>";
 		};
 		2577514D1DC25A790019D38B /* S0005_HZLaunchView */ = {
@@ -692,6 +703,7 @@
 				0993B46D1DA9C6790012F962 /* CRBaseViewController.m in Sources */,
 				092003581DADC3F2008266B8 /* CRItemBriefCollectionViewCell.m in Sources */,
 				092A2D4E1DBCA54C00650DE1 /* CRMyCardView.m in Sources */,
+				09D168D81DC620210082C35E /* README.md in Sources */,
 				092003631DADCE2A008266B8 /* CRItemBriefSetcionHeaderView.m in Sources */,
 				092A2D311DBCA51C00650DE1 /* GifDemoInfoModel.m in Sources */,
 				257751531DC25A790019D38B /* HZLaunchViewDemoVC.m in Sources */,
