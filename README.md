@@ -19,7 +19,7 @@ CRAnimation为开源项目，CRAnimation Pod仓库中整理了各种封装好的
 
 如果开发者对源码感兴趣，也可以研究源码，给作者提建议，提升代码质量，完善代码接口和功能。
 
-<img src="http://oftcdgt2m.bkt.clouddn.com/Base/CRPerformance2.gif" width=150 />
+<img src="http://oftcdgt2m.bkt.clouddn.com/Base/CRPerformance3.gif" width=150 />
 
 ### 特色：
 
