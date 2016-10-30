@@ -44,7 +44,7 @@ CRAnimation为开源项目，CRAnimation Pod仓库中整理了各种封装好的
 - Gif demo
 - Gif播放控件
 
-<img src="http://oftcdgt2m.bkt.clouddn.com/S0003/GifPlay.gif" width=150 />
+<img src="http://oftcdgt2m.bkt.clouddn.com/S0003/GifPlay1.gif" width=150 />
 
 - S0004
 - [WCLLoadingView](https://github.com/BearRan/CRAnimation/tree/master/Example/CRAnimation/Demo/WidgetDemo/S0004_WCLLoadingView)
