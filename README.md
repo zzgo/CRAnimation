@@ -19,7 +19,7 @@ CRAnimation为开源项目，CRAnimation Pod仓库中整理了各种封装好的
 
 如果开发者对源码感兴趣，也可以研究源码，给作者提建议，提升代码质量，完善代码接口和功能。
 
-<img src="http://oftcdgt2m.bkt.clouddn.com/Base/CRPerformance3.gif" width=150 />
+<img src="http://oftcdgt2m.bkt.clouddn.com/Base/CRPerformance4.gif" width=150 />
 
 ### 特色：
 
@@ -65,7 +65,7 @@ CRAnimation为开源项目，CRAnimation Pod仓库中整理了各种封装好的
 - [音乐切换动效](https://github.com/BearRan/CRAnimation/tree/master/Example/CRAnimation/Demo/MixDemo/C0001_CRMusicCardDemo)
 - CRCardAnimationView和CRImageGradientView的组合动效
 
-<img src="http://oftcdgt2m.bkt.clouddn.com/C0001/CRMusicCardDemoVC.gif" width=150 />
+<img src="http://oftcdgt2m.bkt.clouddn.com/C0001/CRMusicCardDemoVC1.gif" width=150 />
 
 ---
 ### Find
