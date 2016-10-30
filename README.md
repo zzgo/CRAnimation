@@ -53,6 +53,12 @@ CRAnimation为开源项目，CRAnimation Pod仓库中整理了各种封装好的
 
 <img src="http://oftcdgt2m.bkt.clouddn.com/S0004/WCLLoadingView.gif" width=150 />
 
+- S0005
+- [HZLaunchView](https://github.com/BearRan/CRAnimation/tree/master/Example/CRAnimation/Demo/WidgetDemo/S0005_HZLaunchView)
+- Twitter 的 Launch 动画
+
+<img src="http://of8uz9wjk.bkt.clouddn.com/HZLaunchView.gif" width=150 />
+
 ---
 ##组合动效
 
