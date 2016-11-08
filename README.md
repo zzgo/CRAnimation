@@ -1,4 +1,4 @@
-# CRAnimation计划
+# CRAnimation计 划
 
 [![Join the chat at https://gitter.im/CRAnimation/Lobby](https://badges.gitter.im/CRAnimation/Lobby.svg)](https://gitter.im/CRAnimation/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
