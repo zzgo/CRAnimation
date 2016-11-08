@@ -7,7 +7,7 @@
 //
 
 #import "CRGatlingVC.h"
-#import "ProgressView.h"
+#import "CRGatling.h"
 @interface CRGatlingVC ()
 
 @property (weak, nonatomic) IBOutlet UITextField *textField;
@@ -15,11 +15,11 @@
 
 @implementation CRGatlingVC
 {
-    ProgressView *progressView;
+    CRGatling *progressView;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    progressView=[[ProgressView alloc]initWithFrame:CGRectMake(5, 50, 355, 75)];
+    progressView=[[CRGatling alloc]initWithFrame:CGRectMake(5, 50, 355, 75)];
     [self.view addSubview:progressView];
 }
 - (IBAction)okSet:(UIButton *)sender {

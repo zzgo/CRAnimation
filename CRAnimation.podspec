@@ -37,8 +37,8 @@ Pod::Spec.new do |s|
         widget.subspec 'HZLaunchView' do |hzLaunchView|
             hzLaunchView.source_files = 'Pod/CRWidget/HZLaunchView/*'
         end
-        widget.subspec 'CRGatling' do |progressView|
-        progressView.source_files = 'Pod/CRWidget/ProgressView/*'
+        widget.subspec 'CRGatling' do |CRGatling|
+        CRGatling.source_files = 'Pod/CRWidget/CRGatling/*'
         end
 
     end

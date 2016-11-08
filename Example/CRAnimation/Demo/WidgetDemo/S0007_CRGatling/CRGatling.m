@@ -6,12 +6,12 @@
 //  Copyright © 2016年 I_MT. All rights reserved.
 //
 
-#import "ProgressView.h"
+#import "CRGatling.h"
 
-@interface ProgressView ()<CAAnimationDelegate>
+@interface CRGatling ()<CAAnimationDelegate>
 
 @end
-@implementation ProgressView
+@implementation CRGatling
 {
     UIImageView *bottomView;
     UIImageView *progressView;

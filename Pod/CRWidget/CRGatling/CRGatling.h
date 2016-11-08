@@ -10,7 +10,7 @@
 /**
  * Size： 355, 75  供参考
  */
-@interface ProgressView : UIImageView
+@interface CRGatling : UIImageView
 @property (nonatomic,assign)CGFloat  progress;
 @property (nonatomic,assign)CGFloat  duration; //单个树叶时长
 //**间隔时间,最好不要小于 1/60.0  */
