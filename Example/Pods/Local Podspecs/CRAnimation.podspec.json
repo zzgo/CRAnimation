@@ -40,6 +40,10 @@
         {
           "name": "HZLaunchView",
           "source_files": "Pod/CRWidget/HZLaunchView/*"
+        },
+        {
+          "name": "CRGatling",
+          "source_files": "Pod/CRWidget/ProgressView/*"
         }
       ]
     }
