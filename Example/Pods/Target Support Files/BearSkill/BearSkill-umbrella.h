@@ -1,6 +1,7 @@
 #import <UIKit/UIKit.h>
 
 #import "NSMutableAttributedString+BearSet.h"
+#import "ApplicationOpenURLManager.h"
 #import "BearConstants.h"
 #import "UITableView+BearStoreCellHeight.h"
 #import "UIView+BearSet.h"

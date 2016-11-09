@@ -1,5 +1,5 @@
 PODS:
-  - BearSkill (0.1.6)
+  - BearSkill (0.2.0)
   - CRAnimation (0.1.1):
     - BearSkill
     - CRAnimation/Widget (= 0.1.1)
@@ -7,17 +7,23 @@ PODS:
     - BearSkill
     - CRAnimation/Widget/CCWormHUD (= 0.1.1)
     - CRAnimation/Widget/CRCardAnimationView (= 0.1.1)
+    - CRAnimation/Widget/CRGatling (= 0.1.1)
     - CRAnimation/Widget/CRImageGradientView (= 0.1.1)
+    - CRAnimation/Widget/HZLaunchView (= 0.1.1)
   - CRAnimation/Widget/CCWormHUD (0.1.1):
     - BearSkill
   - CRAnimation/Widget/CRCardAnimationView (0.1.1):
     - BearSkill
+  - CRAnimation/Widget/CRGatling (0.1.1):
+    - BearSkill
   - CRAnimation/Widget/CRImageGradientView (0.1.1):
     - BearSkill
-  - FBSnapshotTestCase (2.1.2):
-    - FBSnapshotTestCase/SwiftSupport (= 2.1.2)
-  - FBSnapshotTestCase/Core (2.1.2)
-  - FBSnapshotTestCase/SwiftSupport (2.1.2):
+  - CRAnimation/Widget/HZLaunchView (0.1.1):
+    - BearSkill
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
   - FLAnimatedImage (1.0.12)
   - YLGIFImage (0.11)
@@ -33,9 +39,9 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  BearSkill: df366c1f09f0402036b0d53768160c0754f425d7
-  CRAnimation: 41ec281cfc88c25ba34956fa22c5d3a0afd00ebc
-  FBSnapshotTestCase: 918c55861356ee83aee7843d759f55a18ff6982b
+  BearSkill: 180b4d49cfae7466f65402eabcdb8d5a28665314
+  CRAnimation: 1a6e3a2dcd55878364fd8d66a2aa80b47e092997
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   YLGIFImage: c0ae132fe80e5282b2762a97d14e23ba71a748ae
 
