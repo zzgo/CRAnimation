@@ -34,5 +34,9 @@ Pod::Spec.new do |s|
             cardAnimationView.source_files = 'Pod/CRWidget/CRCardAnimationView/*'
         end
 
+        widget.subspec 'CCWormHUD' do |wormHUD|
+            wormHUD.source_files = 'Pod/CRWidget/CCWormHUD/*'
+        end
+
     end
 end
