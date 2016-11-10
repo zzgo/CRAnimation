@@ -1,9 +1,9 @@
-# CRAnimation计划
+# CRAnimation计 划
 
 [![Join the chat at https://gitter.im/CRAnimation/Lobby](https://badges.gitter.im/CRAnimation/Lobby.svg)](https://gitter.im/CRAnimation/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 <left>
-<img src="http://oftcdgt2m.bkt.clouddn.com/Base/TitleImage.png">
+<img src="http://oftcdgt2m.bkt.clouddn.com/Base/TitleImage1.png">
 </left>
 
 gitHub:<https://github.com/BearRan/CRAnimation>
@@ -19,7 +19,7 @@ CRAnimation为开源项目，CRAnimation Pod仓库中整理了各种封装好的
 
 如果开发者对源码感兴趣，也可以研究源码，给作者提建议，提升代码质量，完善代码接口和功能。
 
-<img src="http://oftcdgt2m.bkt.clouddn.com/Base/CRPerformance.gif" width=150 />
+<img src="http://oftcdgt2m.bkt.clouddn.com/Base/CRPerformance4.gif" width=150 />
 
 ### 特色：
 
@@ -32,20 +32,19 @@ CRAnimation为开源项目，CRAnimation Pod仓库中整理了各种封装好的
 - [CRCardAnimationView](https://github.com/BearRan/CRAnimation/tree/master/Example/CRAnimation/Demo/WidgetDemo/S0001_CRCardAnimationViewDemo)
 - 卡片切换动效
 
-<img src="http://img.hb.aicdn.com/69261ba15765259a1942c23ac11d229fc6e619a2915ea-euO6Aa_fw658" width=150 />
-<img src="http://oftcdgt2m.bkt.clouddn.com/S0001/CRCardAnimationViewDemoVC.gif" width=150 />
+<img src="http://oftcdgt2m.bkt.clouddn.com/S0001/CRCardAnimationViewDemoVC1.gif" width=150 />
 
 - S0002
 - [CRImageGradientView](https://github.com/BearRan/CRAnimation/tree/master/Example/CRAnimation/Demo/WidgetDemo/S0002_CRImageGradientViewDemo)
 - ImageView过渡切换动效
 
-<img src="http://oftcdgt2m.bkt.clouddn.com/S0002/CRImageGradientDemoVC.gif" width=150 />
+<img src="http://oftcdgt2m.bkt.clouddn.com/S0002/CRImageGradientDemoVC2.gif" width=150 />
 
 - S0003
 - Gif demo
 - Gif播放控件
 
-<img src="http://oftcdgt2m.bkt.clouddn.com/S0003/GifPlay.gif" width=150 />
+<img src="http://oftcdgt2m.bkt.clouddn.com/S0003/GifPlay1.gif" width=150 />
 
 - S0004
 - [WCLLoadingView](https://github.com/BearRan/CRAnimation/tree/master/Example/CRAnimation/Demo/WidgetDemo/S0004_WCLLoadingView)
@@ -57,7 +56,7 @@ CRAnimation为开源项目，CRAnimation Pod仓库中整理了各种封装好的
 - [HZLaunchView](https://github.com/BearRan/CRAnimation/tree/master/Example/CRAnimation/Demo/WidgetDemo/S0005_HZLaunchView)
 - Twitter 的 Launch 动画
 
-<img src="http://of8uz9wjk.bkt.clouddn.com/HZLaunchView.gif" width=150 />
+<img src="http://oftcdgt2m.bkt.clouddn.com/S0005/HZLaunchView.gif" width=150 />
 
 ---
 ##组合动效
@@ -66,7 +65,7 @@ CRAnimation为开源项目，CRAnimation Pod仓库中整理了各种封装好的
 - [音乐切换动效](https://github.com/BearRan/CRAnimation/tree/master/Example/CRAnimation/Demo/MixDemo/C0001_CRMusicCardDemo)
 - CRCardAnimationView和CRImageGradientView的组合动效
 
-<img src="http://oftcdgt2m.bkt.clouddn.com/C0001/CRMusicCardDemoVC.gif" width=150 />
+<img src="http://oftcdgt2m.bkt.clouddn.com/C0001/CRMusicCardDemoVC3.gif" width=150 />
 
 ---
 ### Find
@@ -76,4 +75,5 @@ CRAnimation为开源项目，CRAnimation Pod仓库中整理了各种封装好的
 有意向者，可与管理员取得联系。
 
 QQ:648070256熊熊
+
 

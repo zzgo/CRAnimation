@@ -11,6 +11,7 @@
 #import "BearCutOutView.h"
 #import "UILabel+BearSet.h"
 #import "UITextField+BearLimitLength.h"
+#import "UITextField+BearSet.h"
 
 FOUNDATION_EXPORT double BearSkillVersionNumber;
 FOUNDATION_EXPORT const unsigned char BearSkillVersionString[];

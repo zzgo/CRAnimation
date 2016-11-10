@@ -60,7 +60,9 @@ static NSString *__kCRDemoCombination   = @"组合动效";
                                        @"CRImageGradientDemoInfoModel",
                                        @"GifDemoInfoModel",
                                        @"WCLLoadingViewDemoInfoModel",
-                                       @"HZLaunchViewDemoInfoModel"
+                                       @"HZLaunchViewDemoInfoModel",
+                                       @"CCWormHUDDemoInfoModel",
+                                       @"CRGatlingModel",
                                        ];
     
     _combinationDemoInfoModelNameArray = @[

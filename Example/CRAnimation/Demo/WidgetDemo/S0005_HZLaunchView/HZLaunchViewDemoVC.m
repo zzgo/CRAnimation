@@ -6,7 +6,7 @@
 //  Copyright © 2016年 BearRan. All rights reserved.
 //
 
-#import "HZLaunchView.h"
+#import <CRAnimation/HZLaunchView.h>
 #import "HZLaunchViewDemoVC.h"
 
 @interface HZLaunchViewDemoVC ()
