@@ -34,6 +34,7 @@
     UIView  *_process1BgView;
     CAShapeLayer        *_processLayer;
     CABasicAnimation    *_processAnimation;
+    CGFloat             _totalDuring;       //  0~1动画所需总时间
 
 }
 #define Multiple 2    //每次产生几个
@@ -45,31 +46,36 @@
     self.backgroundColor = [UIColor blueColor];
     if (self) {
         
+        [self setParamater];
         [self createUI];
 //        [self setup];
     }
     return self;
 }
 
+- (void)setParamater
+{
+    _totalDuring = 4.0;
+}
+
 - (void)createUI
 {
-    //    _progressView = [[CRGatling alloc] initWithFrame:CGRectMake(5, 50, 355, 75)];
-    
     [self createMainBgView];
     [self createProcessBgView];
     [self createProcessLayer];
+    [self createSoldierImageV];
 }
 
 
 - (void)createMainBgView
 {
-    CGFloat mainBgView_width = self.width;
+    CGFloat mainBgView_width = 600.0 / 708 * self.width;
     CGFloat mainBgView_height = self.height * 0.67;
     
     _mainBgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, mainBgView_width, mainBgView_height)];
     _mainBgView.backgroundColor = UIColorFromHEX(0xfed182);
     [self addSubview:_mainBgView];
-    [_mainBgView BearSetCenterToParentViewWithAxis:kAXIS_X_Y];
+    [_mainBgView BearSetCenterToParentViewWithAxis:kAXIS_Y];
     
     
     //  path
@@ -142,6 +148,88 @@
     _processLayer.strokeEnd = 0.5;
 }
 
+- (void)createSoldierImageV
+{
+    CGFloat soldierImageV_width = self.height;
+    
+    NSMutableArray *images=[NSMutableArray array];
+    for (int i=0; i<25; i++) {
+        NSString *numStr=[NSString stringWithFormat:@"%02d",i];
+        UIImage *image=[UIImage imageNamed:[NSString stringWithFormat:@"加特林小人_000%@",numStr]];
+        [images addObject:image];
+    }
+    soldierIV=[[UIImageView alloc]initWithFrame:CGRectMake(0, 0, soldierImageV_width, soldierImageV_width)];
+    soldierIV.image=[UIImage imageNamed:@"加特林小人_00000"];
+    soldierIV.animationImages=images;
+    soldierIV.animationRepeatCount=MAXFLOAT;
+    [self addSubview:soldierIV];
+    [soldierIV BearSetRelativeLayoutWithDirection:kDIR_RIGHT destinationView:nil parentRelation:YES distance:0 center:YES];
+}
+
+- (void)setProgress:(CGFloat )progress{
+    if (progress>1.0||progress<0.0) {
+        return;
+    }
+    
+    differ = (int)((int)(progress*totalAmount) - (int)(OldProgress*totalAmount));//放大1000倍取整0~1000
+    _progress = progress;
+    
+    [self processShapeLayerAnimation];
+    
+    //单个的时间
+    if (abs(differ)<1) {
+        return;
+    }
+    CGFloat perTime=self.duration/(differ-1);
+    if (perTime==INFINITY) {
+        perTime = self.duration/(totalAmount);
+    }
+    CGFloat lastTimeDelay;
+    if (differ>=0) {//+
+        [self startLoading];
+        for (int i=0; i<Multiple; i++) {
+            for (int i=0; i<differ; i++) {
+                CALayer *leafLayer = [CALayer layer];
+                leafLayer.contents = (__bridge id _Nullable)([UIImage imageNamed:@"子弹"].CGImage);
+                leafLayer.bounds = CGRectMake(0, 0,10, 3.6);//10 10
+                CGPoint beginPoint;
+                switch (arc4random()%3) {
+                    case 0:
+                        beginPoint=  CGPointMake(BG_WIDTH,BG_HEIGHT*1/2.0-3);
+                        break;
+                    case 1:
+                        beginPoint=  CGPointMake(BG_WIDTH,BG_HEIGHT*1/2.0);
+                        
+                        break;
+                    case 2:
+                        beginPoint=  CGPointMake(BG_WIDTH,BG_HEIGHT*1/2.0+3);
+                        
+                        break;
+                    default:
+                        break;
+                }
+                leafLayer.position = beginPoint;
+                [_process1BgView.layer insertSublayer:leafLayer below:_processLayer];
+                [bottomView.layer addSublayer:leafLayer];
+                CFTimeInterval currentSuperTime = [_process1BgView.layer convertTime:CACurrentMediaTime() fromLayer:nil];
+                lastTimeDelay=self.timeInterval*i;
+                CGFloat delay =currentSuperTime+self.timeInterval*i;
+                [self addAnimationToLayer:leafLayer andDelay:delay andIndex:i];
+                //            leafIndex+=1;
+                currentCount++;
+            }
+        }
+        //      });
+    }else{//-
+        [self stopLoading];
+#pragma mark -----'*** Collection <CALayerArray: 0x60800005f4a0> was mutated while being enumerated.'
+        [bottomView.layer.sublayers enumerateObjectsUsingBlock:^(CALayer * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            [obj removeAllAnimations];
+        }];
+    }
+    OldProgress = progress;
+}
+
 
 
 
@@ -174,7 +262,7 @@
     //Soldier
     NSMutableArray *images=[NSMutableArray array];
     for (int i=0; i<25; i++) {
-    NSString *numStr=[NSString stringWithFormat:@"%02d",i];
+        NSString *numStr=[NSString stringWithFormat:@"%02d",i];
         UIImage *image=[UIImage imageNamed:[NSString stringWithFormat:@"加特林小人_000%@",numStr]];
         [images addObject:image];
     }
@@ -190,69 +278,70 @@
     self.duration=1.0;
 }
 
-- (void)setProgress:(CGFloat )progress{
-    
-    if (progress>1.0||progress<0.0) {
-        return;
-    }
-    
-    differ = (int)((int)(progress*totalAmount) - (int)(OldProgress*totalAmount));//放大1000倍取整0~1000
-    _progress = progress;
-    //单个的时间
-    if (abs(differ)<1) {
-        return;
-    }
-    CGFloat perTime=self.duration/(differ-1);
-    if (perTime==INFINITY) {
-        perTime = self.duration/(totalAmount);
-    }
-    CGFloat lastTimeDelay;
-    if (differ>=0) {//+
-        [self startLoading];
-        for (int i=0; i<Multiple; i++) {
-            for (int i=0; i<differ; i++) {
-                CALayer *leafLayer = [CALayer layer];
-                leafLayer.contents = (__bridge id _Nullable)([UIImage imageNamed:@"子弹"].CGImage);
-                leafLayer.bounds = CGRectMake(0, 0,10, 3.6);//10 10
-                CGPoint beginPoint;
-                switch (arc4random()%3) {
-                    case 0:
-                      beginPoint=  CGPointMake(BG_WIDTH,BG_HEIGHT*1/2.0-3);
-                        break;
-                    case 1:
-                        beginPoint=  CGPointMake(BG_WIDTH,BG_HEIGHT*1/2.0);
- 
-                        break;
-                    case 2:
-                        beginPoint=  CGPointMake(BG_WIDTH,BG_HEIGHT*1/2.0+3);
+//- (void)setProgress:(CGFloat )progress{
+//    
+//    if (progress>1.0||progress<0.0) {
+//        return;
+//    }
+//    
+//    differ = (int)((int)(progress*totalAmount) - (int)(OldProgress*totalAmount));//放大1000倍取整0~1000
+//    _progress = progress;
+//    //单个的时间
+//    if (abs(differ)<1) {
+//        return;
+//    }
+//    CGFloat perTime=self.duration/(differ-1);
+//    if (perTime==INFINITY) {
+//        perTime = self.duration/(totalAmount);
+//    }
+//    CGFloat lastTimeDelay;
+//    if (differ>=0) {//+
+//        [self startLoading];
+//        for (int i=0; i<Multiple; i++) {
+//            for (int i=0; i<differ; i++) {
+//                CALayer *leafLayer = [CALayer layer];
+//                leafLayer.contents = (__bridge id _Nullable)([UIImage imageNamed:@"子弹"].CGImage);
+//                leafLayer.bounds = CGRectMake(0, 0,10, 3.6);//10 10
+//                CGPoint beginPoint;
+//                switch (arc4random()%3) {
+//                    case 0:
+//                      beginPoint=  CGPointMake(BG_WIDTH,BG_HEIGHT*1/2.0-3);
+//                        break;
+//                    case 1:
+//                        beginPoint=  CGPointMake(BG_WIDTH,BG_HEIGHT*1/2.0);
+// 
+//                        break;
+//                    case 2:
+//                        beginPoint=  CGPointMake(BG_WIDTH,BG_HEIGHT*1/2.0+3);
+//
+//                        break;
+//                    default:
+//                        break;
+//                }
+//                leafLayer.position = beginPoint;
+//                [bottomView.layer addSublayer:leafLayer];
+//                CFTimeInterval currentSuperTime = [bottomView.layer convertTime:CACurrentMediaTime() fromLayer:nil];
+//                lastTimeDelay=self.timeInterval*i;
+//                CGFloat delay =currentSuperTime+self.timeInterval*i;
+//                [self addAnimationToLayer:leafLayer andDelay:delay andIndex:i];
+//                //            leafIndex+=1;
+//                currentCount++;
+//            }
+//        }
+//        //      });
+//    }else{//-
+//        [self stopLoading];
+//#pragma mark -----'*** Collection <CALayerArray: 0x60800005f4a0> was mutated while being enumerated.'
+//        [bottomView.layer.sublayers enumerateObjectsUsingBlock:^(CALayer * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+//            [obj removeAllAnimations];
+//        }];
+//        CGRect rect =  progressView.frame;
+//        rect.size.width = BG_WIDTH*progress;
+//        progressView.frame = rect;
+//    }
+//    OldProgress = progress;
+//}
 
-                        break;
-                    default:
-                        break;
-                }
-                leafLayer.position = beginPoint;
-                [bottomView.layer addSublayer:leafLayer];
-                CFTimeInterval currentSuperTime = [bottomView.layer convertTime:CACurrentMediaTime() fromLayer:nil];
-                lastTimeDelay=self.timeInterval*i;
-                CGFloat delay =currentSuperTime+self.timeInterval*i;
-                [self addAnimationToLayer:leafLayer andDelay:delay andIndex:i];
-                //            leafIndex+=1;
-                currentCount++;
-            }
-        }
-        //      });
-    }else{//-
-        [self stopLoading];
-#pragma mark -----'*** Collection <CALayerArray: 0x60800005f4a0> was mutated while being enumerated.'
-        [bottomView.layer.sublayers enumerateObjectsUsingBlock:^(CALayer * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            [obj removeAllAnimations];
-        }];
-        CGRect rect =  progressView.frame;
-        rect.size.width = BG_WIDTH*progress;
-        progressView.frame = rect;
-    }
-    OldProgress = progress;
-}
 -(void)changeProgressViewWith:(CGFloat)width{
     CGRect frame=progressView.frame;
     frame.size.width=width;
@@ -333,6 +422,25 @@
     }
     RotationDirection=NO;
     [soldierIV stopAnimating];
+}
+
+- (void)processShapeLayerAnimation
+{
+    if (!_processAnimation) {
+        _processAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+        _processAnimation.fromValue = @0;
+        _processAnimation.toValue   = @0;
+        _processAnimation.fillMode  = kCAFillModeForwards;
+        _processAnimation.removedOnCompletion = NO;
+    }
+    
+    CGFloat during = _totalDuring * (self.progress - OldProgress);
+    
+    _processAnimation.fromValue = _processAnimation.toValue;
+    _processAnimation.toValue = [NSNumber numberWithFloat:self.progress];
+    _processAnimation.duration = during;
+    [_processLayer addAnimation:_processAnimation forKey:@"processAnimation"];
+    
 }
 
 @end
