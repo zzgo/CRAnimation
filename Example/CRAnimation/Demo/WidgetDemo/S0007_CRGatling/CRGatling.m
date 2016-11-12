@@ -28,6 +28,12 @@
     BOOL RotationDirection; //YES 顺时针 NO 逆时针
     BOOL isSuspend;
     int currentCount;
+    
+    
+    UIView  *_mainBgView;
+    UIView  *_process1BgView;
+    CAShapeLayer        *_processLayer;
+    CABasicAnimation    *_processAnimation;
 
 }
 #define Multiple 2    //每次产生几个
@@ -36,12 +42,111 @@
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
+    self.backgroundColor = [UIColor blueColor];
     if (self) {
-       [self setup];
+        
+        [self createUI];
+//        [self setup];
     }
     return self;
 }
+
+- (void)createUI
+{
+    //    _progressView = [[CRGatling alloc] initWithFrame:CGRectMake(5, 50, 355, 75)];
+    
+    [self createMainBgView];
+    [self createProcessBgView];
+    [self createProcessLayer];
+}
+
+
+- (void)createMainBgView
+{
+    CGFloat mainBgView_width = self.width;
+    CGFloat mainBgView_height = self.height * 0.67;
+    
+    _mainBgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, mainBgView_width, mainBgView_height)];
+    _mainBgView.backgroundColor = UIColorFromHEX(0xfed182);
+    [self addSubview:_mainBgView];
+    [_mainBgView BearSetCenterToParentViewWithAxis:kAXIS_X_Y];
+    
+    
+    //  path
+    //  坐标释义
+    //  point1  point2
+    //  point3  point4
+    CGPoint point1 = CGPointMake(30.0 / 611 * _mainBgView.width, 0);
+    CGPoint point2 = CGPointMake(_mainBgView.width, 0);
+    CGPoint point3 = CGPointMake(0, _mainBgView.height);
+    CGPoint point4 = CGPointMake(_mainBgView.width, _mainBgView.height);
+    
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    [path moveToPoint:point1];
+    [path addLineToPoint:point2];
+    [path addLineToPoint:point4];
+    [path addLineToPoint:point3];
+    [path addLineToPoint:point1];
+    
+    
+    //  mask shape
+    CAShapeLayer *shapeLayer = [CAShapeLayer layer];
+    shapeLayer.path = path.CGPath;
+    _mainBgView.layer.mask = shapeLayer;
+    
+}
+
+- (void)createProcessBgView
+{
+    _process1BgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, _mainBgView.width, _mainBgView.height * 0.8)];
+    _process1BgView.backgroundColor = [UIColor clearColor];
+    [_mainBgView addSubview:_process1BgView];
+    [_process1BgView BearSetCenterToParentViewWithAxis:kAXIS_Y];
+    
+    
+    //  path
+    //  坐标释义
+    //  point1  point2
+    //  point3  point4
+    CGPoint point1 = CGPointMake(47.0 / 611 * _process1BgView.width, 0);
+    CGPoint point2 = CGPointMake(_process1BgView.width, 0);
+    CGPoint point3 = CGPointMake(30.0 / 611 * _process1BgView.width, _process1BgView.height);
+    CGPoint point4 = CGPointMake(_process1BgView.width, _process1BgView.height);
+    
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    [path moveToPoint:point1];
+    [path addLineToPoint:point2];
+    [path addLineToPoint:point4];
+    [path addLineToPoint:point3];
+    [path addLineToPoint:point1];
+    
+    
+    //  mask shape
+    CAShapeLayer *shapeLayer = [CAShapeLayer layer];
+    shapeLayer.path = path.CGPath;
+    _process1BgView.layer.mask = shapeLayer;
+}
+
+- (void)createProcessLayer
+{
+    UIBezierPath *processPath = [UIBezierPath bezierPath];
+    [processPath moveToPoint:CGPointMake(0, _process1BgView.height / 2.0)];
+    [processPath addLineToPoint:CGPointMake(_process1BgView.width, _process1BgView.height / 2.0)];
+    
+    _processLayer = [CAShapeLayer layer];
+    _processLayer.path = processPath.CGPath;
+    _processLayer.lineWidth = _process1BgView.height;
+    _processLayer.strokeColor = UIColorFromHEX(0xfab140).CGColor;
+    [_process1BgView.layer addSublayer:_processLayer];
+    
+    _processLayer.strokeEnd = 0.5;
+}
+
+
+
+
 -(void)setup{
+    
     UIImageView *BacKGroundView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 12.5, 300, 50)];
     BacKGroundView.image=[UIImage imageNamed:@"底部"];
     [self addSubview:BacKGroundView];
@@ -86,9 +191,11 @@
 }
 
 - (void)setProgress:(CGFloat )progress{
+    
     if (progress>1.0||progress<0.0) {
         return;
     }
+    
     differ = (int)((int)(progress*totalAmount) - (int)(OldProgress*totalAmount));//放大1000倍取整0~1000
     _progress = progress;
     //单个的时间
