@@ -42,6 +42,7 @@
 		09D168D81DC620210082C35E /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 09D168D61DC620210082C35E /* README.md */; };
 		09EE9BA01DBCE2E400BD81A2 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 09EE9B9F1DBCE2E400BD81A2 /* README.md */; };
 		09EE9BA21DBCEA5A00BD81A2 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 09EE9BA11DBCEA5A00BD81A2 /* README.md */; };
+		18D8B62D1DD80BB600C6545D /* CRGatlingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D8B62C1DD80BB600C6545D /* CRGatlingView.m */; };
 		257751521DC25A790019D38B /* HZLaunchViewDemoInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2577514F1DC25A790019D38B /* HZLaunchViewDemoInfoModel.m */; };
 		257751531DC25A790019D38B /* HZLaunchViewDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 257751511DC25A790019D38B /* HZLaunchViewDemoVC.m */; };
 		257751551DC25B070019D38B /* HZLaunchView.gif in Resources */ = {isa = PBXBuildFile; fileRef = 257751541DC25B070019D38B /* HZLaunchView.gif */; };
@@ -143,6 +144,8 @@
 		09EE9B9F1DBCE2E400BD81A2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		09EE9BA11DBCEA5A00BD81A2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0EE5779AF28D42163CC3E896 /* Pods-CRAnimation_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CRAnimation_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-CRAnimation_Example/Pods-CRAnimation_Example.release.xcconfig"; sourceTree = "<group>"; };
+		18D8B62B1DD80BB600C6545D /* CRGatlingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRGatlingView.h; sourceTree = "<group>"; };
+		18D8B62C1DD80BB600C6545D /* CRGatlingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRGatlingView.m; sourceTree = "<group>"; };
 		1C7FE269E5E0C0765014CB0A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		2577514E1DC25A790019D38B /* HZLaunchViewDemoInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZLaunchViewDemoInfoModel.h; sourceTree = "<group>"; };
 		2577514F1DC25A790019D38B /* HZLaunchViewDemoInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZLaunchViewDemoInfoModel.m; sourceTree = "<group>"; };
@@ -383,6 +386,8 @@
 				5247C4F71DD212320024DF8B /* GatlingProgress.gif */,
 				5247C4F01DD2103E0024DF8B /* CRGatling.h */,
 				5247C4F11DD2103E0024DF8B /* CRGatling.m */,
+				18D8B62B1DD80BB600C6545D /* CRGatlingView.h */,
+				18D8B62C1DD80BB600C6545D /* CRGatlingView.m */,
 				527FF7411DD0EBB60055026D /* CRGatlingModel.h */,
 				527FF7421DD0EBB60055026D /* CRGatlingModel.m */,
 				527FF7391DD0E9770055026D /* CRGatlingVC.h */,
@@ -738,6 +743,7 @@
 				6003F59E195388D20070C39A /* CRAppDelegate.m in Sources */,
 				092003551DADC3AA008266B8 /* CRViewController.m in Sources */,
 				09EE9BA21DBCEA5A00BD81A2 /* README.md in Sources */,
+				18D8B62D1DD80BB600C6545D /* CRGatlingView.m in Sources */,
 				092A2D651DBCA8DA00650DE1 /* README.md in Sources */,
 				5247C4F21DD2103E0024DF8B /* CRGatling.m in Sources */,
 				0920035D1DADC74F008266B8 /* CRDefines.m in Sources */,
