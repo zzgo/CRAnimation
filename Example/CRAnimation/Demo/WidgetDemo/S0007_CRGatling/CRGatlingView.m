@@ -25,7 +25,9 @@
     CAShapeLayer        *_processLayer;
     CABasicAnimation    *_processAnimation;
     CGFloat             _totalDuring;       //  0~1动画所需总时间
+    CGFloat             _bulletTotalDuring; //  子弹走完全程所需时间
     
+    CGFloat             _bulletTimeGap;     //  发射子弹的时间间隔
 }
 #define Multiple 2    //每次产生几个
 #define totalAmount  60 //总的产生数
@@ -47,7 +49,16 @@
 - (void)setParamater
 {
     _totalDuring = 4.0;
+    _bulletTotalDuring = 4.0;
+    _bulletTimeGap = 0.2;
 }
+
+-(void)defaultParameters{
+    self.timeInterval=0.1;
+    self.duration=1.0;
+}
+
+#pragma mark - CreateUI
 
 - (void)createUI
 {
@@ -160,6 +171,9 @@
     [soldierIV BearSetRelativeLayoutWithDirection:kDIR_RIGHT destinationView:nil parentRelation:YES distance:0 center:YES];
 }
 
+
+#pragma mark - Rewrite
+
 - (void)setProgress:(CGFloat )progress{
     if (progress>1.0||progress<0.0) {
         return;
@@ -169,7 +183,15 @@
     _progress = progress;
     
     [self processShapeLayerAnimation];
-    
+//    [self aniamtionMethod1];
+    [self aniamtionMethod2];
+}
+
+
+#pragma mark - Animation Method
+
+- (void)aniamtionMethod1
+{
     //单个的时间
     if (abs(differ)<1) {
         return;
@@ -216,12 +238,49 @@
     }else{//-
         [self stopLoading];
     }
-    OldProgress = progress;
+    OldProgress = _progress;
 }
 
--(void)defaultParameters{
-    self.timeInterval=0.1;
-    self.duration=1.0;
+- (void)aniamtionMethod2
+{
+    CGFloat processNeedTime = _totalDuring * _progress;
+    int totalBullet = (int)(1.0 * processNeedTime / _bulletTimeGap);
+    
+    NSLog(@"totalBullet:%d", totalBullet);
+    for (int i = 0; i < totalBullet; i++) {
+        CALayer *bulletLayer = [CALayer layer];
+        bulletLayer.contents = (__bridge id _Nullable)([UIImage imageNamed:@"子弹"].CGImage);
+        bulletLayer.bounds = CGRectMake(0, 0,10, 3.6);//10 10
+        CGPoint beginPoint;
+        switch (arc4random()%3) {
+            case 0:
+                beginPoint=  CGPointMake(BG_WIDTH,BG_HEIGHT*1/2.0-3);
+                break;
+            case 1:
+                beginPoint=  CGPointMake(BG_WIDTH,BG_HEIGHT*1/2.0);
+                
+                break;
+            case 2:
+                beginPoint=  CGPointMake(BG_WIDTH,BG_HEIGHT*1/2.0+3);
+                
+                break;
+            default:
+                break;
+        }
+        bulletLayer.position = beginPoint;
+        [_process1BgView.layer insertSublayer:bulletLayer below:_processLayer];
+        CFTimeInterval currentSuperTime = [_process1BgView.layer convertTime:CACurrentMediaTime() fromLayer:nil];
+        CGFloat delay =currentSuperTime+self.timeInterval*i;
+        [self addAnimationToLayer:bulletLayer andDelay:delay andIndex:i];
+    }
+    
+    
+    OldProgress = _progress;
+}
+
+- (void)calculateBullet
+{
+
 }
 
 //- (void)addBulletAnimationToLayer:(CALayer *)layer delay:(CGFloat)delay
