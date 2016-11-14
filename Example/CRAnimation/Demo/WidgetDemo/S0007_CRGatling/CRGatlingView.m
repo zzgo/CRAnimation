@@ -8,6 +8,10 @@
 
 #import "CRGatlingView.h"
 
+@interface CRGatlingView () <CAAnimationDelegate>
+
+@end
+
 @implementation CRGatlingView
 {
    UIImageView *soldierIV;
@@ -24,10 +28,10 @@
     UIView  *_process1BgView;
     CAShapeLayer        *_processLayer;
     CABasicAnimation    *_processAnimation;
-    CGFloat             _totalDuring;       //  0~1动画所需总时间
-    CGFloat             _bulletTotalDuring; //  子弹走完全程所需时间
+    CGFloat             _processTotalDuring;        //  0~1动画所需总时间
+    CGFloat             _bulletTotalDuring;         //  子弹走完全程所需时间
     
-    CGFloat             _bulletTimeGap;     //  发射子弹的时间间隔
+    CGFloat             _bulletTimeGap;             //  发射子弹的时间间隔
 }
 #define Multiple 2    //每次产生几个
 #define totalAmount  60 //总的产生数
@@ -48,7 +52,7 @@
 
 - (void)setParamater
 {
-    _totalDuring = 4.0;
+    _processTotalDuring = 4.0;
     _bulletTotalDuring = 4.0;
     _bulletTimeGap = 0.2;
 }
@@ -183,71 +187,21 @@
     _progress = progress;
     
     [self processShapeLayerAnimation];
-//    [self aniamtionMethod1];
-    [self aniamtionMethod2];
+    [self aniamtionMethod];
 }
 
 
 #pragma mark - Animation Method
 
-- (void)aniamtionMethod1
+- (void)aniamtionMethod
 {
-    //单个的时间
-    if (abs(differ)<1) {
-        return;
-    }
-    CGFloat perTime=self.duration/(differ-1);
-    if (perTime==INFINITY) {
-        perTime = self.duration/(totalAmount);
-    }
-    CGFloat lastTimeDelay;
-    if (differ>=0) {//+
-        [self startLoading];
-        for (int i=0; i<Multiple; i++) {
-            for (int i=0; i<differ; i++) {
-                CALayer *leafLayer = [CALayer layer];
-                leafLayer.contents = (__bridge id _Nullable)([UIImage imageNamed:@"子弹"].CGImage);
-                leafLayer.bounds = CGRectMake(0, 0,10, 3.6);//10 10
-                CGPoint beginPoint;
-                switch (arc4random()%3) {
-                    case 0:
-                        beginPoint=  CGPointMake(BG_WIDTH,BG_HEIGHT*1/2.0-3);
-                        break;
-                    case 1:
-                        beginPoint=  CGPointMake(BG_WIDTH,BG_HEIGHT*1/2.0);
-                        
-                        break;
-                    case 2:
-                        beginPoint=  CGPointMake(BG_WIDTH,BG_HEIGHT*1/2.0+3);
-                        
-                        break;
-                    default:
-                        break;
-                }
-                leafLayer.position = beginPoint;
-                [_process1BgView.layer insertSublayer:leafLayer below:_processLayer];
-                CFTimeInterval currentSuperTime = [_process1BgView.layer convertTime:CACurrentMediaTime() fromLayer:nil];
-                lastTimeDelay=self.timeInterval*i;
-                CGFloat delay =currentSuperTime+self.timeInterval*i;
-                [self addAnimationToLayer:leafLayer andDelay:delay andIndex:i];
-                //            leafIndex+=1;
-                
-            }
-        }
-        //      });
-    }else{//-
-        [self stopLoading];
-    }
-    OldProgress = _progress;
-}
-
-- (void)aniamtionMethod2
-{
-    CGFloat processNeedTime = _totalDuring * _progress;
+    CGFloat processNeedTime = _processTotalDuring * _progress;
     int totalBullet = (int)(1.0 * processNeedTime / _bulletTimeGap);
     
     NSLog(@"totalBullet:%d", totalBullet);
+    
     for (int i = 0; i < totalBullet; i++) {
+        
         CALayer *bulletLayer = [CALayer layer];
         bulletLayer.contents = (__bridge id _Nullable)([UIImage imageNamed:@"子弹"].CGImage);
         bulletLayer.bounds = CGRectMake(0, 0,10, 3.6);//10 10
@@ -271,34 +225,46 @@
         [_process1BgView.layer insertSublayer:bulletLayer below:_processLayer];
         CFTimeInterval currentSuperTime = [_process1BgView.layer convertTime:CACurrentMediaTime() fromLayer:nil];
         CGFloat delay =currentSuperTime+self.timeInterval*i;
-        [self addAnimationToLayer:bulletLayer andDelay:delay andIndex:i];
+        [self addAnimationToLayer:bulletLayer andDelay:delay andIndex:i andTotalBullet:totalBullet];
     }
     
     
     OldProgress = _progress;
 }
 
-- (void)calculateBullet
-{
+#pragma mark - 添加动画 （树叶）
 
-}
-
-//- (void)addBulletAnimationToLayer:(CALayer *)layer delay:(CGFloat)delay
-
-#pragma mark -----添加动画 （树叶）
--(void)addAnimationToLayer:(CALayer *)layer andDelay:(CGFloat)delay andIndex:(int)index{
+-(void)addAnimationToLayer:(CALayer *)layer andDelay:(CGFloat)delay andIndex:(int)index andTotalBullet:(int)totalBullet{
+    
+    //  进度条动画所需时间
+    CGFloat processNeedTime         = _processTotalDuring * _progress;
+    //  子弹总路程
+    CGFloat bulletTotalDistance     = _process1BgView.width;
+    //  子弹宽度
+    CGFloat bulletWidth             = layer.frame.size.width;
+    //  之前的路程
+    CGFloat oldProcessDistance      = OldProgress * bulletTotalDistance;
+    //  此次bullet计算的间隔路程
+    CGFloat thisTimeProcessDistance = (_progress - OldProgress) / totalBullet * index * bulletTotalDistance;
+    //  此次子弹所需路程
+    CGFloat bulletDistance          = bulletTotalDistance - oldProcessDistance - thisTimeProcessDistance + bulletWidth / 2.0;
+    //  此次子弹动画所需时间
+    CGFloat bulletAnimationDuring   = 1.0 * bulletDistance / bulletTotalDistance * _bulletTotalDuring;
+    //  子弹延时时间
+    CGFloat bulletDelay             = processNeedTime - bulletAnimationDuring;
+    
+    
+    
     CAKeyframeAnimation *keyFrameAnimation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
     //一直增加的话
     //进度条之前的位置
-    CGFloat beginP = BG_WIDTH*OldProgress;
-    CGFloat addWidth = BG_WIDTH/(1.0*totalAmount*Multiple)*(index+1);
-    CGFloat teminalPosition = beginP+addWidth;
-    CGFloat moveWidth = BG_WIDTH - teminalPosition;
+    CGFloat teminalPosition = bulletTotalDistance - bulletDistance;
     CGPoint originalP = CGPointMake(layer.position.x, layer.position.y);// layer.position;
     CGFloat terminalY;
     CGPoint controlPoint;
     CGPoint middlePoint;
     terminalY=originalP.y;
+    
     CGPoint terminalPoint=CGPointMake(teminalPosition,terminalY);
     if (originalP.y==1/2.0*BG_HEIGHT+3) {
         terminalPoint.y=terminalPoint.y+5;
@@ -312,17 +278,21 @@
     UIBezierPath *path=[UIBezierPath bezierPath];
     [path moveToPoint:originalP];
     [path addQuadCurveToPoint:terminalPoint controlPoint:controlPoint];
-#pragma mark -----todo
+
     keyFrameAnimation.path=path.CGPath;
     if (isnan(delay)) {
         return;
     }
+    
     //动画持续时间
-    //    group.duration = self.duration;
-    keyFrameAnimation.duration=moveWidth/BG_WIDTH*self.duration;
+    keyFrameAnimation.duration = bulletAnimationDuring;
     keyFrameAnimation.delegate = self;
     //    keyFrameAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionDefault];
-    keyFrameAnimation.beginTime=delay;
+    
+    CFTimeInterval currentSuperTime = [_process1BgView.layer convertTime:CACurrentMediaTime() fromLayer:nil];
+    CGFloat delay1 = currentSuperTime + bulletDelay;
+    
+    keyFrameAnimation.beginTime = delay1;
     [keyFrameAnimation setValue:layer forKey:@"leafLayer"];
     [layer addAnimation:keyFrameAnimation forKey:@"move"];
 }
@@ -351,7 +321,7 @@
         _processAnimation.removedOnCompletion = NO;
     }
     
-    CGFloat during = _totalDuring * (self.progress - OldProgress);
+    CGFloat during = _processTotalDuring * (self.progress - OldProgress);
     
     _processAnimation.fromValue = _processAnimation.toValue;
     _processAnimation.toValue = [NSNumber numberWithFloat:self.progress];
