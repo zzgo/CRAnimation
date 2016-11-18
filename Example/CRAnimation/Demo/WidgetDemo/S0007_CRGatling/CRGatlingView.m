@@ -151,7 +151,7 @@
     _processLayer = [CAShapeLayer layer];
     _processLayer.path = processPath.CGPath;
     _processLayer.lineWidth = _process1BgView.height;
-    _processLayer.strokeColor = UIColorFromHEX(0xfab140).CGColor;
+    _processLayer.strokeColor = [UIColorFromHEX(0xfab140) colorWithAlphaComponent:0.3].CGColor;
     [_process1BgView.layer addSublayer:_processLayer];
     
     _processLayer.strokeEnd = 0.5;
@@ -186,8 +186,10 @@
     differ = (int)((int)(progress*totalAmount) - (int)(OldProgress*totalAmount));//放大1000倍取整0~1000
     _progress = progress;
     
-    [self processShapeLayerAnimation];
-    [self aniamtionMethod];
+//    [self processShapeLayerAnimation];
+//    [self aniamtionMethod];
+    
+    [self addBulletAnimation];
 }
 
 
@@ -230,6 +232,94 @@
     
     
     OldProgress = _progress;
+}
+
+#pragma mark - 添加动画 （子弹）
+
+-(void)addBulletAnimation{
+    
+    CALayer *bulletLayer = [CALayer layer];
+    bulletLayer.contents = (__bridge id _Nullable)([UIImage imageNamed:@"子弹"].CGImage);
+    bulletLayer.bounds = CGRectMake(0, 0,10, 3.6);//10 10
+    
+    CGPoint beginPoint;
+    beginPoint=  CGPointMake(BG_WIDTH,BG_HEIGHT*1/2.0);
+    bulletLayer.position = beginPoint;
+    
+    [_process1BgView.layer insertSublayer:bulletLayer below:_processLayer];
+    CFTimeInterval currentSuperTime0 = [_process1BgView.layer convertTime:CACurrentMediaTime() fromLayer:nil];
+    CGFloat delay =currentSuperTime0+self.timeInterval;
+    
+    
+    //  进度条总路程
+    CGFloat processTotalDistance    = _process1BgView.width;
+    //  本次进度条所需路程
+    CGFloat thisProcessDistance     = processTotalDistance * (_progress - OldProgress);
+    //  本次进度条动画所需时间
+    CGFloat thisProcessTime         = _processTotalDuring * (self.progress - OldProgress);
+    //  子弹宽度
+    CGFloat bulletWidth             = bulletLayer.frame.size.width;
+    //  子弹总路程
+    CGFloat bulletTotalDistance     = _process1BgView.width;
+    //  之前的路程
+    CGFloat oldProcessDistance      = OldProgress * bulletTotalDistance;
+    //  本次子弹需要走过的路程
+    CGFloat thisBulletDistance      = processTotalDistance * (1 - _progress) + bulletWidth / 2.0;
+    //  本次子弹所需时间
+    CGFloat thisBulletTime          = (1.0 * thisBulletDistance / bulletTotalDistance) * _bulletTotalDuring;
+    
+    
+    //  进度条动画
+    [self processShapeLayerAnimationWithDuring:thisProcessTime];
+    
+    
+    //  子弹动画
+    CAKeyframeAnimation *keyFrameAnimation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
+    //一直增加的话
+    //进度条之前的位置
+    CGFloat teminalPosition = bulletTotalDistance - thisBulletDistance;
+    CGPoint originalP = CGPointMake(bulletLayer.position.x, bulletLayer.position.y);// layer.position;
+    CGFloat terminalY;
+    CGPoint controlPoint;
+    CGPoint middlePoint;
+    terminalY=originalP.y;
+    
+    CGPoint terminalPoint=CGPointMake(teminalPosition,terminalY);
+    middlePoint = controlPoint=   CGPointMake(1/2.0*(teminalPosition+originalP.x),terminalY);
+    UIBezierPath *path=[UIBezierPath bezierPath];
+    [path moveToPoint:originalP];
+    [path addQuadCurveToPoint:terminalPoint controlPoint:controlPoint];
+    
+    keyFrameAnimation.path=path.CGPath;
+    if (isnan(delay)) {
+        return;
+    }
+    
+    //动画持续时间
+    keyFrameAnimation.duration = thisBulletTime;
+    
+#warning DAD
+    keyFrameAnimation.removedOnCompletion = NO;
+    keyFrameAnimation.fillMode = kCAFillModeForwards;
+    
+#warning Release
+//    keyFrameAnimation.delegate = self;
+    
+    
+    
+    //    keyFrameAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionDefault];
+    
+    CFTimeInterval currentSuperTime = [_process1BgView.layer convertTime:CACurrentMediaTime() fromLayer:nil];
+    CGFloat calucateDelayValue = thisProcessTime - thisBulletTime;
+    if (calucateDelayValue < 0) {
+        calucateDelayValue = 0;
+    }
+    
+    CGFloat delay1 = currentSuperTime + calucateDelayValue;
+    
+    keyFrameAnimation.beginTime = delay1;
+    [keyFrameAnimation setValue:bulletLayer forKey:@"leafLayer"];
+    [bulletLayer addAnimation:keyFrameAnimation forKey:@"move"];
 }
 
 #pragma mark - 添加动画 （树叶）
@@ -311,7 +401,7 @@
     [soldierIV stopAnimating];
 }
 
-- (void)processShapeLayerAnimation
+- (void)processShapeLayerAnimationWithDuring:(CGFloat)during
 {
     if (!_processAnimation) {
         _processAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
@@ -320,8 +410,6 @@
         _processAnimation.fillMode  = kCAFillModeForwards;
         _processAnimation.removedOnCompletion = NO;
     }
-    
-    CGFloat during = _processTotalDuring * (self.progress - OldProgress);
     
     _processAnimation.fromValue = _processAnimation.toValue;
     _processAnimation.toValue = [NSNumber numberWithFloat:self.progress];
