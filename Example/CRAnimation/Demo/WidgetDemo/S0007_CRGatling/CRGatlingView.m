@@ -34,7 +34,6 @@
     self.backgroundColor = [UIColor blueColor];
     if (self) {
         
-        [self defaultParameters];
         [self setParamater];
         [self createUI];
     }
@@ -48,10 +47,6 @@
     _bulletTimeGap = 0.2;
 }
 
--(void)defaultParameters{
-    self.timeInterval=0.1;
-    self.duration=1.0;
-}
 
 #pragma mark - CreateUI
 
@@ -268,7 +263,7 @@
     
     [_process1BgView.layer insertSublayer:bulletLayer below:_processLayer];
     CFTimeInterval currentSuperTime0 = [_process1BgView.layer convertTime:CACurrentMediaTime() fromLayer:nil];
-    CGFloat delay =currentSuperTime0+self.timeInterval;
+    CGFloat delay = currentSuperTime0;
     
     CGPoint beginPoint;
     switch (arc4random()%3) {
