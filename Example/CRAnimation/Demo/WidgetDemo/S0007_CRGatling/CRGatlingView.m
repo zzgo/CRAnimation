@@ -190,6 +190,8 @@
 //    [self aniamtionMethod];
     
     [self addBulletAnimation];
+    
+    OldProgress = _progress;
 }
 
 
@@ -238,15 +240,6 @@
 
 -(void)addBulletAnimation{
     
-    CALayer *bulletLayer = [CALayer layer];
-    bulletLayer.contents = (__bridge id _Nullable)([UIImage imageNamed:@"子弹"].CGImage);
-    bulletLayer.bounds = CGRectMake(0, 0,10, 3.6);//10 10
-    
-    [_process1BgView.layer insertSublayer:bulletLayer below:_processLayer];
-    CFTimeInterval currentSuperTime0 = [_process1BgView.layer convertTime:CACurrentMediaTime() fromLayer:nil];
-    CGFloat delay =currentSuperTime0+self.timeInterval;
-    
-    
     //  进度条总路程
     CGFloat processTotalDistance    = _process1BgView.width;
     //  本次进度条所需路程
@@ -256,7 +249,7 @@
     //  进度条延时执行时间
     CGFloat processDelayTime        = 0;
     //  子弹宽度
-    CGFloat bulletWidth             = bulletLayer.frame.size.width;
+    CGFloat bulletWidth             = 10;
     //  子弹总路程
     CGFloat bulletTotalDistance     = _process1BgView.width;
     //  之前的路程
@@ -268,7 +261,46 @@
     //  子弹延时执行时间
     CGFloat bulletDelayTime         = 0;
     
+    //  子弹总数
+//    int totalBulletCount            =
     
+    
+    
+    
+    
+    if (thisBulletTime > thisProcessTime) {
+    
+        //  本次子弹所需时间>本次进度条所需时间：进度条延时执行动画
+        processDelayTime    = thisBulletTime - thisProcessTime;
+        bulletDelayTime     = 0;
+    }else{
+    
+        //  本次进度条所需时间>本次子弹所需时间：子弹延时执行动画
+        processDelayTime    = 0;
+        bulletDelayTime     = thisProcessTime - thisBulletTime;
+    }
+    
+    //  子弹动画
+    [self addBulleLayerAnimationWithBulletTotalDistance:bulletTotalDistance
+                                     thisBulletDistance:thisBulletDistance
+                                         thisBulletTime:thisBulletTime
+                                        bulletDelayTime:bulletDelayTime];
+    //  进度条动画
+    [self processShapeLayerAnimationWithDuring:thisProcessTime delay:processDelayTime];
+}
+
+- (void)addBulleLayerAnimationWithBulletTotalDistance:(CGFloat)bulletTotalDistance
+                                   thisBulletDistance:(CGFloat)thisBulletDistance
+                                       thisBulletTime:(CGFloat)thisBulletTime
+                                      bulletDelayTime:(CGFloat)bulletDelayTime
+{
+    CALayer *bulletLayer = [CALayer layer];
+    bulletLayer.contents = (__bridge id _Nullable)([UIImage imageNamed:@"子弹"].CGImage);
+    bulletLayer.bounds = CGRectMake(0, 0,10, 3.6);//10 10
+    
+    [_process1BgView.layer insertSublayer:bulletLayer below:_processLayer];
+    CFTimeInterval currentSuperTime0 = [_process1BgView.layer convertTime:CACurrentMediaTime() fromLayer:nil];
+    CGFloat delay =currentSuperTime0+self.timeInterval;
     
     CGPoint beginPoint;
     switch (arc4random()%3) {
@@ -326,34 +358,12 @@
     keyFrameAnimation.fillMode = kCAFillModeForwards;
     
 #warning Release
-//    keyFrameAnimation.delegate = self;
-    
-    
-    
-    //    keyFrameAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionDefault];
-    
-    
-    
-    
-    if (thisBulletTime > thisProcessTime) {
-    
-        //  本次子弹所需时间>本次进度条所需时间：进度条延时执行动画
-        processDelayTime    = thisBulletTime - thisProcessTime;
-        bulletDelayTime     = 0;
-    }else{
-    
-        //  本次进度条所需时间>本次子弹所需时间：子弹延时执行动画
-        processDelayTime    = 0;
-        bulletDelayTime     = thisProcessTime - thisBulletTime;
-    }
+    //    keyFrameAnimation.delegate = self;
     
     CFTimeInterval currentSuperTime = [_process1BgView.layer convertTime:CACurrentMediaTime() fromLayer:nil];
     keyFrameAnimation.beginTime = currentSuperTime + bulletDelayTime;
     [keyFrameAnimation setValue:bulletLayer forKey:@"leafLayer"];
     [bulletLayer addAnimation:keyFrameAnimation forKey:@"move"];
-    
-    //  进度条动画
-    [self processShapeLayerAnimationWithDuring:thisProcessTime delay:processDelayTime];
 }
 
 #pragma mark - 添加动画 （树叶）
