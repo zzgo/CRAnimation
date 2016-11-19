@@ -182,8 +182,6 @@
 
 - (void)bulletAnimationManager
 {
-    //  进度条总路程
-    CGFloat processTotalDistance    = _process1BgView.width;
     //  本次进度条动画所需时间
     CGFloat thisProcessTime         = _processTotalDuring * (_progress - OldProgress);
     //  进度条延时执行时间
@@ -224,18 +222,10 @@
     
     //  进度条总路程
     CGFloat processTotalDistance    = _process1BgView.width;
-    //  本次进度条所需路程
-    CGFloat thisProcessDistance     = processTotalDistance * (process - OldProgress);
-    //  本次进度条动画所需时间
-    CGFloat thisProcessTime         = _processTotalDuring * (process - OldProgress);
-    //  进度条延时执行时间
-    CGFloat processDelayTime        = 0;
     //  子弹宽度
     CGFloat bulletWidth             = 10;
     //  子弹总路程
     CGFloat bulletTotalDistance     = _process1BgView.width;
-    //  之前的路程
-    CGFloat oldProcessDistance      = oldProcess * bulletTotalDistance;
     //  本次子弹需要走过的路程
     CGFloat thisBulletDistance      = processTotalDistance * (1 - process) + bulletWidth / 2.0;
     //  本次子弹所需时间
