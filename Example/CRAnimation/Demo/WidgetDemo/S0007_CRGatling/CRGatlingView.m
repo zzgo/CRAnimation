@@ -183,47 +183,6 @@
 }
 
 
-#pragma mark - Animation Method
-
-- (void)aniamtionMethod
-{
-    CGFloat processNeedTime = _processTotalDuring * _progress;
-    int totalBullet = (int)(1.0 * processNeedTime / _bulletTimeGap);
-    
-    NSLog(@"totalBullet:%d", totalBullet);
-    
-    for (int i = 0; i < totalBullet; i++) {
-        
-        CALayer *bulletLayer = [CALayer layer];
-        bulletLayer.contents = (__bridge id _Nullable)([UIImage imageNamed:@"子弹"].CGImage);
-        bulletLayer.bounds = CGRectMake(0, 0,10, 3.6);//10 10
-        CGPoint beginPoint;
-        switch (arc4random()%3) {
-            case 0:
-                beginPoint=  CGPointMake(BG_WIDTH,BG_HEIGHT*1/2.0-3);
-                break;
-            case 1:
-                beginPoint=  CGPointMake(BG_WIDTH,BG_HEIGHT*1/2.0);
-                
-                break;
-            case 2:
-                beginPoint=  CGPointMake(BG_WIDTH,BG_HEIGHT*1/2.0+3);
-                
-                break;
-            default:
-                break;
-        }
-        bulletLayer.position = beginPoint;
-        [_process1BgView.layer insertSublayer:bulletLayer below:_processLayer];
-        CFTimeInterval currentSuperTime = [_process1BgView.layer convertTime:CACurrentMediaTime() fromLayer:nil];
-        CGFloat delay =currentSuperTime+self.timeInterval*i;
-        [self addAnimationToLayer:bulletLayer andDelay:delay andIndex:i andTotalBullet:totalBullet];
-    }
-    
-    
-    OldProgress = _progress;
-}
-
 #pragma mark - 添加动画 （子弹）
 
 - (void)bulletAnimationManager
@@ -375,70 +334,6 @@
     [bulletLayer addAnimation:keyFrameAnimation forKey:@"move"];
 }
 
-#pragma mark - 添加动画 （树叶）
-
--(void)addAnimationToLayer:(CALayer *)layer andDelay:(CGFloat)delay andIndex:(int)index andTotalBullet:(int)totalBullet{
-    
-    //  进度条动画所需时间
-    CGFloat processNeedTime         = _processTotalDuring * _progress;
-    //  子弹总路程
-    CGFloat bulletTotalDistance     = _process1BgView.width;
-    //  子弹宽度
-    CGFloat bulletWidth             = layer.frame.size.width;
-    //  之前的路程
-    CGFloat oldProcessDistance      = OldProgress * bulletTotalDistance;
-    //  此次bullet计算的间隔路程
-    CGFloat thisTimeProcessDistance = (_progress - OldProgress) / totalBullet * index * bulletTotalDistance;
-    //  此次子弹所需路程
-    CGFloat bulletDistance          = bulletTotalDistance - oldProcessDistance - thisTimeProcessDistance + bulletWidth / 2.0;
-    //  此次子弹动画所需时间
-    CGFloat bulletAnimationDuring   = 1.0 * bulletDistance / bulletTotalDistance * _bulletTotalDuring;
-    //  子弹延时时间
-    CGFloat bulletDelay             = processNeedTime - bulletAnimationDuring;
-    
-    
-    
-    CAKeyframeAnimation *keyFrameAnimation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
-    //一直增加的话
-    //进度条之前的位置
-    CGFloat teminalPosition = bulletTotalDistance - bulletDistance;
-    CGPoint originalP = CGPointMake(layer.position.x, layer.position.y);// layer.position;
-    CGFloat terminalY;
-    CGPoint controlPoint;
-    CGPoint middlePoint;
-    terminalY=originalP.y;
-    
-    CGPoint terminalPoint=CGPointMake(teminalPosition,terminalY);
-    if (originalP.y==1/2.0*BG_HEIGHT+3) {
-        terminalPoint.y=terminalPoint.y+5;
-        middlePoint= controlPoint=   CGPointMake(1/2.0*(teminalPosition+originalP.x),terminalY+10);
-    }else if (originalP.y==1/2.0*BG_HEIGHT-3){
-        terminalPoint.y=terminalPoint.y-5;
-        middlePoint = controlPoint=   CGPointMake(1/2.0*(teminalPosition+originalP.x),terminalY-10);
-    }else{
-        middlePoint = controlPoint=   CGPointMake(1/2.0*(teminalPosition+originalP.x),terminalY);
-    }
-    UIBezierPath *path=[UIBezierPath bezierPath];
-    [path moveToPoint:originalP];
-    [path addQuadCurveToPoint:terminalPoint controlPoint:controlPoint];
-
-    keyFrameAnimation.path=path.CGPath;
-    if (isnan(delay)) {
-        return;
-    }
-    
-    //动画持续时间
-    keyFrameAnimation.duration = bulletAnimationDuring;
-    keyFrameAnimation.delegate = self;
-    //    keyFrameAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionDefault];
-    
-    CFTimeInterval currentSuperTime = [_process1BgView.layer convertTime:CACurrentMediaTime() fromLayer:nil];
-    CGFloat delay1 = currentSuperTime + bulletDelay;
-    
-    keyFrameAnimation.beginTime = delay1;
-    [keyFrameAnimation setValue:layer forKey:@"leafLayer"];
-    [layer addAnimation:keyFrameAnimation forKey:@"move"];
-}
 
 #pragma mark ----- Animation Delegate
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
