@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CRAnimation/Demo/WidgetDemo/S0007_CRGatling/CRGatlingView.m"
-            timestampString = "501221160.476196"
+            timestampString = "501223794.369226"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "389"
-            endingLineNumber = "389"
+            startingLineNumber = "451"
+            endingLineNumber = "451"
             landmarkName = "-addAnimationToLayer:andDelay:andIndex:andTotalBullet:"
             landmarkType = "7">
          </BreakpointContent>
