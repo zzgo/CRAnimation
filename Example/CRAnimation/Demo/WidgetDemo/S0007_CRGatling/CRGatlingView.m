@@ -243,16 +243,10 @@
 {
     //  进度条总路程
     CGFloat processTotalDistance    = _process1BgView.width;
-    //  本次进度条所需路程
-    CGFloat thisProcessDistance     = processTotalDistance * (_progress - OldProgress);
     //  本次进度条动画所需时间
     CGFloat thisProcessTime         = _processTotalDuring * (_progress - OldProgress);
     //  进度条延时执行时间
     CGFloat processDelayTime        = 0;
-    //  子弹宽度
-    CGFloat bulletWidth             = 10;
-    //  子弹总路程
-    CGFloat bulletTotalDistance     = _process1BgView.width;
     
     //  第一颗子弹所需时间
     CGFloat firstBulletTime = [self addBulletAnimationWithProcess:OldProgress oldProcess:OldProgress animation:NO bulletDelayTime:0];
@@ -269,16 +263,16 @@
     
     for (int i = 0; i < totalBulletCount; i++) {
         
-        CGFloat bulletPercent       = 1.0 * i / totalBulletCount;
-        CGFloat thisProcess = OldProgress + (_progress - OldProgress) * bulletPercent;
-        CGFloat bulletDelay = i * _bulletTimeGap;
+        //  当前子弹所在percent
+        CGFloat bulletPercent   = 1.0 * i / totalBulletCount;
+        //  预计算本次对应进度条的progress
+        CGFloat thisProgress    = OldProgress + (_progress - OldProgress) * bulletPercent;
+        //  子弹延时时间
+        CGFloat bulletDelay     = i * _bulletTimeGap;
         
-        [self addBulletAnimationWithProcess:thisProcess oldProcess:oldProgress animation:YES bulletDelayTime:bulletDelay];
-        
-        oldProgress = thisProcess;
+        [self addBulletAnimationWithProcess:thisProgress oldProcess:oldProgress animation:YES bulletDelayTime:bulletDelay];
+        oldProgress = thisProgress;
     }
-    
-//    [self addBulletAnimationWithProcess:_progress oldProcess:OldProgress];
     
     processDelayTime = firstBulletTime;
     //  进度条动画
