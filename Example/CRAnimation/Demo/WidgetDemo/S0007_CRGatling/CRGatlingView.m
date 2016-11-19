@@ -242,10 +242,6 @@
     bulletLayer.contents = (__bridge id _Nullable)([UIImage imageNamed:@"子弹"].CGImage);
     bulletLayer.bounds = CGRectMake(0, 0,10, 3.6);//10 10
     
-    CGPoint beginPoint;
-    beginPoint=  CGPointMake(BG_WIDTH,BG_HEIGHT*1/2.0);
-    bulletLayer.position = beginPoint;
-    
     [_process1BgView.layer insertSublayer:bulletLayer below:_processLayer];
     CFTimeInterval currentSuperTime0 = [_process1BgView.layer convertTime:CACurrentMediaTime() fromLayer:nil];
     CGFloat delay =currentSuperTime0+self.timeInterval;
@@ -274,6 +270,23 @@
     
     
     
+    CGPoint beginPoint;
+    switch (arc4random()%3) {
+        case 0:
+            beginPoint=  CGPointMake(BG_WIDTH,BG_HEIGHT*1/2.0-3);
+            break;
+        case 1:
+            beginPoint=  CGPointMake(BG_WIDTH,BG_HEIGHT*1/2.0);
+            
+            break;
+        case 2:
+            beginPoint=  CGPointMake(BG_WIDTH,BG_HEIGHT*1/2.0+3);
+            
+            break;
+        default:
+            break;
+    }
+    bulletLayer.position = beginPoint;
     
     //  子弹动画
     CAKeyframeAnimation *keyFrameAnimation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
@@ -287,7 +300,15 @@
     terminalY=originalP.y;
     
     CGPoint terminalPoint=CGPointMake(teminalPosition,terminalY);
-    middlePoint = controlPoint=   CGPointMake(1/2.0*(teminalPosition+originalP.x),terminalY);
+    if (originalP.y==1/2.0*BG_HEIGHT+3) {
+        terminalPoint.y=terminalPoint.y+5;
+        middlePoint= controlPoint=   CGPointMake(1/2.0*(teminalPosition+originalP.x),terminalY+10);
+    }else if (originalP.y==1/2.0*BG_HEIGHT-3){
+        terminalPoint.y=terminalPoint.y-5;
+        middlePoint = controlPoint=   CGPointMake(1/2.0*(teminalPosition+originalP.x),terminalY-10);
+    }else{
+        middlePoint = controlPoint=   CGPointMake(1/2.0*(teminalPosition+originalP.x),terminalY);
+    }
     UIBezierPath *path=[UIBezierPath bezierPath];
     [path moveToPoint:originalP];
     [path addQuadCurveToPoint:terminalPoint controlPoint:controlPoint];
