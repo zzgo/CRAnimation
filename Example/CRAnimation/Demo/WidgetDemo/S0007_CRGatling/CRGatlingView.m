@@ -8,7 +8,15 @@
 
 #import "CRGatlingView.h"
 
-static NSString *bulletLayerKeyStr = @"bulletLayer";
+//  子弹动画key
+static NSString *bulletLayerKeyStr          = @"bulletLayer";
+//  进度条动画key
+static NSString *progressAnimationKeyStr    = @"progressAnimationKeyStr";
+//  子弹宽度
+static CGFloat  BulletWidth                 = 10;
+//  每次发射的子弹数量
+static int      bulletCountPerTime          = 3;
+
 
 @interface CRGatlingView () <CAAnimationDelegate>
 
@@ -23,8 +31,9 @@ static NSString *bulletLayerKeyStr = @"bulletLayer";
     CABasicAnimation    *_processAnimation;
     
     CGFloat             OldProgress;
-    CGFloat             BG_WIDTH ;
-    CGFloat             BG_HEIGHT ;
+    CGFloat             progressEffect_X;
+    CGFloat             progressEffect_WIDTH;
+    CGFloat             progressEffect_HEIGHT;
     CGFloat             _processTotalDuring;        //  0~1动画所需总时间
     CGFloat             _bulletTotalDuring;         //  子弹走完全程所需时间
     CGFloat             _bulletTimeGap;             //  发射子弹的时间间隔
@@ -44,9 +53,9 @@ static NSString *bulletLayerKeyStr = @"bulletLayer";
 
 - (void)setParamater
 {
-    _processTotalDuring = 4.0;
-    _bulletTotalDuring = 4.0;
-    _bulletTimeGap = 0.2;
+    _processTotalDuring     = 2.0;
+    _bulletTotalDuring      = 1.0;
+    _bulletTimeGap          = 0.06;
 }
 
 
@@ -126,20 +135,21 @@ static NSString *bulletLayerKeyStr = @"bulletLayer";
     shapeLayer.path = path.CGPath;
     _process1BgView.layer.mask = shapeLayer;
     
-    BG_WIDTH = _process1BgView.width;
-    BG_HEIGHT = _process1BgView.height;
+    progressEffect_X        = 30.0 / 611 * _process1BgView.width;
+    progressEffect_WIDTH    = _process1BgView.width - progressEffect_X;
+    progressEffect_HEIGHT   = _process1BgView.height;
 }
 
 - (void)createProcessLayer
 {
     UIBezierPath *processPath = [UIBezierPath bezierPath];
-    [processPath moveToPoint:CGPointMake(0, _process1BgView.height / 2.0)];
-    [processPath addLineToPoint:CGPointMake(_process1BgView.width, _process1BgView.height / 2.0)];
+    [processPath moveToPoint:CGPointMake(progressEffect_X, _process1BgView.height / 2.0)];
+    [processPath addLineToPoint:CGPointMake(progressEffect_WIDTH, _process1BgView.height / 2.0)];
     
     _processLayer = [CAShapeLayer layer];
     _processLayer.path = processPath.CGPath;
     _processLayer.lineWidth = _process1BgView.height;
-    _processLayer.strokeColor = [UIColorFromHEX(0xfab140) colorWithAlphaComponent:0.3].CGColor;
+    _processLayer.strokeColor = [UIColorFromHEX(0xfab140) colorWithAlphaComponent:1.0].CGColor;
     [_process1BgView.layer addSublayer:_processLayer];
     
     _processLayer.strokeEnd = 0;
@@ -174,7 +184,7 @@ static NSString *bulletLayerKeyStr = @"bulletLayer";
     
     _progress = progress;
     
-    [self bulletAnimationManager];
+    [self startLoading];
     
     OldProgress = _progress;
 }
@@ -187,9 +197,9 @@ static NSString *bulletLayerKeyStr = @"bulletLayer";
     //  本次进度条动画所需时间
     CGFloat thisProcessTime = _processTotalDuring * (_progress - OldProgress);
     //  第一颗子弹所需时间
-    CGFloat firstBulletTime = [self addBulletAnimationWithProcess:OldProgress animation:NO bulletDelayTime:0];
+    CGFloat firstBulletTime = [self caculateBulletTimeAndAddBulletAnimationWithProcess:OldProgress animation:NO bulletDelayTime:0];
     //  最后一颗子弹所需时间
-    CGFloat lastBulletTime  = [self addBulletAnimationWithProcess:_progress animation:NO bulletDelayTime:0];
+    CGFloat lastBulletTime  = [self caculateBulletTimeAndAddBulletAnimationWithProcess:_progress animation:NO bulletDelayTime:0];
     //  进度条动画延时时间
     CGFloat progressDelay   = firstBulletTime;
     //  动画总时间
@@ -197,8 +207,15 @@ static NSString *bulletLayerKeyStr = @"bulletLayer";
     //  子弹总数
     int totalBulletCount    = 1.0 * (TotalTime - lastBulletTime) / _bulletTimeGap;
     
-    CGFloat oldProgress = OldProgress;
-    for (int i = 0; i < totalBulletCount; i++) {
+    //  进度条动画
+    [self processShapeLayerAnimationWithDuring:thisProcessTime delay:progressDelay];
+    
+    if (totalBulletCount <= 0) {
+        return;
+    }
+    
+    //  子弹动画(最后一颗子弹不执行动画)
+    for (int i = 0; i < totalBulletCount - 1; i++) {
         
         //  当前子弹所在percent
         CGFloat bulletPercent   = 1.0 * i / totalBulletCount;
@@ -207,62 +224,64 @@ static NSString *bulletLayerKeyStr = @"bulletLayer";
         //  子弹延时时间
         CGFloat bulletDelay     = i * _bulletTimeGap;
         
-        [self addBulletAnimationWithProcess:thisProgress animation:YES bulletDelayTime:bulletDelay];
-        oldProgress = thisProgress;
+        [self caculateBulletTimeAndAddBulletAnimationWithProcess:thisProgress animation:YES bulletDelayTime:bulletDelay];
     }
     
-    //  进度条动画
-    [self processShapeLayerAnimationWithDuring:thisProcessTime delay:progressDelay];
 }
 
-- (CGFloat)addBulletAnimationWithProcess:(CGFloat)process animation:(BOOL)animation bulletDelayTime:(CGFloat)bulletDelayTime{
+- (CGFloat)caculateBulletTimeAndAddBulletAnimationWithProcess:(CGFloat)process
+                                                    animation:(BOOL)animation
+                                              bulletDelayTime:(CGFloat)bulletDelayTime
+{
     
     //  进度条总路程
-    CGFloat processTotalDistance    = _process1BgView.width;
-    //  子弹宽度
-    CGFloat bulletWidth             = 10;
+    CGFloat processTotalDistance    = progressEffect_WIDTH;
     //  子弹总路程
-    CGFloat bulletTotalDistance     = _process1BgView.width;
+    CGFloat bulletTotalDistance     = progressEffect_WIDTH;
     //  本次子弹需要走过的路程
-    CGFloat thisBulletDistance      = processTotalDistance * (1 - process) + bulletWidth / 2.0;
+    CGFloat thisBulletDistance      = processTotalDistance * (1 - process);
     //  本次子弹所需时间
     CGFloat thisBulletTime          = (1.0 * thisBulletDistance / bulletTotalDistance) * _bulletTotalDuring;
     
     if (animation) {
-        //  子弹动画
-        [self addBulleLayerAnimationWithBulletTotalDistance:bulletTotalDistance
-                                         thisBulletDistance:thisBulletDistance
-                                             thisBulletTime:thisBulletTime
-                                            bulletDelayTime:bulletDelayTime];
+        for (int i = 0; i < bulletCountPerTime; i++) {
+            //  子弹动画
+            [self addBulletLayerAnimationWithBulletTotalDistance:bulletTotalDistance
+                                              thisBulletDistance:thisBulletDistance
+                                                  thisBulletTime:thisBulletTime
+                                                 bulletDelayTime:bulletDelayTime];
+        }
+        
     }
     
     return thisBulletTime;
 }
 
-- (void)addBulleLayerAnimationWithBulletTotalDistance:(CGFloat)bulletTotalDistance
-                                   thisBulletDistance:(CGFloat)thisBulletDistance
-                                       thisBulletTime:(CGFloat)thisBulletTime
-                                      bulletDelayTime:(CGFloat)bulletDelayTime
+- (void)addBulletLayerAnimationWithBulletTotalDistance:(CGFloat)bulletTotalDistance
+                                    thisBulletDistance:(CGFloat)thisBulletDistance
+                                        thisBulletTime:(CGFloat)thisBulletTime
+                                       bulletDelayTime:(CGFloat)bulletDelayTime
 {
     CALayer *bulletLayer = [CALayer layer];
     bulletLayer.contents = (__bridge id _Nullable)([UIImage imageNamed:@"子弹"].CGImage);
-    bulletLayer.bounds = CGRectMake(0, 0,10, 3.6);//10 10
+    bulletLayer.bounds = CGRectMake(0, 0,BulletWidth, 3.6);//10 10
     
     [_process1BgView.layer insertSublayer:bulletLayer below:_processLayer];
     CFTimeInterval currentSuperTime0 = [_process1BgView.layer convertTime:CACurrentMediaTime() fromLayer:nil];
     CGFloat delay = currentSuperTime0;
+    CGFloat beginX = progressEffect_WIDTH + progressEffect_X;
     
     CGPoint beginPoint;
     switch (arc4random()%3) {
         case 0:
-            beginPoint=  CGPointMake(BG_WIDTH,BG_HEIGHT*1/2.0-3);
+            beginPoint=  CGPointMake(beginX,progressEffect_HEIGHT*1/2.0-3);
             break;
         case 1:
-            beginPoint=  CGPointMake(BG_WIDTH,BG_HEIGHT*1/2.0);
+            beginPoint=  CGPointMake(beginX,progressEffect_HEIGHT*1/2.0);
             
             break;
         case 2:
-            beginPoint=  CGPointMake(BG_WIDTH,BG_HEIGHT*1/2.0+3);
+            beginPoint=  CGPointMake(beginX,progressEffect_HEIGHT*1/2.0+3);
             
             break;
         default:
@@ -274,41 +293,39 @@ static NSString *bulletLayerKeyStr = @"bulletLayer";
     CAKeyframeAnimation *keyFrameAnimation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
     //一直增加的话
     //进度条之前的位置
-    CGFloat teminalPosition = bulletTotalDistance - thisBulletDistance;
+    CGFloat teminalPosition = bulletTotalDistance - thisBulletDistance + progressEffect_X - BulletWidth;
     CGPoint originalP = CGPointMake(bulletLayer.position.x, bulletLayer.position.y);// layer.position;
-    CGFloat terminalY;
     CGPoint controlPoint;
     CGPoint middlePoint;
-    terminalY=originalP.y;
-    
+    CGFloat terminalX = 1/2.0*(teminalPosition+originalP.x) + progressEffect_X - BulletWidth;
+    CGFloat terminalY = originalP.y;
     CGPoint terminalPoint=CGPointMake(teminalPosition,terminalY);
-    if (originalP.y==1/2.0*BG_HEIGHT+3) {
-        terminalPoint.y=terminalPoint.y+5;
-        middlePoint= controlPoint=   CGPointMake(1/2.0*(teminalPosition+originalP.x),terminalY+10);
-    }else if (originalP.y==1/2.0*BG_HEIGHT-3){
-        terminalPoint.y=terminalPoint.y-5;
-        middlePoint = controlPoint=   CGPointMake(1/2.0*(teminalPosition+originalP.x),terminalY-10);
+    
+    if (originalP.y == 1/2.0 * progressEffect_HEIGHT + 3) {
+        
+        terminalPoint.y = terminalPoint.y + 5;
+        middlePoint = controlPoint = CGPointMake(terminalX, terminalY + 10);
+        
+    }else if (originalP.y == 1/2.0 * progressEffect_HEIGHT - 3 ){
+        
+        terminalPoint.y = terminalPoint.y - 5;
+        middlePoint = controlPoint = CGPointMake(terminalX, terminalY - 10);
+        
     }else{
-        middlePoint = controlPoint=   CGPointMake(1/2.0*(teminalPosition+originalP.x),terminalY);
+        middlePoint = controlPoint = CGPointMake(terminalX, terminalY);
     }
-    UIBezierPath *path=[UIBezierPath bezierPath];
+    UIBezierPath *path = [UIBezierPath bezierPath];
     [path moveToPoint:originalP];
     [path addQuadCurveToPoint:terminalPoint controlPoint:controlPoint];
     
-    keyFrameAnimation.path=path.CGPath;
+    keyFrameAnimation.path = path.CGPath;
     if (isnan(delay)) {
         return;
     }
     
     //动画持续时间
     keyFrameAnimation.duration = thisBulletTime;
-    
-#warning DAD
-    keyFrameAnimation.removedOnCompletion = NO;
-    keyFrameAnimation.fillMode = kCAFillModeForwards;
-    
-#warning Release
-    //    keyFrameAnimation.delegate = self;
+    keyFrameAnimation.delegate = self;
     
     CFTimeInterval currentSuperTime = [_process1BgView.layer convertTime:CACurrentMediaTime() fromLayer:nil];
     keyFrameAnimation.beginTime = currentSuperTime + bulletDelayTime;
@@ -317,20 +334,7 @@ static NSString *bulletLayerKeyStr = @"bulletLayer";
 }
 
 
-#pragma mark ----- Animation Delegate
-- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
-    CALayer *layer = [anim valueForKey:bulletLayerKeyStr];
-    [layer removeFromSuperlayer];
-}
-
-- (void)startLoading{
-    [soldierIV startAnimating];
-}
-
-- (void)stopLoading{
-    [soldierIV stopAnimating];
-}
-
+//  进度条动画
 - (void)processShapeLayerAnimationWithDuring:(CGFloat)during delay:(CGFloat)delay
 {
     if (!_processAnimation) {
@@ -348,8 +352,44 @@ static NSString *bulletLayerKeyStr = @"bulletLayer";
     _processAnimation.toValue = [NSNumber numberWithFloat:self.progress];
     _processAnimation.duration = during;
     _processAnimation.beginTime = delay;
-    [_processLayer addAnimation:_processAnimation forKey:@"processAnimation"];
+    _processAnimation.delegate = self;
+    [_processLayer addAnimation:_processAnimation forKey:progressAnimationKeyStr];
     
+}
+
+
+
+#pragma mark - Animation Delegate
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
+    
+    if ([anim isEqual:[_processLayer animationForKey:progressAnimationKeyStr]]) {
+        
+        if (flag == YES) {
+            [self stopLoading];
+        }
+    }
+    
+    else {
+    
+        CALayer *layer = [anim valueForKey:bulletLayerKeyStr];
+        if (layer && flag == YES) {
+            [layer removeFromSuperlayer];
+        }
+    }
+    
+}
+
+
+
+#pragma mark - Start-End
+
+- (void)startLoading{
+    [soldierIV startAnimating];
+    [self bulletAnimationManager];
+}
+
+- (void)stopLoading{
+    [soldierIV stopAnimating];
 }
 
 @end
