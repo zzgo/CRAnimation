@@ -15,7 +15,7 @@ static NSString *progressAnimationKeyStr    = @"progressAnimationKeyStr";
 //  子弹宽度
 static CGFloat  BulletWidth                 = 10;
 //  每次发射的子弹数量
-static int      bulletCountPerTime          = 3;
+static int      bulletCountPerTime          = 2;
 
 
 @interface CRGatlingView () <CAAnimationDelegate>
@@ -42,7 +42,7 @@ static int      bulletCountPerTime          = 3;
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
-    self.backgroundColor = [UIColor blueColor];
+    self.backgroundColor = [UIColor clearColor];
     if (self) {
         
         [self setParamater];
@@ -55,7 +55,7 @@ static int      bulletCountPerTime          = 3;
 {
     _processTotalDuring     = 2.0;
     _bulletTotalDuring      = 1.0;
-    _bulletTimeGap          = 0.06;
+    _bulletTimeGap          = 0.08;
 }
 
 
@@ -354,7 +354,6 @@ static int      bulletCountPerTime          = 3;
     _processAnimation.beginTime = delay;
     _processAnimation.delegate = self;
     [_processLayer addAnimation:_processAnimation forKey:progressAnimationKeyStr];
-    
 }
 
 
@@ -365,6 +364,7 @@ static int      bulletCountPerTime          = 3;
     if ([anim isEqual:[_processLayer animationForKey:progressAnimationKeyStr]]) {
         
         if (flag == YES) {
+            _processLayer.strokeEnd = [_processAnimation.toValue floatValue];
             [self stopLoading];
         }
     }
