@@ -205,7 +205,7 @@ static int      bulletCountPerTime          = 2;
     //  动画总时间
     CGFloat TotalTime       = progressDelay + thisProcessTime;
     //  子弹总数
-    int totalBulletCount    = 1.0 * (TotalTime - lastBulletTime) / _bulletTimeGap;
+    int totalBulletCount    = ceil(1.0 * (TotalTime - lastBulletTime) / _bulletTimeGap);
     
     //  进度条动画
     [self processShapeLayerAnimationWithDuring:thisProcessTime delay:progressDelay];
