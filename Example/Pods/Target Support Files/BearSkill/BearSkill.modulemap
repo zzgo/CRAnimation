@@ -1,6 +1,0 @@
-framework module BearSkill {
-  umbrella header "BearSkill-umbrella.h"
-
-  export *
-  module * { export * }
-}
