@@ -154,7 +154,7 @@
     _processLayer.strokeColor = [UIColorFromHEX(0xfab140) colorWithAlphaComponent:0.3].CGColor;
     [_process1BgView.layer addSublayer:_processLayer];
     
-    _processLayer.strokeEnd = 0.5;
+    _processLayer.strokeEnd = 0;
 }
 
 - (void)createSoldierImageV
@@ -257,6 +257,8 @@
     CGFloat thisProcessDistance     = processTotalDistance * (_progress - OldProgress);
     //  本次进度条动画所需时间
     CGFloat thisProcessTime         = _processTotalDuring * (self.progress - OldProgress);
+    //  进度条延时执行时间
+    CGFloat processDelayTime        = 0;
     //  子弹宽度
     CGFloat bulletWidth             = bulletLayer.frame.size.width;
     //  子弹总路程
@@ -267,10 +269,10 @@
     CGFloat thisBulletDistance      = processTotalDistance * (1 - _progress) + bulletWidth / 2.0;
     //  本次子弹所需时间
     CGFloat thisBulletTime          = (1.0 * thisBulletDistance / bulletTotalDistance) * _bulletTotalDuring;
+    //  子弹延时执行时间
+    CGFloat bulletDelayTime         = 0;
     
     
-    //  进度条动画
-    [self processShapeLayerAnimationWithDuring:thisProcessTime];
     
     
     //  子弹动画
@@ -309,17 +311,28 @@
     
     //    keyFrameAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionDefault];
     
-    CFTimeInterval currentSuperTime = [_process1BgView.layer convertTime:CACurrentMediaTime() fromLayer:nil];
-    CGFloat calucateDelayValue = thisProcessTime - thisBulletTime;
-    if (calucateDelayValue < 0) {
-        calucateDelayValue = 0;
+    
+    
+    
+    if (thisBulletTime > thisProcessTime) {
+    
+        //  本次子弹所需时间>本次进度条所需时间：进度条延时执行动画
+        processDelayTime    = thisBulletTime - thisProcessTime;
+        bulletDelayTime     = 0;
+    }else{
+    
+        //  本次进度条所需时间>本次子弹所需时间：子弹延时执行动画
+        processDelayTime    = 0;
+        bulletDelayTime     = thisProcessTime - thisBulletTime;
     }
     
-    CGFloat delay1 = currentSuperTime + calucateDelayValue;
-    
-    keyFrameAnimation.beginTime = delay1;
+    CFTimeInterval currentSuperTime = [_process1BgView.layer convertTime:CACurrentMediaTime() fromLayer:nil];
+    keyFrameAnimation.beginTime = currentSuperTime + bulletDelayTime;
     [keyFrameAnimation setValue:bulletLayer forKey:@"leafLayer"];
     [bulletLayer addAnimation:keyFrameAnimation forKey:@"move"];
+    
+    //  进度条动画
+    [self processShapeLayerAnimationWithDuring:thisProcessTime delay:processDelayTime];
 }
 
 #pragma mark - 添加动画 （树叶）
@@ -401,7 +414,7 @@
     [soldierIV stopAnimating];
 }
 
-- (void)processShapeLayerAnimationWithDuring:(CGFloat)during
+- (void)processShapeLayerAnimationWithDuring:(CGFloat)during delay:(CGFloat)delay
 {
     if (!_processAnimation) {
         _processAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
@@ -411,9 +424,13 @@
         _processAnimation.removedOnCompletion = NO;
     }
     
+    CFTimeInterval currentSuperTime = [_process1BgView.layer convertTime:CACurrentMediaTime() fromLayer:nil];
+    delay += currentSuperTime;
+    
     _processAnimation.fromValue = _processAnimation.toValue;
     _processAnimation.toValue = [NSNumber numberWithFloat:self.progress];
     _processAnimation.duration = during;
+    _processAnimation.beginTime = delay;
     [_processLayer addAnimation:_processAnimation forKey:@"processAnimation"];
     
 }
