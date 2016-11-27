@@ -42,14 +42,13 @@
 		09D168D81DC620210082C35E /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 09D168D61DC620210082C35E /* README.md */; };
 		09EE9BA01DBCE2E400BD81A2 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 09EE9B9F1DBCE2E400BD81A2 /* README.md */; };
 		09EE9BA21DBCEA5A00BD81A2 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 09EE9BA11DBCEA5A00BD81A2 /* README.md */; };
+		18D8B62D1DD80BB600C6545D /* CRGatlingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D8B62C1DD80BB600C6545D /* CRGatlingView.m */; };
 		257751521DC25A790019D38B /* HZLaunchViewDemoInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2577514F1DC25A790019D38B /* HZLaunchViewDemoInfoModel.m */; };
 		257751531DC25A790019D38B /* HZLaunchViewDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 257751511DC25A790019D38B /* HZLaunchViewDemoVC.m */; };
 		257751551DC25B070019D38B /* HZLaunchView.gif in Resources */ = {isa = PBXBuildFile; fileRef = 257751541DC25B070019D38B /* HZLaunchView.gif */; };
 		366BCD0EA1948D6414619360 /* Pods_CRAnimation_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02449F62305352FC64D71D38 /* Pods_CRAnimation_Tests.framework */; };
-		5247C4F21DD2103E0024DF8B /* CRGatling.m in Sources */ = {isa = PBXBuildFile; fileRef = 5247C4F11DD2103E0024DF8B /* CRGatling.m */; };
 		5247C4F81DD212320024DF8B /* GatlingProgress.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5247C4F71DD212320024DF8B /* GatlingProgress.gif */; };
 		527FF73C1DD0E9770055026D /* CRGatlingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 527FF73A1DD0E9770055026D /* CRGatlingVC.m */; };
-		527FF73D1DD0E9770055026D /* CRGatlingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 527FF73B1DD0E9770055026D /* CRGatlingVC.xib */; };
 		527FF7431DD0EBB60055026D /* CRGatlingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 527FF7421DD0EBB60055026D /* CRGatlingModel.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
@@ -144,18 +143,17 @@
 		09EE9B9F1DBCE2E400BD81A2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		09EE9BA11DBCEA5A00BD81A2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0EE5779AF28D42163CC3E896 /* Pods-CRAnimation_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CRAnimation_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-CRAnimation_Example/Pods-CRAnimation_Example.release.xcconfig"; sourceTree = "<group>"; };
+		18D8B62B1DD80BB600C6545D /* CRGatlingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRGatlingView.h; sourceTree = "<group>"; };
+		18D8B62C1DD80BB600C6545D /* CRGatlingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRGatlingView.m; sourceTree = "<group>"; };
 		1C7FE269E5E0C0765014CB0A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		2577514E1DC25A790019D38B /* HZLaunchViewDemoInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZLaunchViewDemoInfoModel.h; sourceTree = "<group>"; };
 		2577514F1DC25A790019D38B /* HZLaunchViewDemoInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZLaunchViewDemoInfoModel.m; sourceTree = "<group>"; };
 		257751501DC25A790019D38B /* HZLaunchViewDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZLaunchViewDemoVC.h; sourceTree = "<group>"; };
 		257751511DC25A790019D38B /* HZLaunchViewDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZLaunchViewDemoVC.m; sourceTree = "<group>"; };
 		257751541DC25B070019D38B /* HZLaunchView.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = HZLaunchView.gif; sourceTree = "<group>"; };
-		5247C4F01DD2103E0024DF8B /* CRGatling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRGatling.h; sourceTree = "<group>"; };
-		5247C4F11DD2103E0024DF8B /* CRGatling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRGatling.m; sourceTree = "<group>"; };
 		5247C4F71DD212320024DF8B /* GatlingProgress.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = GatlingProgress.gif; sourceTree = "<group>"; };
 		527FF7391DD0E9770055026D /* CRGatlingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRGatlingVC.h; sourceTree = "<group>"; };
 		527FF73A1DD0E9770055026D /* CRGatlingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRGatlingVC.m; sourceTree = "<group>"; };
-		527FF73B1DD0E9770055026D /* CRGatlingVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CRGatlingVC.xib; sourceTree = "<group>"; };
 		527FF7411DD0EBB60055026D /* CRGatlingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRGatlingModel.h; sourceTree = "<group>"; };
 		527FF7421DD0EBB60055026D /* CRGatlingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRGatlingModel.m; sourceTree = "<group>"; };
 		59F56DF0F33F6C42324864D8 /* Pods_CRAnimation_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CRAnimation_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -248,13 +246,13 @@
 		0920033B1DAAA20B008266B8 /* WidgetDemo */ = {
 			isa = PBXGroup;
 			children = (
-				ED36EAC91DD2AF9A0050416B /* S0006_CCWormHUDDemo */,
 				09D168D51DC61FFB0082C35E /* S0000_SampleDemo */,
 				092A2D0B1DBCA51C00650DE1 /* S0001_CRCardAnimationViewDemo */,
 				092A2D111DBCA51C00650DE1 /* S0002_CRImageGradientViewDemo */,
 				092A2D181DBCA51C00650DE1 /* S0003_GifDemo */,
 				092A2D5D1DBCA8DA00650DE1 /* S0004_WCLLoadingView */,
 				2577514D1DC25A790019D38B /* S0005_HZLaunchView */,
+				ED36EAC91DD2AF9A0050416B /* S0006_CCWormHUDDemo */,
 				527FF7331DD0E9270055026D /* S0007_CRGatling */,
 			);
 			path = WidgetDemo;
@@ -383,13 +381,12 @@
 			isa = PBXGroup;
 			children = (
 				5247C4F71DD212320024DF8B /* GatlingProgress.gif */,
-				5247C4F01DD2103E0024DF8B /* CRGatling.h */,
-				5247C4F11DD2103E0024DF8B /* CRGatling.m */,
+				18D8B62B1DD80BB600C6545D /* CRGatlingView.h */,
+				18D8B62C1DD80BB600C6545D /* CRGatlingView.m */,
 				527FF7411DD0EBB60055026D /* CRGatlingModel.h */,
 				527FF7421DD0EBB60055026D /* CRGatlingModel.m */,
 				527FF7391DD0E9770055026D /* CRGatlingVC.h */,
 				527FF73A1DD0E9770055026D /* CRGatlingVC.m */,
-				527FF73B1DD0E9770055026D /* CRGatlingVC.xib */,
 			);
 			path = S0007_CRGatling;
 			sourceTree = "<group>";
@@ -617,7 +614,6 @@
 				257751551DC25B070019D38B /* HZLaunchView.gif in Resources */,
 				5247C4F81DD212320024DF8B /* GatlingProgress.gif in Resources */,
 				092A2D2A1DBCA51C00650DE1 /* CRCardAnimationViewDemoVC.gif in Resources */,
-				527FF73D1DD0E9770055026D /* CRGatlingVC.xib in Resources */,
 				092A2D331DBCA51C00650DE1 /* GifPlay.gif in Resources */,
 				ED36EAD11DD2AF9A0050416B /* a-diligent-worm-in-iOS.gif in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
@@ -742,8 +738,8 @@
 				6003F59E195388D20070C39A /* CRAppDelegate.m in Sources */,
 				092003551DADC3AA008266B8 /* CRViewController.m in Sources */,
 				09EE9BA21DBCEA5A00BD81A2 /* README.md in Sources */,
+				18D8B62D1DD80BB600C6545D /* CRGatlingView.m in Sources */,
 				092A2D651DBCA8DA00650DE1 /* README.md in Sources */,
-				5247C4F21DD2103E0024DF8B /* CRGatling.m in Sources */,
 				0920035D1DADC74F008266B8 /* CRDefines.m in Sources */,
 				092A2D2E1DBCA51C00650DE1 /* CRImageGradientDemoVC.m in Sources */,
 				092A2D0A1DBC9A5C00650DE1 /* CRStaffInfoModel.m in Sources */,

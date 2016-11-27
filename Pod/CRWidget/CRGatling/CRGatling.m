@@ -81,7 +81,7 @@
     [self defaultParameters];
 }
 -(void)defaultParameters{
-    self.timeInterval=0.1;
+    self.timeInterval=1.1;
     self.duration=1.0;
 }
 
@@ -192,6 +192,7 @@
     [keyFrameAnimation setValue:layer forKey:@"leafLayer"];
     [layer addAnimation:keyFrameAnimation forKey:@"move"];
 }
+
 #pragma mark ----- Animation Delegate
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
     CALayer *layer = [anim valueForKey:@"leafLayer"];

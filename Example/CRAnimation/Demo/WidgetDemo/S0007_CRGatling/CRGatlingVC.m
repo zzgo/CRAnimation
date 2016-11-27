@@ -7,38 +7,43 @@
 //
 
 #import "CRGatlingVC.h"
-#import "CRGatling.h"
-@interface CRGatlingVC ()
+#import "CRGatlingView.h"
 
-@property (weak, nonatomic) IBOutlet UITextField *textField;
+@interface CRGatlingVC ()
+{
+    CRGatlingView   *_progressView;
+    UISlider        *_slider;
+}
+
 @end
 
+
 @implementation CRGatlingVC
-{
-    CRGatling *progressView;
-}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    progressView=[[CRGatling alloc]initWithFrame:CGRectMake(5, 50, 355, 75)];
-    [self.view addSubview:progressView];
-}
-- (IBAction)okSet:(UIButton *)sender {
-    [progressView setProgress:[self.textField.text floatValue]];
+    
+    [self createUI1];
+    [self addTopBar];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+- (void)createUI1
+{
+    _progressView = [[CRGatlingView alloc] initWithFrame:CGRectMake(5, 50, 355, 75)];
+    [self.view addSubview:_progressView];
+    
+    _slider = [[UISlider alloc] initWithFrame:CGRectMake(0, 0, WIDTH * 0.8, 30)];
+    _slider.continuous = NO;
+    [_slider addTarget:self action:@selector(sliderValueChanged:) forControlEvents:UIControlEventValueChanged];
+    [self.view addSubview:_slider];
+    [_slider BearSetRelativeLayoutWithDirection:kDIR_DOWN destinationView:_progressView parentRelation:NO distance:100 center:YES];
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)sliderValueChanged:(UISlider *)slider
+{
+    [_progressView setProgress:slider.value];
 }
-*/
 
 @end
